@@ -1,0 +1,235 @@
+@font-face {
+  font-family: "trade_gothic_inline";
+  src: url("C:/Users/Chris/Desktop/font/TradeGothicInline-Regular.ttf");
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgb(21, 96, 130);
+  font-weight: 800;
+  font-size: 36px;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  display: flex;
+  z-index: 5;
+}
+
+.header-title {
+  width: 40%;
+  font-size: 40px;
+  font-family: trade_gothic_inline;
+  text-align: center;
+  color: #FFF;
+}
+/* End of header */
+
+/* Step bar */
+.header-stepper-container
+{
+  width: 50%;
+  font-size: small;
+  line-height: 30px;
+  color: white;
+}
+.stepper-wrapper {
+  width:100%;
+  display: flex;
+}
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  margin-top: 2%;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.step-name > a{
+  color: white;
+  font-weight: normal;
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ffffff;
+  width: 100%;
+  top: 20px;
+  left: -50%;
+  z-index: 2;
+}
+
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #a6caec;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 2;
+}
+
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #626768;
+  margin-bottom: 6px;
+}
+
+.stepper-item.active > .step-name > a{
+  font-weight: bold;
+}
+
+.stepper-item.active .step-counter {
+  background-color: #acd7ff;
+}
+
+.stepper-item.completed .step-counter {
+  background-color: #87accf;
+}
+
+
+
+.stepper-item:first-child::before {
+  content: none;
+}
+.stepper-item:last-child::after {
+  content: none;
+}
+/* End of step bar */
+
+
+/* Language */
+.header-language {
+  font-size: x-large;
+}
+
+.header-language > a {
+  color: #ffffff;
+}
+
+.header-language > .active {
+  color: #a6caec;
+}
+/* End of language */
+
+/* Footer */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(21, 96, 130);
+  color: white;
+  height: 100px;
+}
+/* End of footer */
+
+/* Body class */
+.body {
+  margin-bottom: 100px;
+}
+/* End of Body class*/
+
+/*4 card box*/
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Page 1 - 4 Card box */
+.table-container
+{
+  width: 60%;
+  margin: 10px 2% 2% 2%;
+}
+
+.header {
+  width: 25%; /* Set width to 25% */
+  background-color: blue;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  margin: 0;
+  border-right: 1px solid white; /* Add right border */
+  display: flex;           /* Use flexbox */
+  align-items: center;     /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  background-color: rgb(21, 96, 130);
+}
+
+.header.active
+{
+  background-color: rgb(78, 149, 217);
+}
+.header:last-child {
+  border-right: none; /* Remove right border from the last header */
+}
+.content {
+  background-color: rgb(220, 234, 247);
+  padding: 20px;
+  border-radius: 0 0 5px 5px;
+  margin-top: -1px; /* To overlap the bottom border of the header */
+  width: 100%;
+  color: #111;
+  font-size: larger;
+}
+.headers {
+  display: flex;
+  justify-content: space-between;
+  height: 20%;
+  width: 100%;
+}
+
+/* End of Page 1 - 4 Card box */
+
+.body > ul > li{ 
+  list-style: none; 
+  font-size: 25px;
+  margin: 0% 2% 10px 0%;
+} 
+
+.body > ul > li::before{ 
+  content: "\00BB"; 
+} 
+
+.body > ul > li > .list-title{
+  font-size: 25px;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: rgb(33, 104, 136);
+}
+
+.list-content
+{
+  background-color: rgb(220, 234, 247);
+  padding: 20px;
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+  color: #111;
+  font-size: smaller;
+}
+
+.sublist-title {
+  font-size: 25px;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: rgb(33, 104, 136);
+}
+

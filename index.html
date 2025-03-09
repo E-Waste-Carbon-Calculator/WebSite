@@ -1,0 +1,427 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <span class="header-title">E-WASTE Carbon CALCULATOR</span>
+        <span class="header-stepper-container">
+            <div class="stepper-wrapper">
+                <div class="stepper-item active">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./index.html"><u>Background</u></a></div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./en/calculator.html"><u>Calculator</u></a></div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./carbonSavingProcedure.html"><u>Carbon Saving Procedure</u></a></div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./impact.html"><u>Impact</u></a></div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./en/zeroE-wasteAction.html"><u>#Zero E-waste Action</u></a></div>
+                </div>
+            </div>
+        </span>
+        <span class="header-language">
+            <a href="EN" class="active">EN</a> / <a href="CN">CN</a>
+        </span>
+    </header>
+    <!-- End of header -->
+    <div class="body">
+        <div style="display: flex; justify-content: space-between; margin-top: 10px; margin-bottom: 10px;">
+            <span style="width: 40%;margin: 10px 2% 2% 2%;"><img style="width: 100%; height:100%"
+                    src="./resources/P1_Banner.svg"></span>
+            <span class="table-container">
+                <div class="headers">
+                    <div class="header active" onclick="cardBoxChangeContent(this, 'about','contentBox')"><b>About
+                            Us</b>
+                    </div>
+                    <div class="header" onclick="cardBoxChangeContent(this, 'purpose', 'contentBox')"><b>Purpose and
+                            Functionality</b></div>
+                    <div class="header" onclick="cardBoxChangeContent(this, 'users', 'contentBox')"><b>Target Users</b>
+                    </div>
+                    <div class="header" onclick="cardBoxChangeContent(this, 'relevance', 'contentBox')"><b>Local
+                            Relevance</b></div>
+                </div>
+                <div class="content" style="height: 80%;" id="contentBox">
+                    Welcome to the E-waste Carbon Calculator, a specialized tool designed to deliver precise and
+                    localized assessments of greenhouse gas emissions linked to waste electrical and electronic
+                    equipment (WEEE or e-waste) in Hong Kong. This Calculator aim to empower producers, retailers, and
+                    consumers of Regulated Electrical and Electronic Equipment (REE) to gain a deeper understanding of
+                    their environmental impact and promote sustainable practices in e- waste management.
+                </div>
+            </span>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span style="width: 40%;margin: 0% 2% 10px 2%;">
+                <div
+                    style="border: solid; border-radius: 10px;display: flex; justify-content: center; align-items: center;line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
+                    <b>Understanding E-waste in Hong Kong</b>
+                </div>
+            </span>
+            <span style="width: 60%;margin: 0% 2% 10px 2%;">
+                <img style="width: 100%; height:100%"
+                    src="./resources/P1_Hong Kong E-waste data.svg">
+            </span>
+        </div>
+
+        <ul id="list">
+            <li><span class="list-title">What is E-waste?</span>
+                <div class="list-content">Electronic waste, or e-waste, refers to discarded electrical and electronic
+                    equipment that is no longer useful to its owners. In general, the terms “WEEE” and “e-waste” are
+                    used synonymously in accordance with the EU WEEE Directive.
+                </div>
+            </li>
+        </ul>
+
+        <ul id="list">
+            <li><span class="list-title">Where Does All This E-waste go?</span>
+                <ul>
+                    <li><span class="sublist-title">Export</span>
+                        <div style="display: flex;align-items: stretch;">
+                            <img src="./resources/P2_Export.gif"
+                                style="width: 5%;object-fit: contain;" />
+                            <div class="list-content">For years, much of Hong Kong’s e-waste was exported to developing
+                                countries for recycling or reuse.
+                                However, stricter international regulations like the Basel Convention have limited the
+                                global trade of hazardous waste, forcing Hong Kong to take responsibility for its
+                                e-waste locally.
+                            </div>
+                        </div>
+                    </li>
+                    <li><span class="sublist-title">Hong Kong E-waste Management</span>
+                        <div class="list-content">To address this challenge, Hong Kong introduced the <span
+                                style="color: rgb(33, 104, 136);"><b>Producer Responsibility Scheme on Waste Electrical
+                                    and Electronic Equipment (WPRS)</b></span>. To ensure proper recycling and disposal
+                            of e-waste, the government has implemented a licensing scheme for e-waste recyclers and
+                            established WEEE · PARK to provide free collection and treatment services for Hong Kong
+                            residents.
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+            <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
+                <div class="headers">
+                    <div class="header active" style="width: 50%;"
+                        onclick="cardBoxChangeContent(this, 'producer-responsibility','contentBox2')">
+                        <b>Producer Responsibility Scheme on Waste Electrical <br>and Electronic Equipment
+                            (WPRS)</b>
+                    </div>
+                    <div class="header" style="width: 50%;"
+                        onclick="cardBoxChangeContent(this, 'weee-park', 'contentBox2')"><b>WEEE · PARK</b>
+                    </div>
+                </div>
+                <div class="content" style="height: 461px;" id="contentBox2">
+                    <div>The WPRS regulates the disposal of key appliances, including air conditioners, refrigerators,
+                        washing machines, televisions, computers, printers, scanners, and monitors. Effective from 1
+                        July
+                        2024, the scheme has been expanded to cover larger refrigerators, washing machines with higher
+                        capacities, tumble dryers, and dehumidifiers, ensuring better oversight of e-waste management
+                        and
+                        expanding WEEE · PARK’s capacity to collect and recycle a broader range of WEEE.</div>
+                    <div style="display: flex; justify-content: space-between; margin: 10px 0px 10px 2%;">
+                        <img id="image-box"
+                            src="..\resources\P3_Washing Machine details (eng).svg"
+                            style="width: 40%;">
+                        <div style="display: flex; justify-content: center;width: 60%;    margin: 0% 2% 10px 2%;">
+                            <table style="max-width: 100%; width: 100%;margin: 0px 10px 0px 2%;">
+                                <tr>
+                                    <td id="washing-machine"
+                                        onclick="imageBoxChangeContent('washing-machine', 'image-box')">
+                                        <img src="./resources/washing machine.svg"
+                                            style="height: 150px;" alt="Washing Machine">
+                                    </td>
+                                    <td id="refrigerator" onclick="imageBoxChangeContent('refrigerator', 'image-box')">
+                                        <img src="./resources/refrigerator.svg"
+                                            style="height: 150px;" alt="Refrigerator">
+                                    </td>
+                                    <td id="air-conditioner"
+                                        onclick="imageBoxChangeContent('air-conditioner', 'image-box')">
+                                        <img src="./resources/Air conditioner.svg"
+                                            style="height: 150px;" alt="Air Conditioner">
+                                    </td>
+                                    <td id="television" onclick="imageBoxChangeContent('television', 'image-box')">
+                                        <img src="./resources/television.svg"
+                                            style="height: 150px;" alt="Television">
+                                    </td>
+                                    <td id="dehumidifier" onclick="imageBoxChangeContent('dehumidifier', 'image-box')">
+                                        <img src="./resources/Dehumidifier.svg"
+                                            style="height: 150px;" alt="Dehumidifier">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="monitor" onclick="imageBoxChangeContent('monitor', 'image-box')">
+                                        <img src="./resources/monitor.svg"
+                                            style="height: 150px;" alt="Monitor">
+                                    </td>
+                                    <td id="computer" onclick="imageBoxChangeContent('computer', 'image-box')">
+                                        <img src="./resources/Computer.svg"
+                                            style="height: 150px;" alt="Computer">
+                                    </td>
+                                    <td id="printer" onclick="imageBoxChangeContent('printer', 'image-box')">
+                                        <img src="./resources/printer.svg"
+                                            style="height: 150px;" alt="Printer">
+                                    </td>
+                                    <td id="scanner" onclick="imageBoxChangeContent('scanner', 'image-box')">
+                                        <img src="./resources/scanner.svg"
+                                            style="height: 150px;" alt="Scanner">
+                                    </td>
+                                    <td id="tumble-dryer" onclick="imageBoxChangeContent('tumble-dryer', 'image-box')">
+                                        <img src="./resources/Tumble dryer.svg"
+                                            style="height: 150px;" alt="Tumble Dryer">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </span>
+        </div>
+
+        <ul id="list">
+            <li><span class="list-title">E-Waste Contributes to Climate Change</span>
+                <div class="list-content">Every piece of Waste Electrical and Electronic Equipment (WEEE) inevitably
+                    generates greenhouse gas (GHG) emissions throughout its lifecycle, from production to disposal. The
+                    method of e-waste disposal plays a crucial role in determining the level of these emissions.
+                    Improper disposal, especially in landfills, can result in the release of significant amounts of
+                    GHGs.
+                </div>
+            </li>
+        </ul>
+
+        <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+            <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
+                <div class="headers">
+                    <div class="header active" style="width: 50%;"
+                        onclick="cardBoxChangeContent(this, 'higher-GHG','contentBox3')">
+                        <b>Methods of Disposal with Higher GHG Emissions</b>
+                    </div>
+                    <div class="header" style="width: 50%;"
+                        onclick="cardBoxChangeContent(this, 'lower-GHG', 'contentBox3')"><b>Methods of Disposal with
+                            Lower GHG Emissions</b>
+                    </div>
+                </div>
+                <div class="content" style="height: 200px;" id="contentBox3">
+                    <ol>
+                        <li>In landfills, e-waste undergoes anaerobic decomposition, which produces methane (CH4). </li>
+                        <li>Burning e-waste or incomplete combustion can emit both methane (CH4) and carbon dioxide
+                            (CO2).</li>
+                    </ol>
+                </div>
+            </span>
+        </div>
+
+        <ul id="list">
+            <li><span class="list-title">Benefits of Understanding E-waste Carbon Emissions</span>
+                <div class="list-content">Even if you are legally sending e-waste to licensed collectors, understanding
+                    the greenhouse gas (GHG) emissions associated with its treatment process is important for several
+                    reasons:
+                </div>
+            </li>
+        </ul>
+
+        <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+            <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
+                <div class="headers">
+                    <div class="header active" style="width: 33.3%;"
+                        onclick="cardBoxChangeContent(this, 'ree-supplier','contentBox4')">
+                        <b>REE Supplier</b>
+                    </div>
+                    <div class="header" style="width: 33.3%;"
+                        onclick="cardBoxChangeContent(this, 'ree-seller','contentBox4')">
+                        <b>REE Seller</b>
+                    </div>
+                    <div class="header" style="width: 33.3%;"
+                        onclick="cardBoxChangeContent(this, 'ree-consumer','contentBox4')">
+                        <b>REE Consumer </b>
+                    </div>
+                </div>
+                <div class="content" id="contentBox4">
+                    <div style="margin: 0 0 5px 0;">At this Calculator, you can benefit from...</div>
+                    <table style="width: 100%;">
+                        <tr style="border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;">
+                            <td
+                                style="border-right: 2px solid rgb(239, 246, 251);border-bottom: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;">
+                                <b>Sustainability Disclosure</b>
+                            </td>
+                            <td style="padding: 15px 0px 10px 15px;width: 80%;">&#10003; Assess the greenhouse gas (GHG)
+                                emissions
+                                from producing and supplying electronic devices.</td>
+                        </tr>
+                        <tr style="font-size: larger;">
+                            <td
+                                style="border-right: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;">
+                                <b>Waste Management</b>
+                            </td>
+                            <td style="padding: 15px 0px 10px 15px;width: 80%;">&#10003; Gain insights into how
+                                recycling can
+                                mitigate emissions associated with materials used in production.</td>
+                        </tr>
+                    </table>
+                </div>
+            </span>
+        </div>
+
+        <style>
+            .container-fluid .blue-row {
+                background-color: rgb(33, 104, 136);
+                width: 100%;
+                margin: auto;
+            }
+
+            .container-fluid .blue-row h3 {
+                color: white;
+                font-size: 39px;
+                text-align: center;
+                vertical-align: center;
+                padding: 40px;
+                font-weight: bold;
+            }
+
+            @keyframes example {
+                0% {
+                    transform: translateX(20%);
+                }
+
+                50% {
+                    transform: translateX(40%);
+                }
+
+                100% {
+                    transform: translateX(20%);
+                }
+            }
+
+            .container-fluid .blue-row h3 span {
+                display: inline-block;
+                animation-name: example;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+        </style>
+        <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+            <div class="blue-row" style="width: 50%;border-radius: 20px;">
+                <a href="./en/calculator.html" style="all: unset;cursor: pointer;"><h3>Discover Your E-waste Carbon Data<span>&#10230;</span></h3></a>
+            </div>
+        </div>
+    </div>
+    <!-- End of body class -->
+    <div style="height: 100px"></div>
+    <!-- Footer -->
+    <footer>
+        <div style="display: flex; justify-content: space-between;">
+            <span style="position: relative;left: 25%;margin-top: 8px;text-align: center;">
+                <span style="margin-bottom: 2px;"><u>Created by:</u></span><br>
+                <img style="height:42.5px;" src="./resources/hkuLogo.png"><br>
+                M.SC. Environmental Management
+            </span>
+            <span style="position: relative;right: 25%;margin-top: 8px;text-align: center;">
+                <span style="margin-bottom: 2px;"><u>Supported by:</u></span><br>
+                <img style="height:42.5px;" src="./resources/P1_ALBA_logo.svg">
+            </span>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+</body>
+<script>
+    function cardBoxChangeContent(item, section, id) {
+        item.parentElement.querySelectorAll(".active").forEach(e => e.classList.remove("active"))
+        item.classList.add("active")
+        const contentBox = document.getElementById(id);
+        switch (section) {
+            case 'about':
+                contentBox.innerHTML = 'Welcome to the E-waste Carbon Calculator, a specialized tool designed to deliver precise and localized assessments of greenhouse gas emissions linked to waste electrical and electronic equipment (WEEE or e-waste) in Hong Kong. This Calculator aim to empower producers, retailers, and consumers of Regulated Electrical and Electronic Equipment (REE) to gain a deeper understanding of their environmental impact and promote sustainable practices in e- waste management.';
+                break;
+            case 'purpose':
+                contentBox.innerHTML = 'This E-waste Carbon Calculator estimates: Your carbon saving in CO2 equivalent (CO2e) from the appliances you recycle come mainly from preventing release of refrigerants (if any) to the atmosphere and producing recycled materials for reuse. This is calculated after deducting the emissions generated during collection, treatment and final disposal processes.<br><br> If you are producing a GHG Inventory, you may consider to include this carbon saving in your Scope 3 GHG emissions (CO2 equivalent) under <br><br> <ul> <li>Category 1 (Purchased goods and services),</li> <li>Category 5 (Waste generated in operations), or</li> <li>Category 12 (End-of-life treatment of sold products) as appropriate.</li> </ul>';
+                break;
+            case 'users':
+                contentBox.innerHTML = 'This Calculator is designed for all stakeholders under the Producer Responsibility Scheme on Waste Electrical and Electronic Equipment (WPRS): <br><br> <ul> <li>REE Suppliers</li> <li>REE Sellers</li> <li>REE Consumers</li> </ul>';
+                break;
+            case 'relevance':
+                contentBox.innerHTML = 'This Calculator is built upon an emission factors database maintained by ALBA Integrated Waste Solutions (Hong Kong) Limited (ALBA IWS), which has been verified by third parties with reference to the GHG Protocol. ALBA IWS operates the WEEE.PARK, under the supervision of the Environmental Protection Department and is responsible for the collection, treatment and recycling of WEEE in Hong Kong. Therefore, the carbon saving calculation methodology of this Calculator aligns with the Greenhouse Gas Protocol.';
+                break;
+            case 'producer-responsibility':
+                contentBox.innerHTML = "<div>The WPRS regulates the disposal of key appliances, including air conditioners, refrigerators, washing machines, televisions, computers, printers, scanners, and monitors. Effective from 1 July 2024, the scheme has been expanded to cover larger refrigerators, washing machines with higher capacities, tumble dryers, and dehumidifiers, ensuring better oversight of e-waste management and expanding WEEE · PARK’s capacity to collect and recycle a broader range of WEEE.</div> <div style=\"display: flex; justify-content: space-between; margin: 10px 0px 10px 2%;\"> <img id=\"image-box\" src=\"./resources/P3_Washing Machine details (eng).svg\" style=\"width: 40%;\"> <div style=\"display: flex; justify-content: center;width: 60%;    margin: 0% 2% 10px 2%;\"> <table style=\"max-width: 100%; width: 100%;margin: 0px 10px 0px 2%;\"> <tr> <td id=\"washing-machine\" onclick=\"imageBoxChangeContent('washing-machine', 'image-box')\"> <img src=\"./resources/washing machine.svg\" style=\"height: 150px;\" alt=\"Washing Machine\"> </td> <td id=\"refrigerator\" onclick=\"imageBoxChangeContent('refrigerator', 'image-box')\"> <img src=\"./resources/refrigerator.svg\" style=\"height: 150px;\" alt=\"Refrigerator\"> </td> <td id=\"air-conditioner\" onclick=\"imageBoxChangeContent('air-conditioner', 'image-box')\"> <img src=\"./resources/Air conditioner.svg\" style=\"height: 150px;\" alt=\"Air Conditioner\"> </td> <td id=\"television\" onclick=\"imageBoxChangeContent('television', 'image-box')\"> <img src=\"./resources/television.svg\" style=\"height: 150px;\" alt=\"Television\"> </td> <td id=\"dehumidifier\" onclick=\"imageBoxChangeContent('dehumidifier', 'image-box')\"> <img src=\"./resources/Dehumidifier.svg\" style=\"height: 150px;\" alt=\"Dehumidifier\"> </td> </tr> <tr> <td id=\"monitor\" onclick=\"imageBoxChangeContent('monitor', 'image-box')\"> <img src=\"./resources/monitor.svg\" style=\"height: 150px;\" alt=\"Monitor\"> </td> <td id=\"computer\" onclick=\"imageBoxChangeContent('computer', 'image-box')\"> <img src=\"./resources/Computer.svg\" style=\"height: 150px;\" alt=\"Computer\"> </td> <td id=\"printer\" onclick=\"imageBoxChangeContent('printer', 'image-box')\"> <img src=\"./resources/printer.svg\" style=\"height: 150px;\" alt=\"Printer\"> </td> <td id=\"scanner\" onclick=\"imageBoxChangeContent('scanner', 'image-box')\"> <img src=\"./resources/scanner.svg\" style=\"height: 150px;\" alt=\"Scanner\"> </td> <td id=\"tumble-dryer\" onclick=\"imageBoxChangeContent('tumble-dryer', 'image-box')\"> <img src=\"./resources/Tumble dryer.svg\" style=\"height: 150px;\" alt=\"Tumble Dryer\"> </td> </tr> </table> </div> </div>"
+                break;
+            case 'weee-park':
+                contentBox.innerHTML = "<div>The WEEE · PARK is located in EcoPark, Tuen Mun. As one of the leading facilities of its kind in the world. WEEE · PARK adopts advanced technologies to turn regulated WEEE into valuable secondary raw materials through a series of detoxification, dismantling, and recycling processes.</div> <div style=\"justify-items: center; display: flex; justify-content: center; height: 48%; margin: 5%;\"><img src=\"./resources/P4_WEEE Park.svg\"></div>"
+                break;
+            case 'higher-GHG':
+                contentBox.innerHTML = "<ol> <li>In landfills, e-waste undergoes anaerobic decomposition, which produces methane (CH4). </li> <li>Burning e-waste or incomplete combustion can emit both methane (CH4) and carbon dioxide (CO2).</li> </ol>"
+                break;
+            case 'lower-GHG':
+                contentBox.innerHTML = "Proper recycling of e-waste helps save GHG emissions. Recycling allows for the recovery and reuse of valuable materials, decreasing the need for new raw material extraction and processing. This conservation of resources lowers energy consumption and the associated GHG emissions that arise from producing new materials. If e-waste were recycled, the GHG generated from material extraction and refinement could be significantly reduced or avoided."
+                break;
+            case 'ree-supplier':
+                contentBox.innerHTML = "<div style=\"margin: 0 0 5px 0;\">At this Calculator, you can benefit from...</div> <table style=\"width: 100%;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td style=\"border-right: 2px solid rgb(239, 246, 251);border-bottom: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;\"> <b>Sustainability Disclosure</b></td> <td style=\"padding: 15px 0px 10px 15px;width: 80%;\">&#10003; Assess the greenhouse gas (GHG) emissions from producing and supplying electronic devices.</td> </tr> <tr style=\"font-size: larger;\"> <td style=\"border-right: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;\"> <b>Waste Management</b></td> <td style=\"padding: 15px 0px 10px 15px;width: 80%;\">&#10003; Gain insights into how recycling can mitigate emissions associated with materials used in production.</td> </tr> </table>";
+                break;
+            case 'ree-seller':
+                contentBox.innerHTML = "<div style=\"margin: 0 0 5px 0;\">At this Calculator, you can benefit from...</div> <table style=\"width: 100%;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td style=\"border-right: 2px solid rgb(239, 246, 251);border-bottom: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;\"><b>Sustainability Disclosure</b></td> <td style=\"padding: 15px 0px 10px 15px;width: 80%;\">&#10003; Evaluate the carbon footprint of selling electronic equipment, particularly for waste generated in operations.</td> </tr> <tr style=\"font-size: larger;\"> <td style=\"border-right: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;\"><b>Waste Management</b></td> <td style=\"padding: 15px 0px 10px 15px;width: 80%;\">&#10003; Leverage the calculator to support sustainable business practices and enhance reporting of emissions reductions.</td> </tr> </table>";
+                break;
+            case 'ree-consumer':
+                contentBox.innerHTML = "<div style=\"margin: 0 0 5px 0;\">At this Calculator, you can benefit from...</div> <table style=\"width: 100%;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td style=\"border-right: 2px solid rgb(239, 246, 251);border-bottom: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;\"> <b>Sustainability Disclosure</b></td> <td style=\"padding: 15px 0px 10px 15px;width: 80%;\">&#10003; Learn the potential carbon emissions and savings from recycling electronic appliances.</td> </tr> <tr style=\"font-size: larger;\"> <td style=\"border-right: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;\"> <b>Waste Management</b></td> <td style=\"padding: 15px 0px 10px 15px;width: 80%;\">&#10003; Get a better understanding of how recycling decisions impact the environment.</td> </tr> </table>";
+                break;
+        }
+    }
+
+    function imageBoxChangeContent(section, id) {
+        let item = document.getElementById(id)
+        let resourcePath = "./resources/"
+        switch (section) {
+            case 'washing-machine':
+                item.src = resourcePath + "P3_Washing Machine details (eng).svg";
+                break;
+            case 'refrigerator':
+                item.src = resourcePath + "P3_Refrigerator details (eng).svg";
+                break;
+            case 'air-conditioner':
+                item.src = resourcePath + "P3_Air conditioner details (eng).svg";
+                break;
+            case 'television':
+                item.src = resourcePath + "P3_Television details (eng).svg";
+                break;
+            case 'dehumidifier':
+                item.src = resourcePath + "P3_Dehumidifier details (eng).svg";
+                break;
+            case 'monitor':
+                item.src = resourcePath + "P3_Monitor details (eng).svg";
+                break;
+            case 'computer':
+                item.src = resourcePath + "P3_Computer details (eng).svg";
+                break;
+            case 'printer':
+                item.src = resourcePath + "P3_Printer details (eng).svg";
+                break;
+            case 'scanner':
+                item.src = resourcePath + "P3_Scanner details (eng).svg";
+                break;
+            case 'tumble-dryer':
+                item.src = resourcePath + "P3_Tumble Dryer details (eng).svg";
+                break;
+        }
+    }
+</script>

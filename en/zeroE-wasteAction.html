@@ -1,0 +1,346 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <span class="header-title">E-WASTE Carbon CALCULATOR</span>
+        <span class="header-stepper-container">
+            <div class="stepper-wrapper">
+                <div class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="../index.html"><u>Background</u></a></div>
+                </div>
+                <div class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./calculator.html"><u>Calculator</u></a></div>
+                </div>
+                <div class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./carbonSavingProcedure.html"><u>Carbon Saving Procedure</u></a>
+                    </div>
+                </div>
+                <div class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./impact.html"><u>Impact</u></a></div>
+                </div>
+                <div class="stepper-item active">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./zeroE-wasteAction.html"><u>#Zero E-waste Action</u></a></div>
+                </div>
+            </div>
+        </span>
+        <span class="header-language">
+            <a href="EN" class="active">EN</a> / <a href="CN">CN</a>
+        </span>
+    </header>
+    <!-- End of header -->
+    <div class="body">
+        <div style="display: flex; justify-content: space-between;margin-bottom: 10px;height: 63%;">
+            <div style="width: 40%;margin:auto;display: inline-block;padding-left: 5%;">
+                <div style="text-align: left;font-size: x-large;margin-top: 10px;color: rgb(21, 96, 130);">
+                    If your E-wastes go recycling treatment, you will generate….
+                </div>
+                <div style="text-align: left;font-size: x-large;margin-top: 8%;color: rgb(21, 96, 130);">
+                    <b><span id="cO2SavingResult" style="font-size: 60px;"></span><span style="font-size: 30px;">
+                            tonnes of CO2e</span></b>
+                    <p>in CO2 saving from recycled materials</p>
+                </div>
+                <div style="text-align: left;font-size: x-large;margin-top: 8%;color: rgb(21, 96, 130);">
+                    <b><span id="emissionResult" style="font-size: 60px;"></span><span style="font-size: 30px;">
+                            tonnes of CO2e</span></b>
+                    <p>in CO2 emissions generated from recycling treatment</p>
+                </div>
+            </div>
+            <div style="width: 45%;margin: auto;display: inline-block;">
+                <div
+                    style="text-align: center; background-color: rgb(134, 206, 234);height: 3em;margin-bottom: 1%;align-content: center;color: rgb(21, 96, 130);font-size: larger;">
+                    <b>Summary Report</b>
+                </div>
+                <div class="headers" style="height: auto;border-bottom: 1px solid white;">
+                    <div class="header" style="width: 30%;"><b>E-waste category
+                        </b>
+                    </div>
+                    <div class="header" style="width: 20%;"><b>Quantity</b></div>
+                    <div class="header"><b>CO2 saving from recycled materials
+                        </b>
+                    </div>
+                    <div class="header"><b>CO2 emissions generated from recycling treatment
+                        </b></div>
+                </div>
+                <div class="headers" style="height: 15%;border-bottom: 1px solid white;">
+                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 30%;">Large
+                        household<br>electrical appliances
+                    </div>
+                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 20%;"><span
+                            id="qtyLargeHousehold"></span></div>
+                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;"><span
+                            id="largeHouseholdcO2Saving"></span></div>
+                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;"><span
+                            id="largeHouseholdEmissions"></span></div>
+                </div>
+                <div class="headers" style="height: 15%;border-bottom: 1px solid white;">
+                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 30%;">Computer
+                    </div>
+                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 20%;"><span
+                            id="qtyComputer"></span></div>
+                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;"><span
+                            id="computerCO2Saving"></span></div>
+                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;"><span
+                            id="computerEmissions"></span></div>
+                </div>
+            </div>
+            <script>
+                let qtyLargeHousehold = (sessionStorage.getItem("qtyLargeHousehold") == undefined || sessionStorage.getItem("qtyLargeHousehold") == null) ? 0 : sessionStorage.getItem("qtyLargeHousehold");
+                let qtyComputer = (sessionStorage.getItem("qtyComputer") == undefined || sessionStorage.getItem("qtyComputer") == null) ? 0 : sessionStorage.getItem("qtyComputer");
+                let largeHouseholdcO2Saving = (sessionStorage.getItem("largeHouseholdcO2Saving") == undefined || sessionStorage.getItem("largeHouseholdcO2Saving") == null) ? 0 : sessionStorage.getItem("largeHouseholdcO2Saving");
+                let computerCO2Saving = (sessionStorage.getItem("computerCO2Saving") == undefined || sessionStorage.getItem("computerCO2Saving") == null) ? 0 : sessionStorage.getItem("computerCO2Saving");
+                let largeHouseholdEmissions = (sessionStorage.getItem("largeHouseholdEmissions") == undefined || sessionStorage.getItem("largeHouseholdEmissions") == null) ? 0 : sessionStorage.getItem("largeHouseholdEmissions");
+                let computerEmissions = (sessionStorage.getItem("computerEmissions") == undefined || sessionStorage.getItem("computerEmissions") == null) ? 0 : sessionStorage.getItem("computerEmissions");
+                let cO2SavingResult = (sessionStorage.getItem("cO2SavingResult") == undefined || sessionStorage.getItem("cO2SavingResult") == null) ? 0 : sessionStorage.getItem("cO2SavingResult");
+                let emissionResult = (sessionStorage.getItem("emissionResult") == undefined || sessionStorage.getItem("emissionResult") == null) ? 0 : sessionStorage.getItem("emissionResult");
+
+                document.getElementById("qtyLargeHousehold").innerHTML = qtyLargeHousehold;
+                document.getElementById("largeHouseholdcO2Saving").innerHTML = "= " + largeHouseholdcO2Saving + " tonnes of CO2e";
+                document.getElementById("largeHouseholdEmissions").innerHTML = "= " + largeHouseholdEmissions + "xxx tonnes of CO2e";
+
+                document.getElementById("qtyComputer").innerHTML = qtyComputer;
+                document.getElementById("computerCO2Saving").innerHTML = "= " + computerCO2Saving + " tonnes of CO2e";
+                document.getElementById("computerEmissions").innerHTML = "= " + computerEmissions + "xxx tonnes of CO2e";
+
+                document.getElementById("cO2SavingResult").innerHTML = cO2SavingResult;
+                document.getElementById("emissionResult").innerHTML = emissionResult;
+            </script>
+        </div>
+
+        <style>
+            .container {
+                position: relative;
+                width: 24px;
+                height: 17%;
+            }
+
+            .chevron {
+                position: absolute;
+                width: 28px;
+                height: 2px;
+                opacity: 0;
+                transform: scale3d(0.5, 0.5, 0.5);
+                animation: move 3s ease-out infinite;
+                z-index: 1;
+            }
+
+            .chevron:first-child {
+                animation: move 3s ease-out 1s infinite;
+            }
+
+            .chevron:nth-child(2) {
+                animation: move 3s ease-out 2s infinite;
+            }
+
+            .chevron:before,
+            .chevron:after {
+                content: ' ';
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 51%;
+                background: black;
+            }
+
+            .chevron:before {
+                left: 0;
+                transform: skew(0deg, 30deg);
+            }
+
+            .chevron:after {
+                right: 0;
+                width: 50%;
+                transform: skew(0deg, -30deg);
+            }
+
+            @keyframes move {
+                25% {
+                    opacity: 1;
+
+                }
+
+                33% {
+                    opacity: 1;
+                    transform: translateY(30px);
+                }
+
+                67% {
+                    opacity: 1;
+                    transform: translateY(40px);
+                }
+
+                100% {
+                    opacity: 0;
+                    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+                }
+            }
+
+            .text {
+                display: inline-block;
+                margin-top: 75px;
+                margin-left: -30px;
+                font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+                font-size: 12px;
+                color: black;
+                text-transform: uppercase;
+                white-space: nowrap;
+                opacity: .25;
+                animation: pulse 2s linear alternate infinite;
+            }
+
+            @keyframes pulse {
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
+        <div class="container">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <span class="text">Scroll down</span>
+        </div>
+
+
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span style="width: 40%;margin: 0% 2% 10px 2%;">
+                <div
+                    style="border: solid; border-radius: 10px;display: flex; justify-content: center; align-items: center;line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
+                    <b>Action hints for Zero E-waste
+                    </b>
+                </div>
+            </span>
+        </div>
+
+        <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+            <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
+                <div class="headers">
+                    <div class="header active" style="width: 33.3%;"
+                        onclick="cardBoxChangeContent(this, 'supplier','contentBox')">
+                        <b>Supplier</b>
+                    </div>
+                    <div class="header" style="width: 33.3%;"
+                        onclick="cardBoxChangeContent(this, 'seller', 'contentBox')"><b>Seller</b>
+                    </div>
+                    <div class="header" style="width: 33.3%;"
+                        onclick="cardBoxChangeContent(this, 'consumer', 'contentBox')"><b>Consumer</b>
+                    </div>
+                </div>
+                <div class="content" style="height: 400px;" id="contentBox">
+                    <p>Adopt green product design based on 3 principles
+                        Design: Consider the environmental attributes of the product—such as disassembly, recyclability,
+                        maintainability, and reusability—which in turn simplify the recycling processes for
+                        decommissioned
+                        electronic products.</p>
+                    <p>Materials used: Employ eco-friendly new materials that are non-hazardous, energy-saving, easily
+                        recyclable, highly reliable, and have a long lifespan.</p>
+
+                    <p>Contribution techniques: Develop green recycling processes for electronic products to help avoid
+                        the
+                        release of harmful substances during the dismantling of e- waste, and to reduce the use of
+                        acidic,
+                        alkaline, and corrosive reagents and chemicals.</p>
+                </div>
+            </span>
+        </div>
+        <style>
+            .container-fluid .blue-row {
+                background-color: rgb(33, 104, 136);
+                width: 100%;
+                margin: auto;
+            }
+
+            .container-fluid .blue-row h3 {
+                color: white;
+                font-size: 39px;
+                text-align: center;
+                vertical-align: center;
+                padding: 40px;
+                font-weight: bold;
+            }
+
+            @keyframes example {
+                0% {
+                    transform: translateX(20%);
+                }
+
+                50% {
+                    transform: translateX(40%);
+                }
+
+                100% {
+                    transform: translateX(20%);
+                }
+            }
+
+            .container-fluid .blue-row h3 span {
+                display: inline-block;
+                animation-name: example;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+        </style>
+        <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+            <div class="blue-row" style="width: 25%;border-radius: 20px;">
+                <a href="./survey.html" style="all: unset;cursor: pointer;">
+                    <h3>Next<span>&#10230;</span></h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End of body class -->
+    <div style="height: 100px"></div>
+    <!-- Footer -->
+    <footer>
+        <div style="display: flex; justify-content: space-between;">
+            <span style="position: relative;left: 25%;margin-top: 8px;text-align: center;">
+                <span style="margin-bottom: 2px;"><u>Created by:</u></span><br>
+                <img style="height:42.5px;" src="../resources/hkuLogo.png"><br>
+                M.SC. Environmental Management
+            </span>
+            <span style="position: relative;right: 25%;margin-top: 8px;text-align: center;">
+                <span style="margin-bottom: 2px;"><u>Supported by:</u></span><br>
+                <img style="height:42.5px;" src="../resources/P1_ALBA_logo.svg">
+            </span>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+</body>
+<script>
+    function cardBoxChangeContent(item, section, id) {
+        item.parentElement.querySelectorAll(".active").forEach(e => e.classList.remove("active"))
+        item.classList.add("active")
+        const contentBox = document.getElementById(id);
+        switch (section) {
+            case 'supplier':
+                contentBox.innerHTML = '<p>Adopt green product design based on 3 principles Design: Consider the environmental attributes of the product—such as disassembly, recyclability, maintainability, and reusability—which in turn simplify the recycling processes for decommissioned electronic products.</p> <p>Materials used: Employ eco-friendly new materials that are non-hazardous, energy-saving, easily recyclable, highly reliable, and have a long lifespan.</p> <p>Contribution techniques: Develop green recycling processes for electronic products to help avoid the release of harmful substances during the dismantling of e- waste, and to reduce the use of acidic, alkaline, and corrosive reagents and chemicals.</p>';
+                break;
+            case 'seller':
+                contentBox.innerHTML = '<ol> <li>Educate customers <ul> <li>Promote in-store awareness campaigns using signage, brochures to educate customers about the importance of e-waste recycling and proper disposal</li> </ul> </li> <li>Promote refurbished and second-hand product <ul> <li>Create second-hand section to offer high-quality, certified refurbished devices at a lower price point to reduce demand for new products</li> </ul> </li> <li>Advocate for green policies <ul> <li>Encourage manufacturers to adopt sustainable practices and reduce e-waste, by conducting sustainable supplier assessment </li> </ul> </li> </ol>';
+                break;
+            case 'consumer':
+                contentBox.innerHTML = '<p><b>5R action towards e-waste management:</b></p> <ul> <li><b>R</b>egular maintenance: Keep your appliances clean and well-maintained to ensure they last longer.</li> <li><b>R</b>efurbish: Fix broken or malfunctioning appliances instead of discarding them.</li> <li><b>R</b>euse: If your appliance is still functional but no longer needed, donate it to people in need.</li> <li><b>R</b>ecycle: Dispose of e-waste through certified recycling programs or facilities to ensure proper treatment.</li> <li><b>R</b>esponsibly: Purchase from companies that prioritize sustainability, use recycled materials and offer take-back programs.</li> </ul>';
+                break;
+
+        }
+    }
+</script>
