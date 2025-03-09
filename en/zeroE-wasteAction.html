@@ -246,19 +246,31 @@
                     </div>
                 </div>
                 <div class="content" style="height: 400px;" id="contentBox">
-                    <p>Adopt green product design based on 3 principles
-                        Design: Consider the environmental attributes of the product—such as disassembly, recyclability,
-                        maintainability, and reusability—which in turn simplify the recycling processes for
-                        decommissioned
-                        electronic products.</p>
-                    <p>Materials used: Employ eco-friendly new materials that are non-hazardous, energy-saving, easily
-                        recyclable, highly reliable, and have a long lifespan.</p>
-
-                    <p>Contribution techniques: Develop green recycling processes for electronic products to help avoid
-                        the
-                        release of harmful substances during the dismantling of e- waste, and to reduce the use of
-                        acidic,
-                        alkaline, and corrosive reagents and chemicals.</p>
+                    <p style="font-weight: bold;font-size: larger;color: rgb(33, 104, 136);">&#10003;Adopt green product
+                        design based on 3 principles</p>
+                    <ul>
+                        <li>
+                            Design: <p>Consider the environmental attributes of the product—such as disassembly,
+                                recyclability,
+                                maintainability, and reusability—which in turn simplify the recycling processes for
+                                decommissioned
+                                electronic products.</p>
+                        </li>
+                        <li>
+                            Materials used: <p>Employ eco-friendly new materials that are non-hazardous, energy-saving,
+                                easily
+                                recyclable, highly reliable, and have a long lifespan.</p>
+                        </li>
+                        <li>
+                            Contribution techniques: <p>Develop green recycling processes for electronic products to
+                                help avoid
+                                the
+                                release of harmful substances during the dismantling of e- waste, and to reduce the use
+                                of
+                                acidic,
+                                alkaline, and corrosive reagents and chemicals.</p>
+                        </li>
+                    </ul>
                 </div>
             </span>
         </div>
@@ -332,7 +344,7 @@
         const contentBox = document.getElementById(id);
         switch (section) {
             case 'supplier':
-                contentBox.innerHTML = '<p>Adopt green product design based on 3 principles Design: Consider the environmental attributes of the product—such as disassembly, recyclability, maintainability, and reusability—which in turn simplify the recycling processes for decommissioned electronic products.</p> <p>Materials used: Employ eco-friendly new materials that are non-hazardous, energy-saving, easily recyclable, highly reliable, and have a long lifespan.</p> <p>Contribution techniques: Develop green recycling processes for electronic products to help avoid the release of harmful substances during the dismantling of e- waste, and to reduce the use of acidic, alkaline, and corrosive reagents and chemicals.</p>';
+                contentBox.innerHTML = '<p style=\"font-weight: bold;font-size: larger;color: rgb(33, 104, 136);\">&#10003;Adopt green product design based on 3 principles</p> <ul> <li> Design: <p>Consider the environmental attributes of the product—such as disassembly, recyclability, maintainability, and reusability—which in turn simplify the recycling processes for decommissioned electronic products.</p> </li> <li> Materials used: <p>Employ eco-friendly new materials that are non-hazardous, energy-saving, easily recyclable, highly reliable, and have a long lifespan.</p> </li> <li> Contribution techniques: <p>Develop green recycling processes for electronic products to help avoid the release of harmful substances during the dismantling of e- waste, and to reduce the use of acidic, alkaline, and corrosive reagents and chemicals.</p> </li> </ul>';
                 break;
             case 'seller':
                 contentBox.innerHTML = '<ol> <li>Educate customers <ul> <li>Promote in-store awareness campaigns using signage, brochures to educate customers about the importance of e-waste recycling and proper disposal</li> </ul> </li> <li>Promote refurbished and second-hand product <ul> <li>Create second-hand section to offer high-quality, certified refurbished devices at a lower price point to reduce demand for new products</li> </ul> </li> <li>Advocate for green policies <ul> <li>Encourage manufacturers to adopt sustainable practices and reduce e-waste, by conducting sustainable supplier assessment </li> </ul> </li> </ol>';
