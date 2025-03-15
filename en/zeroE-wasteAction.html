@@ -49,81 +49,92 @@
     </header>
     <!-- End of header -->
     <div class="body">
-        <div style="display: flex; justify-content: space-between;margin-bottom: 10px;height: calc((90% - 100px) - 30px);">
-            <div style="width: 40%;margin:auto;display: inline-block;padding-left: 5%;">
-                <div style="text-align: left;font-size: x-large;margin-top: 10px;color: rgb(21, 96, 130);">
-                    If your E-wastes go recycling treatment, you will generate….
+        <div style="margin: auto;height: calc((90% - 100px) - 30px);align-content: center;">
+            <div>
+                <div style="text-align: center;margin: 0% 2% 2% 2%;">
+                    <span style="width: 100%;">
+                        <div style="line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
+                            <h2><b> If your E-wastes go recycling treatment, you will generate….</b></h2>
+                        </div>
+                    </span>
                 </div>
-                <div style="text-align: left;font-size: x-large;margin-top: 8%;color: rgb(21, 96, 130);">
-                    <b><span id="cO2SavingResult" style="font-size: 60px;"></span><span style="font-size: 30px;">
-                            tonnes of CO2e</span></b>
-                    <p>in CO2 saving from recycled materials</p>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;text-align: center;">
+                    <div style="width: 40%;margin:auto;display: inline-block;padding-left: 5%;">
+                        <div style="text-align: left;font-size: x-large;margin-top: 8%;color: rgb(21, 96, 130);">
+                            <b><span id="cO2SavingResult" style="font-size: 60px;"></span><span
+                                    style="font-size: 30px;">
+                                    tonnes of CO2e</span></b>
+                            <p>in CO2 saving from recycled materials</p>
+                        </div>
+                        <div style="text-align: left;font-size: x-large;margin-top: 8%;color: rgb(21, 96, 130);">
+                            <b><span id="emissionResult" style="font-size: 60px;"></span><span style="font-size: 30px;">
+                                    tonnes of CO2e</span></b>
+                            <p>in CO2 emissions generated from recycling treatment</p>
+                        </div>
+                    </div>
+                    <div style="width: 48%;margin: auto;display: inline-block;">
+                        <div
+                            style="text-align: center; background-color: rgb(134, 206, 234);height: 3em;margin-bottom: 1%;align-content: center;color: rgb(21, 96, 130);font-size: larger;">
+                            <b>Summary Report</b>
+                        </div>
+                        <div class="headers" style="height: auto;border-bottom: 1px solid white;">
+                            <div class="header" style="width: 30%;"><b>E-waste category
+                                </b>
+                            </div>
+                            <div class="header" style="width: 15%;"><b>Quantity</b></div>
+                            <div class="header" style="width: 27.5%;"><b>CO2 saving from recycled materials
+                                </b>
+                            </div>
+                            <div class="header" style="width: 27.5%;"><b>CO2 emissions generated from recycling treatment
+                                </b></div>
+                        </div>
+                        <div class="headers" style="height: 15%;border-bottom: 1px solid white;">
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 30%;">
+                                Large
+                                household<br>electrical appliances
+                            </div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 15%;">
+                                <span id="qtyLargeHousehold"></span></div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;"><span
+                                    id="largeHouseholdcO2Saving"></span></div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;"><span
+                                    id="largeHouseholdEmissions"></span></div>
+                        </div>
+                        <div class="headers" style="height: 15%;border-bottom: 1px solid white;">
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 30%;">
+                                Computer
+                            </div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 15%;">
+                                <span id="qtyComputer"></span></div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;"><span
+                                    id="computerCO2Saving"></span></div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;"><span
+                                    id="computerEmissions"></span></div>
+                        </div>
+                    </div>
                 </div>
-                <div style="text-align: left;font-size: x-large;margin-top: 8%;color: rgb(21, 96, 130);">
-                    <b><span id="emissionResult" style="font-size: 60px;"></span><span style="font-size: 30px;">
-                            tonnes of CO2e</span></b>
-                    <p>in CO2 emissions generated from recycling treatment</p>
-                </div>
+                <script>
+                    let qtyLargeHousehold = (sessionStorage.getItem("qtyLargeHousehold") == undefined || sessionStorage.getItem("qtyLargeHousehold") == null) ? 0 : sessionStorage.getItem("qtyLargeHousehold");
+                    let qtyComputer = (sessionStorage.getItem("qtyComputer") == undefined || sessionStorage.getItem("qtyComputer") == null) ? 0 : sessionStorage.getItem("qtyComputer");
+                    let largeHouseholdcO2Saving = (sessionStorage.getItem("largeHouseholdcO2Saving") == undefined || sessionStorage.getItem("largeHouseholdcO2Saving") == null) ? 0 : sessionStorage.getItem("largeHouseholdcO2Saving");
+                    let computerCO2Saving = (sessionStorage.getItem("computerCO2Saving") == undefined || sessionStorage.getItem("computerCO2Saving") == null) ? 0 : sessionStorage.getItem("computerCO2Saving");
+                    let largeHouseholdEmissions = (sessionStorage.getItem("largeHouseholdEmissions") == undefined || sessionStorage.getItem("largeHouseholdEmissions") == null) ? 0 : sessionStorage.getItem("largeHouseholdEmissions");
+                    let computerEmissions = (sessionStorage.getItem("computerEmissions") == undefined || sessionStorage.getItem("computerEmissions") == null) ? 0 : sessionStorage.getItem("computerEmissions");
+                    let cO2SavingResult = (sessionStorage.getItem("cO2SavingResult") == undefined || sessionStorage.getItem("cO2SavingResult") == null) ? 0 : sessionStorage.getItem("cO2SavingResult");
+                    let emissionResult = (sessionStorage.getItem("emissionResult") == undefined || sessionStorage.getItem("emissionResult") == null) ? 0 : sessionStorage.getItem("emissionResult");
+
+                    document.getElementById("qtyLargeHousehold").innerHTML = qtyLargeHousehold;
+                    document.getElementById("largeHouseholdcO2Saving").innerHTML = "= " + largeHouseholdcO2Saving + " tonnes of CO2e";
+                    document.getElementById("largeHouseholdEmissions").innerHTML = "= " + largeHouseholdEmissions + " tonnes of CO2e";
+
+                    document.getElementById("qtyComputer").innerHTML = qtyComputer;
+                    document.getElementById("computerCO2Saving").innerHTML = "= " + computerCO2Saving + " tonnes of CO2e";
+                    document.getElementById("computerEmissions").innerHTML = "= " + computerEmissions + " tonnes of CO2e";
+
+                    document.getElementById("cO2SavingResult").innerHTML = cO2SavingResult;
+                    document.getElementById("emissionResult").innerHTML = emissionResult;
+                </script>
             </div>
-            <div style="width: 45%;margin: auto;display: inline-block;">
-                <div
-                    style="text-align: center; background-color: rgb(134, 206, 234);height: 3em;margin-bottom: 1%;align-content: center;color: rgb(21, 96, 130);font-size: larger;">
-                    <b>Summary Report</b>
-                </div>
-                <div class="headers" style="height: auto;border-bottom: 1px solid white;">
-                    <div class="header" style="width: 30%;"><b>E-waste category
-                        </b>
-                    </div>
-                    <div class="header" style="width: 20%;"><b>Quantity</b></div>
-                    <div class="header"><b>CO2 saving from recycled materials
-                        </b>
-                    </div>
-                    <div class="header"><b>CO2 emissions generated from recycling treatment
-                        </b></div>
-                </div>
-                <div class="headers" style="height: 15%;border-bottom: 1px solid white;">
-                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 30%;">Large
-                        household<br>electrical appliances
-                    </div>
-                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 20%;"><span
-                            id="qtyLargeHousehold"></span></div>
-                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;"><span
-                            id="largeHouseholdcO2Saving"></span></div>
-                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;"><span
-                            id="largeHouseholdEmissions"></span></div>
-                </div>
-                <div class="headers" style="height: 15%;border-bottom: 1px solid white;">
-                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 30%;">Computer
-                    </div>
-                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 20%;"><span
-                            id="qtyComputer"></span></div>
-                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;"><span
-                            id="computerCO2Saving"></span></div>
-                    <div class="header" style="background-color: rgb(220, 234, 247);color: black;"><span
-                            id="computerEmissions"></span></div>
-                </div>
-            </div>
-            <script>
-                let qtyLargeHousehold = (sessionStorage.getItem("qtyLargeHousehold") == undefined || sessionStorage.getItem("qtyLargeHousehold") == null) ? 0 : sessionStorage.getItem("qtyLargeHousehold");
-                let qtyComputer = (sessionStorage.getItem("qtyComputer") == undefined || sessionStorage.getItem("qtyComputer") == null) ? 0 : sessionStorage.getItem("qtyComputer");
-                let largeHouseholdcO2Saving = (sessionStorage.getItem("largeHouseholdcO2Saving") == undefined || sessionStorage.getItem("largeHouseholdcO2Saving") == null) ? 0 : sessionStorage.getItem("largeHouseholdcO2Saving");
-                let computerCO2Saving = (sessionStorage.getItem("computerCO2Saving") == undefined || sessionStorage.getItem("computerCO2Saving") == null) ? 0 : sessionStorage.getItem("computerCO2Saving");
-                let largeHouseholdEmissions = (sessionStorage.getItem("largeHouseholdEmissions") == undefined || sessionStorage.getItem("largeHouseholdEmissions") == null) ? 0 : sessionStorage.getItem("largeHouseholdEmissions");
-                let computerEmissions = (sessionStorage.getItem("computerEmissions") == undefined || sessionStorage.getItem("computerEmissions") == null) ? 0 : sessionStorage.getItem("computerEmissions");
-                let cO2SavingResult = (sessionStorage.getItem("cO2SavingResult") == undefined || sessionStorage.getItem("cO2SavingResult") == null) ? 0 : sessionStorage.getItem("cO2SavingResult");
-                let emissionResult = (sessionStorage.getItem("emissionResult") == undefined || sessionStorage.getItem("emissionResult") == null) ? 0 : sessionStorage.getItem("emissionResult");
-
-                document.getElementById("qtyLargeHousehold").innerHTML = qtyLargeHousehold;
-                document.getElementById("largeHouseholdcO2Saving").innerHTML = "= " + largeHouseholdcO2Saving + " tonnes of CO2e";
-                document.getElementById("largeHouseholdEmissions").innerHTML = "= " + largeHouseholdEmissions + "xxx tonnes of CO2e";
-
-                document.getElementById("qtyComputer").innerHTML = qtyComputer;
-                document.getElementById("computerCO2Saving").innerHTML = "= " + computerCO2Saving + " tonnes of CO2e";
-                document.getElementById("computerEmissions").innerHTML = "= " + computerEmissions + "xxx tonnes of CO2e";
-
-                document.getElementById("cO2SavingResult").innerHTML = cO2SavingResult;
-                document.getElementById("emissionResult").innerHTML = emissionResult;
-            </script>
         </div>
 
         <style>
@@ -220,13 +231,11 @@
             <span class="text">Scroll down</span>
         </div>
 
-
         <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
             <span style="width: 40%;margin: 0% 2% 10px 2%;">
                 <div
-                    style="border: solid; border-radius: 10px;display: flex; justify-content: center; align-items: center;line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
-                    <b>Action hints for Zero E-waste
-                    </b>
+                    style="line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
+                    <h2><b>Action hints for Zero E-waste</b></h2>
                 </div>
             </span>
         </div>
@@ -289,11 +298,36 @@
                 padding: 40px;
                 font-weight: bold;
             }
+
+            @keyframes example {
+                0% {
+                    transform: translateX(20%);
+                }
+
+                50% {
+                    transform: translateX(40%);
+                }
+
+                100% {
+                    transform: translateX(20%);
+                }
+            }
+
+            .container-fluid .blue-row h3 span {
+                display: inline-block;
+                animation-name: example;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+
+            .container-fluid .blue-row:hover {
+                background-color: rgb(135, 172, 207) !important;
+            }
         </style>
         <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
             <div class="blue-row" style="width: fit-content;border-radius: 20px;">
                 <a href="./survey.html" style="all: unset;cursor: pointer;">
-                    <h3>Next</h3>
+                    <h3 style="font-size: 25px;">Next<span>&#10230;</span></h3>
                 </a>
             </div>
         </div>
@@ -304,12 +338,11 @@
         <div style="display: flex; justify-content: space-between;">
             <span style="position: relative;left: 25%;margin-top: 8px;text-align: center;">
                 <span style="margin-bottom: 2px;"><u>Created by:</u></span><br>
-                <img style="height:42.5px;" src="../resources/hkuLogo.png"><br>
-                M.SC. Environmental Management
+                <img style="height:125px;" src="../resources/hkuLogo.png"><br>
             </span>
             <span style="position: relative;right: 25%;margin-top: 8px;text-align: center;">
                 <span style="margin-bottom: 2px;"><u>Supported by:</u></span><br>
-                <img style="height:42.5px;" src="../resources/P1_ALBA_logo.svg">
+                <img style="height:85px;" src="../resources/P1_ALBA_logo.svg">
             </span>
         </div>
     </footer>

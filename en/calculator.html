@@ -49,15 +49,15 @@
     </header>
     <!-- End of header -->
     <div class="body">
-        <div style="display: flex; justify-content: space-between; padding-top: 2%; margin-bottom: 10px;">
-            <span style="width: 50%;margin: 0% 2% 10px 2%;">
-                <div
-                    style="border: solid; border-radius: 10px;display: flex; justify-content: center; align-items: center;line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
-                    <b>Pick the number of appliances you want to treat!
-                    </b>
+        <div style="margin-bottom: 10px;display: flex;">
+            <span style="width: 100%;margin: 10px 2% 0px 2%;">
+                <div style="line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
+                    <h2><b>Pick the number of appliances you want to treat!</b></h2>
                 </div>
             </span>
-            <span style="width: 50%;margin: auto;">
+        </div>
+        <div style="margin-bottom: 10px;display: flex;padding-left: 2%;font-size: 20.5px;">
+            <span style="width: 50%;">
                 Your selected appliances are collected and transported to a recycling facility in Hong Kong.<br>
                 Click “<b>GO</b>” to discover what happens to your appliances during the treatment process.
             </span>
@@ -97,9 +97,29 @@
             }
         </style>
         <div
-            style="height: fit-content;display: flex; justify-content: space-between; margin: 10px 2% 15px 2%; margin-bottom: 10px;">
-            <div style="width: 48%;text-align: center;display: inline-block;">
-                <div><img style="max-width: 100%;" src="../resources/P7_受管制電器廢物 – 大型家用電器.svg"></div>
+            style="height: fit-content;display: flex; justify-content: space-around; margin: 10px 2% 15px 2%; margin-bottom: 10px;">
+            <div style="width: 40%;text-align: center;display: inline-block;">
+                <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+                    <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
+                        <div class="headers">
+                            <div class="header" style="width: 100%;"
+                                onclick="cardBoxChangeContent(this, 'weee-park', 'contentBox2')"><b>Regulated WEEE -
+                                    Large household electrical appliances
+                                </b>
+                            </div>
+                        </div>
+                        <div class="content" style="height: fit-content;">
+                            <div style="display: flex;justify-content: space-around;">
+                                <div style="display: inline-block;"><img src="../resources/washing machine.svg" style="height: 150px;" alt="Washing Machine"></div>
+                                <div style="display: inline-block;"><img src="../resources/refrigerator.svg" style="height: 150px;" alt="Refrigerator"></div>
+                            </div>
+                            <div style="display: flex;justify-content: space-around;">
+                                <div style="display: inline-block;"><img src="../resources/Air conditioner.svg" style="height: 150px;" alt="Washing Machine"></div>
+                                <div style="display: inline-block;"><img src="../resources/television.svg" style="height: 150px;" alt="Refrigerator"></div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
                 <div>
                     <div style="color:rgb(21, 96, 130);font-size: x-large;"><b>Quantity:</b></div>
                     <div>
@@ -114,8 +134,26 @@
                     </div>
                 </div>
             </div>
-            <div style="width: 48%;text-align: center;display:inline-block">
-                <div><img style="max-width: 100%;" src="../resources/P7_受管制電器廢物 – 電腦.svg"></div>
+            <div style="width: 40%;text-align: center;display:inline-block">
+                <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+                    <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
+                        <div class="headers">
+                            <div class="header" style="width: 100%;"
+                                onclick="cardBoxChangeContent(this, 'weee-park', 'contentBox2')"><b>Regulated WEEE - Computer</b>
+                            </div>
+                        </div>
+                        <div class="content" style="height: fit-content;">
+                            <div style="display: flex;justify-content: space-around;">
+                                <div style="display: inline-block;"><img src="../resources/monitor.svg" style="height: 150px;" alt="Washing Machine"></div>
+                                <div style="display: inline-block;"><img src="../resources/Computer.svg" style="height: 150px;" alt="Refrigerator"></div>
+                            </div>
+                            <div style="display: flex;justify-content: space-around;">
+                                <div style="display: inline-block;"><img src="../resources/printer.svg" style="height: 150px;" alt="Washing Machine"></div>
+                                <div style="display: inline-block;"><img src="../resources/scanner.svg" style="height: 150px;" alt="Refrigerator"></div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
                 <div>
                     <div style="color:rgb(21, 96, 130);font-size: x-large;"><b>Quantity:</b></div>
                     <div>
@@ -130,18 +168,52 @@
             </div>
         </div>
         <style>
-            .calculateButton:hover {
+            .container-fluid .blue-row {
+                background-color: rgb(33, 104, 136);
+                width: 100%;
+                margin: auto;
+            }
+
+            .container-fluid .blue-row h3 {
+                color: white;
+                font-size: 39px;
+                text-align: center;
+                vertical-align: center;
+                padding: 40px;
+                font-weight: bold;
+            }
+
+            @keyframes example {
+                0% {
+                    transform: translateX(20%);
+                }
+
+                50% {
+                    transform: translateX(40%);
+                }
+
+                100% {
+                    transform: translateX(20%);
+                }
+            }
+
+            .container-fluid .blue-row h3 span {
+                display: inline-block;
+                animation-name: example;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+
+            .container-fluid .blue-row:hover {
                 background-color: rgb(135, 172, 207) !important;
             }
         </style>
-        <div
-            style="display: flex; justify-content: space-around; margin: 10px 2% 15px 2%; margin-bottom: 10px;align-items: center;">
-            <span>
-                <button class="calculateButton" id="calculateButton"
-                    style="width: 200px;height: 43px;border-radius: 22px; background-color: rgb(78, 149, 217);color: white;font-size: x-large;"
-                    onclick="calculation()">GO</button>
-            </span>
-
+        <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+            <div class="blue-row" style="width: fit-content;border-radius: 20px;">
+                <a href="./carbonSavingProcedure.html" style="all: unset;cursor: pointer;" onclick="calculation()">
+                    <h3 style="font-size: 25px;">GO<span>&#10230;</span></h3>
+                </a>
+            </div>
         </div>
     </div>
     <!-- End of body class -->
@@ -150,12 +222,11 @@
         <div style="display: flex; justify-content: space-between;">
             <span style="position: relative;left: 25%;margin-top: 8px;text-align: center;">
                 <span style="margin-bottom: 2px;"><u>Created by:</u></span><br>
-                <img style="height:42.5px;" src="../resources/hkuLogo.png"><br>
-                M.SC. Environmental Management
+                <img style="height:125px;" src="../resources/hkuLogo.png"><br>
             </span>
             <span style="position: relative;right: 25%;margin-top: 8px;text-align: center;">
                 <span style="margin-bottom: 2px;"><u>Supported by:</u></span><br>
-                <img style="height:42.5px;" src="../resources/P1_ALBA_logo.svg">
+                <img style="height:85px;" src="../resources/P1_ALBA_logo.svg">
             </span>
         </div>
     </footer>

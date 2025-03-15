@@ -48,22 +48,22 @@
     </header>
     <!-- End of header -->
     <div class="body">
-        <div style="display: flex; justify-content: space-between; margin-top: 10px; margin-bottom: 10px;">
-            <span style="width: 40%;margin: 10px 2% 2% 2%;"><img style="width: 100%; height:100%"
-                    src="./resources/P1_Banner.svg"></span>
-            <span class="table-container" style="justify-content: center;">
+        <div style="width: 100%;text-align: center;margin-top: 10px;"><img style="height:100%"
+            src="./resources/P1_Banner.svg"></div>
+        <div style="display: flex; justify-content: center; margin-top: 10px; margin-bottom: 10px;">
+            <span class="table-container" style="justify-content: center;width: 80%;">
                 <div class="headers" style="height: fit-content;">
-                    <div class="header active" onclick="cardBoxChangeContent(this, 'about','contentBox')"><b>About
+                    <div class="header clickable active" onclick="cardBoxChangeContent(this, 'about','contentBox')"><b>About
                             Us</b>
                     </div>
-                    <div class="header" onclick="cardBoxChangeContent(this, 'purpose', 'contentBox')"><b>Purpose and
+                    <div class="header clickable" onclick="cardBoxChangeContent(this, 'purpose', 'contentBox')"><b>Purpose and
                             Functionality</b></div>
-                    <div class="header" onclick="cardBoxChangeContent(this, 'users', 'contentBox')"><b>Target Users</b>
+                    <div class="header clickable" onclick="cardBoxChangeContent(this, 'users', 'contentBox')"><b>Target Users</b>
                     </div>
-                    <div class="header" onclick="cardBoxChangeContent(this, 'relevance', 'contentBox')"><b>Local
+                    <div class="header clickable" onclick="cardBoxChangeContent(this, 'relevance', 'contentBox')"><b>Local
                             Relevance</b></div>
                 </div>
-                <div class="content" style="height: 80%;" id="contentBox">
+                <div class="content" style="height: 315px;" id="contentBox">
                     Welcome to the E-waste Carbon Calculator, a specialized tool designed to deliver precise and
                     localized assessments of greenhouse gas emissions linked to waste electrical and electronic
                     equipment (WEEE or e-waste) in Hong Kong. This Calculator aim to empower producers, retailers, and
@@ -76,14 +76,13 @@
         <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
             <span style="width: 40%;margin: 0% 2% 10px 2%;">
                 <div
-                    style="border: solid; border-radius: 10px;display: flex; justify-content: center; align-items: center;line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
-                    <b>Understanding E-waste in Hong Kong</b>
+                    style="line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
+                    <h2><b>Understanding E-waste in Hong Kong</b></h2>
                 </div>
             </span>
-            <span style="width: 60%;margin: 0% 2% 10px 2%;">
-                <img style="width: 100%; height:100%"
-                    src="./resources/P1_Hong Kong E-waste data.svg">
-            </span>
+        </div>
+        <div style="width: 100%;margin: 0% 2% 10px 2%;">
+            <h3 style="color: rgb(21, 96, 130);font-size: 25px;"><p>Hong Kong generates <span style="background-color: yellow;">over 70,000 tonnes</span> of e-waste annually,  but <span style="background-color: yellow;">only about 10% </span>of this waste is recycled properly</p></h3>
         </div>
 
         <ul id="list">
@@ -97,11 +96,9 @@
 
         <ul id="list">
             <li><span class="list-title">Where Does All This E-waste go?</span>
-                <ul>
+                <ul style="margin-left: 3%;">
                     <li><span class="sublist-title">Export</span>
                         <div style="display: flex;align-items: stretch;">
-                            <img src="./resources/P2_Export.gif"
-                                style="width: 5%;object-fit: contain;" />
                             <div class="list-content">For years, much of Hong Kong’s e-waste was exported to developing
                                 countries for recycling or reuse.
                                 However, stricter international regulations like the Basel Convention have limited the
@@ -125,12 +122,12 @@
         <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
             <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
                 <div class="headers">
-                    <div class="header active" style="width: 50%;"
+                    <div class="header clickable active" style="width: 50%;"
                         onclick="cardBoxChangeContent(this, 'producer-responsibility','contentBox2')">
                         <b>Producer Responsibility Scheme on Waste Electrical <br>and Electronic Equipment
                             (WPRS)</b>
                     </div>
-                    <div class="header" style="width: 50%;"
+                    <div class="header clickable" style="width: 50%;"
                         onclick="cardBoxChangeContent(this, 'weee-park', 'contentBox2')"><b>WEEE · PARK</b>
                     </div>
                 </div>
@@ -152,46 +149,46 @@
                                     <td id="washing-machine"
                                         onclick="imageBoxChangeContent('washing-machine', 'image-box')">
                                         <img src="./resources/washing machine.svg"
-                                            style="height: 150px;" alt="Washing Machine" class="clickable-image">
+                                            style="height: 150px;" alt="Washing Machine" class="clickable">
                                     </td>
                                     <td id="refrigerator" onclick="imageBoxChangeContent('refrigerator', 'image-box')">
                                         <img src="./resources/refrigerator.svg"
-                                            style="height: 150px;" alt="Refrigerator" class="clickable-image">
+                                            style="height: 150px;" alt="Refrigerator" class="clickable">
                                     </td>
                                     <td id="air-conditioner"
                                         onclick="imageBoxChangeContent('air-conditioner', 'image-box')">
                                         <img src="./resources/Air conditioner.svg"
-                                            style="height: 150px;" alt="Air Conditioner" class="clickable-image">
+                                            style="height: 150px;" alt="Air Conditioner" class="clickable">
                                     </td>
                                     <td id="television" onclick="imageBoxChangeContent('television', 'image-box')">
                                         <img src="./resources/television.svg"
-                                            style="height: 150px;" alt="Television" class="clickable-image">
+                                            style="height: 150px;" alt="Television" class="clickable">
                                     </td>
                                     <td id="dehumidifier" onclick="imageBoxChangeContent('dehumidifier', 'image-box')">
                                         <img src="./resources/Dehumidifier.svg"
-                                            style="height: 150px;" alt="Dehumidifier" class="clickable-image"> 
+                                            style="height: 150px;" alt="Dehumidifier" class="clickable"> 
                                     </td>
                                 </tr>
                                 <tr>
                                     <td id="monitor" onclick="imageBoxChangeContent('monitor', 'image-box')">
                                         <img src="./resources/monitor.svg"
-                                            style="height: 150px;" alt="Monitor" class="clickable-image">
+                                            style="height: 150px;" alt="Monitor" class="clickable">
                                     </td>
                                     <td id="computer" onclick="imageBoxChangeContent('computer', 'image-box')">
                                         <img src="./resources/Computer.svg"
-                                            style="height: 150px;" alt="Computer" class="clickable-image">
+                                            style="height: 150px;" alt="Computer" class="clickable">
                                     </td>
                                     <td id="printer" onclick="imageBoxChangeContent('printer', 'image-box')">
                                         <img src="./resources/Printer.svg"
-                                            style="height: 150px;" alt="Printer" class="clickable-image">
+                                            style="height: 150px;" alt="Printer" class="clickable">
                                     </td>
                                     <td id="scanner" onclick="imageBoxChangeContent('scanner', 'image-box')">
                                         <img src="./resources/Scanner.svg"
-                                            style="height: 150px;" alt="Scanner" class="clickable-image">
+                                            style="height: 150px;" alt="Scanner" class="clickable">
                                     </td>
                                     <td id="tumble-dryer" onclick="imageBoxChangeContent('tumble-dryer', 'image-box')">
                                         <img src="./resources/Tumble dryer.svg"
-                                            style="height: 150px;" alt="Tumble Dryer" class="clickable-image">
+                                            style="height: 150px;" alt="Tumble Dryer" class="clickable">
                                     </td>
                                 </tr>
                             </table>
@@ -215,16 +212,16 @@
         <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
             <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
                 <div class="headers">
-                    <div class="header active" style="width: 50%;"
+                    <div class="header clickable active" style="width: 50%;"
                         onclick="cardBoxChangeContent(this, 'higher-GHG','contentBox3')">
                         <b>Methods of Disposal with Higher GHG Emissions</b>
                     </div>
-                    <div class="header" style="width: 50%;"
+                    <div class="header clickable" style="width: 50%;"
                         onclick="cardBoxChangeContent(this, 'lower-GHG', 'contentBox3')"><b>Methods of Disposal with
                             Lower GHG Emissions</b>
                     </div>
                 </div>
-                <div class="content" style="height: 200px;" id="contentBox3">
+                <div class="content" style="height: 135px;" id="contentBox3">
                     <ol>
                         <li>In landfills, e-waste undergoes anaerobic decomposition, which produces methane (CH4). </li>
                         <li>Burning e-waste or incomplete combustion can emit both methane (CH4) and carbon dioxide
@@ -246,15 +243,15 @@
         <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
             <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
                 <div class="headers">
-                    <div class="header active" style="width: 33.3%;"
+                    <div class="header clickable active" style="width: 33.3%;"
                         onclick="cardBoxChangeContent(this, 'ree-supplier','contentBox4')">
                         <b>REE Supplier</b>
                     </div>
-                    <div class="header" style="width: 33.3%;"
+                    <div class="header clickable" style="width: 33.3%;"
                         onclick="cardBoxChangeContent(this, 'ree-seller','contentBox4')">
                         <b>REE Seller</b>
                     </div>
-                    <div class="header" style="width: 33.3%;"
+                    <div class="header clickable" style="width: 33.3%;"
                         onclick="cardBoxChangeContent(this, 'ree-consumer','contentBox4')">
                         <b>REE Consumer </b>
                     </div>
@@ -301,10 +298,35 @@
                 font-weight: bold;
             }
 
+            @keyframes example {
+                0% {
+                    transform: translateX(20%);
+                }
+
+                50% {
+                    transform: translateX(40%);
+                }
+
+                100% {
+                    transform: translateX(20%);
+                }
+            }
+
+            .container-fluid .blue-row h3 span {
+                display: inline-block;
+                animation-name: example;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+
+            .container-fluid .blue-row:hover {
+                background-color: rgb(135, 172, 207) !important;
+            }
+
         </style>
         <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
             <div class="blue-row" style="width: fit-content;border-radius: 20px;">
-                <a href="./en/calculator.html" style="all: unset;cursor: pointer;"><h3>Discover Your E-waste Carbon Data</h3></a>
+                <a href="./en/calculator.html" style="all: unset;cursor: pointer;"><h3 style="font-size: 25px;">Discover Your E-waste Carbon Data<span>&#10230;</span></h3></a>
             </div>
         </div>
     </div>
@@ -314,12 +336,11 @@
         <div style="display: flex; justify-content: space-between;">
             <span style="position: relative;left: 25%;margin-top: 8px;text-align: center;">
                 <span style="margin-bottom: 2px;"><u>Created by:</u></span><br>
-                <img style="height:42.5px;" src="./resources/hkuLogo.png"><br>
-                M.SC. Environmental Management
+                <img style="height:125px;" src="./resources/hkuLogo.png"><br>
             </span>
             <span style="position: relative;right: 25%;margin-top: 8px;text-align: center;">
                 <span style="margin-bottom: 2px;"><u>Supported by:</u></span><br>
-                <img style="height:42.5px;" src="./resources/P1_ALBA_logo.svg">
+                <img style="height:85px;" src="./resources/P1_ALBA_logo.svg">
             </span>
         </div>
     </footer>
@@ -344,7 +365,7 @@
                 contentBox.innerHTML = 'This Calculator is built upon an emission factors database maintained by ALBA Integrated Waste Solutions (Hong Kong) Limited (ALBA IWS), which has been verified by third parties with reference to the GHG Protocol. ALBA IWS operates the WEEE.PARK, under the supervision of the Environmental Protection Department and is responsible for the collection, treatment and recycling of WEEE in Hong Kong. Therefore, the carbon saving calculation methodology of this Calculator aligns with the Greenhouse Gas Protocol.';
                 break;
             case 'producer-responsibility':
-                contentBox.innerHTML = "<div>The WPRS regulates the disposal of key appliances, including air conditioners, refrigerators, washing machines, televisions, computers, printers, scanners, and monitors. Effective from 1 July 2024, the scheme has been expanded to cover larger refrigerators, washing machines with higher capacities, tumble dryers, and dehumidifiers, ensuring better oversight of e-waste management and expanding WEEE · PARK’s capacity to collect and recycle a broader range of WEEE.</div> <div style=\"display: flex; justify-content: space-between; margin: 10px 0px 10px 2%;\"> <img id=\"image-box\" src=\"./resources/P3_Washing Machine details (eng).svg\" style=\"width: 40%;\"> <div style=\"display: flex; justify-content: center;width: 60%;    margin: 0% 2% 10px 2%;\"> <table style=\"max-width: 100%; width: 100%;margin: 0px 10px 0px 2%;\"> <tr> <td id=\"washing-machine\" onclick=\"imageBoxChangeContent('washing-machine', 'image-box')\"> <img src=\"./resources/washing machine.svg\" style=\"height: 150px;\" alt=\"Washing Machine\"> </td> <td id=\"refrigerator\" onclick=\"imageBoxChangeContent('refrigerator', 'image-box')\"> <img src=\"./resources/refrigerator.svg\" style=\"height: 150px;\" alt=\"Refrigerator\"> </td> <td id=\"air-conditioner\" onclick=\"imageBoxChangeContent('air-conditioner', 'image-box')\"> <img src=\"./resources/Air conditioner.svg\" style=\"height: 150px;\" alt=\"Air Conditioner\"> </td> <td id=\"television\" onclick=\"imageBoxChangeContent('television', 'image-box')\"> <img src=\"./resources/television.svg\" style=\"height: 150px;\" alt=\"Television\"> </td> <td id=\"dehumidifier\" onclick=\"imageBoxChangeContent('dehumidifier', 'image-box')\"> <img src=\"./resources/Dehumidifier.svg\" style=\"height: 150px;\" alt=\"Dehumidifier\"> </td> </tr> <tr> <td id=\"monitor\" onclick=\"imageBoxChangeContent('monitor', 'image-box')\"> <img src=\"./resources/monitor.svg\" style=\"height: 150px;\" alt=\"Monitor\"> </td> <td id=\"computer\" onclick=\"imageBoxChangeContent('computer', 'image-box')\"> <img src=\"./resources/Computer.svg\" style=\"height: 150px;\" alt=\"Computer\"> </td> <td id=\"printer\" onclick=\"imageBoxChangeContent('printer', 'image-box')\"> <img src=\"./resources/Printer.svg\" style=\"height: 150px;\" alt=\"Printer\"> </td> <td id=\"scanner\" onclick=\"imageBoxChangeContent('scanner', 'image-box')\"> <img src=\"./resources/Scanner.svg\" style=\"height: 150px;\" alt=\"Scanner\"> </td> <td id=\"tumble-dryer\" onclick=\"imageBoxChangeContent('tumble-dryer', 'image-box')\"> <img src=\"./resources/Tumble dryer.svg\" style=\"height: 150px;\" alt=\"Tumble Dryer\"> </td> </tr> </table> </div> </div>"
+                contentBox.innerHTML = "<div>The WPRS regulates the disposal of key appliances, including air conditioners, refrigerators, washing machines, televisions, computers, printers, scanners, and monitors. Effective from 1 July 2024, the scheme has been expanded to cover larger refrigerators, washing machines with higher capacities, tumble dryers, and dehumidifiers, ensuring better oversight of e-waste management and expanding WEEE · PARK’s capacity to collect and recycle a broader range of WEEE.</div> <div style=\"display: flex; justify-content: space-between; margin: 10px 0px 10px 2%;\"> <img id=\"image-box\" src=\"./resources/P3_Washing Machine details (eng).svg\" style=\"width: 40%;\"> <div style=\"display: flex; justify-content: center;width: 60%;    margin: 0% 2% 10px 2%;\"> <table style=\"max-width: 100%; width: 100%;margin: 0px 10px 0px 2%;\"> <tr> <td id=\"washing-machine\" onclick=\"imageBoxChangeContent('washing-machine', 'image-box')\"> <img src=\"./resources/washing machine.svg\" style=\"height: 150px;\" alt=\"Washing Machine\" class=\"clickable\"> </td> <td id=\"refrigerator\" onclick=\"imageBoxChangeContent('refrigerator', 'image-box')\"> <img src=\"./resources/refrigerator.svg\" style=\"height: 150px;\" alt=\"Refrigerator\" class=\"clickable\"> </td> <td id=\"air-conditioner\" onclick=\"imageBoxChangeContent('air-conditioner', 'image-box')\"> <img src=\"./resources/Air conditioner.svg\" style=\"height: 150px;\" alt=\"Air Conditioner\" class=\"clickable\"> </td> <td id=\"television\" onclick=\"imageBoxChangeContent('television', 'image-box')\"> <img src=\"./resources/television.svg\" style=\"height: 150px;\" alt=\"Television\" class=\"clickable\"> </td> <td id=\"dehumidifier\" onclick=\"imageBoxChangeContent('dehumidifier', 'image-box')\"> <img src=\"./resources/Dehumidifier.svg\" style=\"height: 150px;\" alt=\"Dehumidifier\" class=\"clickable\"> </td> </tr> <tr> <td id=\"monitor\" onclick=\"imageBoxChangeContent('monitor', 'image-box')\"> <img src=\"./resources/monitor.svg\" style=\"height: 150px;\" alt=\"Monitor\" class=\"clickable\"> </td> <td id=\"computer\" onclick=\"imageBoxChangeContent('computer', 'image-box')\"> <img src=\"./resources/Computer.svg\" style=\"height: 150px;\" alt=\"Computer\" class=\"clickable\"> </td> <td id=\"printer\" onclick=\"imageBoxChangeContent('printer', 'image-box')\"> <img src=\"./resources/Printer.svg\" style=\"height: 150px;\" alt=\"Printer\" class=\"clickable\"> </td> <td id=\"scanner\" onclick=\"imageBoxChangeContent('scanner', 'image-box')\"> <img src=\"./resources/Scanner.svg\" style=\"height: 150px;\" alt=\"Scanner\" class=\"clickable\"> </td> <td id=\"tumble-dryer\" onclick=\"imageBoxChangeContent('tumble-dryer', 'image-box')\"> <img src=\"./resources/Tumble dryer.svg\" style=\"height: 150px;\" alt=\"Tumble Dryer\" class=\"clickable\"> </td> </tr> </table> </div> </div>"
                 break;
             case 'weee-park':
                 contentBox.innerHTML = "<div>The WEEE · PARK is located in EcoPark, Tuen Mun. As one of the leading facilities of its kind in the world. WEEE · PARK adopts advanced technologies to turn regulated WEEE into valuable secondary raw materials through a series of detoxification, dismantling, and recycling processes.</div> <div style=\"justify-items: center; display: flex; justify-content: center; height: 48%; margin: 5%;\"><img src=\"./resources/P4_WEEE Park.svg\"></div>"

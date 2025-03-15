@@ -91,43 +91,43 @@
                     <div style="max-width: 95%;margin: 0px 2% 0px 2%;display: flex;justify-content: center;">
                         <div id="washing-machine" onclick="cardBoxChangeContent('washing-machine', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/washing machine.svg" style="width: 100%;" alt="Washing Machine" class="clickable-image">
+                            <img src="../resources/washing machine.svg" style="width: 100%;" alt="Washing Machine" class="clickable">
                         </div>
                         <div id="refrigerator" onclick="cardBoxChangeContent('refrigerator', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/refrigerator.svg" style="width: 100%;" alt="Refrigerator" class="clickable-image">
+                            <img src="../resources/refrigerator.svg" style="width: 100%;" alt="Refrigerator" class="clickable">
                         </div>
                         <div id="air-conditioner" onclick="cardBoxChangeContent('air-conditioner', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/Air conditioner.svg" style="width: 100%;" alt="Air Conditioner" class="clickable-image">
+                            <img src="../resources/Air conditioner.svg" style="width: 100%;" alt="Air Conditioner" class="clickable">
                         </div>
                         <div id="television" onclick="cardBoxChangeContent('television', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/television.svg" style="width: 100%;" alt="Television" class="clickable-image">
+                            <img src="../resources/television.svg" style="width: 100%;" alt="Television" class="clickable">
                         </div>
                         <div id="monitor" onclick="cardBoxChangeContent('monitor', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/monitor.svg" style="width: 100%;" alt="Monitor" class="clickable-image">
+                            <img src="../resources/monitor.svg" style="width: 100%;" alt="Monitor" class="clickable">
                         </div>
                         <div id="computer" onclick="cardBoxChangeContent('computer', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/Computer.svg" style="width: 100%;" alt="Computer" class="clickable-image">
+                            <img src="../resources/Computer.svg" style="width: 100%;" alt="Computer" class="clickable">
                         </div>
                         <div id="printer" onclick="cardBoxChangeContent('printer', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/Printer.svg" style="width: 100%;" alt="Printer" class="clickable-image">
+                            <img src="../resources/Printer.svg" style="width: 100%;" alt="Printer" class="clickable">
                         </div>
                         <div id="scanner" onclick="cardBoxChangeContent('scanner', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/Scanner.svg" style="width: 100%;" alt="Scanner" class="clickable-image">
+                            <img src="../resources/Scanner.svg" style="width: 100%;" alt="Scanner" class="clickable">
                         </div>
                         <div id="tumble-dryer" onclick="cardBoxChangeContent('tumble-dryer', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/Tumble dryer.svg" style="width: 100%;" alt="Tumble Dryer" class="clickable-image">
+                            <img src="../resources/Tumble dryer.svg" style="width: 100%;" alt="Tumble Dryer" class="clickable">
                         </div>
                         <div id="dehumidifier" onclick="cardBoxChangeContent('dehumidifier', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/Dehumidifier.svg" style="width: 100%;" alt="Dehumidifier" class="clickable-image">
+                            <img src="../resources/Dehumidifier.svg" style="width: 100%;" alt="Dehumidifier" class="clickable">
                         </div>
                     </div>
                 </div>
@@ -136,10 +136,10 @@
         <ul id="list" style="margin-top: 10px;">
             <li>
                 <span style="font-size: 25px;font-weight: bold;color: rgb(33, 104, 136);">Dismantling, Detoxification &
-                    Sorting<br>
-                    &nbsp;&nbsp;<i>- Transform waste into valuable material</i>
+                    Sorting
                 </span>
                 <div class="list-content" style="font-size: 1rem;">
+                    <p style="font-size: 25px;font-weight: bold;color: rgb(33, 104, 136);text-align: center;">Transform waste into valuable material</p>
                     <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
                         <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;" id="contentBox">
                             <div class="headers">
@@ -239,7 +239,7 @@
             <span style="width: 80%;">
                 <div style="border: solid; border-radius: 10px;padding: 15px;">
                     <div style="font-size: 26px;color: rgb(33, 104, 136);"><b>Did you know? </b></div>
-                    <p style="font-size: medium;">Refrigerants used in temperature control devices such as refrigerators
+                    <p style="font-size: 20.5px;">Refrigerants used in temperature control devices such as refrigerators
                         and air conditioners are
                         themselves potent greenhouse gases. In 2019, discarded fridges and air conditioning units
                         released CO2 equivalents that accounted for approximately 0.3% of total global energy-related
@@ -262,11 +262,37 @@
                 padding: 40px;
                 font-weight: bold;
             }
+
+            @keyframes example {
+                0% {
+                    transform: translateX(20%);
+                }
+
+                50% {
+                    transform: translateX(40%);
+                }
+
+                100% {
+                    transform: translateX(20%);
+                }
+            }
+
+            .container-fluid .blue-row h3 span {
+                display: inline-block;
+                animation-name: example;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+
+            .container-fluid .blue-row:hover {
+                background-color: rgb(135, 172, 207) !important;
+            }
+
         </style>
         <div class="container-fluid" style="margin: 10px 0px 0px 0px;justify-items: center;">
             <div class="blue-row" style="width: fit-content;border-radius: 20px;">
                 <a href="./impact.html" style="all: unset;cursor: pointer;">
-                    <h3>Know Your E-waste Impacts</h3>
+                    <h3 style="font-size: 25px;">Know Your E-waste Impacts<span>&#10230;</span></h3>
                 </a>
             </div>
         </div>
@@ -277,12 +303,11 @@
         <div style="display: flex; justify-content: space-between;">
             <span style="position: relative;left: 25%;margin-top: 8px;text-align: center;">
                 <span style="margin-bottom: 2px;"><u>Created by:</u></span><br>
-                <img style="height:42.5px;" src="../resources/hkuLogo.png"><br>
-                M.SC. Environmental Management
+                <img style="height:125px;" src="../resources/hkuLogo.png"><br>
             </span>
             <span style="position: relative;right: 25%;margin-top: 8px;text-align: center;">
                 <span style="margin-bottom: 2px;"><u>Supported by:</u></span><br>
-                <img style="height:42.5px;" src="../resources/P1_ALBA_logo.svg">
+                <img style="height:85px;" src="../resources/P1_ALBA_logo.svg">
             </span>
         </div>
     </footer>

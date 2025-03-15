@@ -134,7 +134,7 @@ footer {
   width: 100%;
   background-color: rgb(21, 96, 130);
   color: white;
-  height: 100px;
+  height: 19%;
 }
 /* End of footer */
 
@@ -171,6 +171,7 @@ footer {
   align-items: center;     /* Center vertically */
   justify-content: center; /* Center horizontally */
   background-color: rgb(21, 96, 130);
+  font-size: 20.5px;
 }
 
 .header.active
@@ -234,7 +235,7 @@ footer {
   color: rgb(33, 104, 136);
 }
 
-.clickable-image:hover{
+.clickable:hover{
   cursor: pointer;
 }
 
