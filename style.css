@@ -128,9 +128,6 @@ header {
 
 /* Footer */
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
   background-color: rgb(21, 96, 130);
   color: white;
@@ -140,8 +137,8 @@ footer {
 
 /* Body class */
 .body {
-  margin-bottom: 100px;
   padding: 0% 4% 0% 4%;
+  min-height: calc(100% - 200px);
 }
 /* End of Body class*/
 
