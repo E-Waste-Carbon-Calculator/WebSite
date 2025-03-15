@@ -187,7 +187,7 @@ footer {
   margin-top: -1px; /* To overlap the bottom border of the header */
   width: 100%;
   color: #111;
-  font-size: larger;
+  font-size: 20.5px;
 }
 .headers {
   display: flex;
@@ -223,7 +223,7 @@ footer {
   border-radius: 0 0 5px 5px;
   width: 100%;
   color: #111;
-  font-size: smaller;
+  font-size: 20.5px;
 }
 
 .sublist-title {
