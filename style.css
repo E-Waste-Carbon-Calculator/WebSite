@@ -140,7 +140,7 @@ footer {
 
 /* Body class */
 .body {
-  padding: 0% 4% 0% 4%;
+  padding: 0% 3cm 0% 3cm;
   min-height: calc(100% - 200px);
 }
 /* End of Body class*/
@@ -232,5 +232,9 @@ footer {
   margin-bottom: 10px;
   font-weight: bold;
   color: rgb(33, 104, 136);
+}
+
+.clickable-image:hover{
+  cursor: pointer;
 }
 
