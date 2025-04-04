@@ -1,0 +1,104 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <span class="header-title">E-WASTE Carbon CALCULATOR</span>
+        <span class="header-stepper-container">
+            <div class="stepper-wrapper">
+                <div class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="../index.html"><u>Background</u></a></div>
+                </div>
+                <div class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./calculator.html"><u>Calculator</u></a></div>
+                </div>
+                <div class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./carbonSavingProcedure.html"><u>Carbon Saving Procedure</u></a>
+                    </div>
+                </div>
+                <div class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./impact.html"><u>Impact</u></a></div>
+                </div>
+                <div class="stepper-item active">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./zeroE-wasteAction.html"><u>#Zero E-waste Action</u></a></div>
+                </div>
+            </div>
+        </span>
+        <span class="header-language">
+            <a href="./zeroE-wasteAction.html" class="active">EN</a> / <a href="../cn/zeroE-wasteAction.html">CN</a>
+        </span>
+    </header>
+    <!-- End of header -->
+    <div class="body">
+        <div style="margin-bottom: 10px;display: flex;">
+            <span style="width: 100%;margin: 10px 2% 0px 2%;">
+                <div style="line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
+                    <h2><b>We Value Your Feedback!</b></h2>
+                </div>
+            </span>
+        </div>
+        <div style="margin-bottom: 10px;display: flex;padding-left: 2%;font-size: 20.5px;">
+            <span style="width: 100%;">
+                We appreciate your efforts in reducing your carbon footprint by participating in this comprehensive assessment of your carbon savings through WEEE recycling. We invite you to take part in this brief questionnaire to help us enhance our services. Your feedback is invaluable! Rest assured, your responses will remain confidential and anonymous.
+            </span>
+        </div>
+        <div style="margin-bottom: 10px;display: flex;padding-left: 2%;font-size: 20.5px;">
+            <span style="width: 100%;">
+                Questionnaire: <a href="">https://forms.office.com/Pages/ResponsePage.aspx?id=dY4N6LlSOUijWIeruTs1Z7twoUl9JqpBliiFNlCe63hUODM5V09YQkJSODJIWktNRDVUSUI2M00xWS4u</a>
+            </span>
+        </div>
+    </div>
+    <!-- End of body class -->
+    <!-- Footer -->
+    <footer>
+        <div style="display: flex; justify-content: space-between;">
+            <span style="position: relative;left: 25%;margin-top: 8px;text-align: center;">
+                <span style="margin-bottom: 2px;"><u>Created by:</u></span><br>
+                <img style="height:125px;" src="../resources/hkuLogo.png"><br>
+            </span>
+            <span style="position: relative;right: 25%;margin-top: 8px;text-align: center;">
+                <span style="margin-bottom: 2px;"><u>Supported by:</u></span><br>
+                <img style="height:85px;" src="../resources/P1_ALBA_logo.svg">
+            </span>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+</body>
+<script>
+    function cardBoxChangeContent(item, section, id) {
+        item.parentElement.querySelectorAll(".active").forEach(e => e.classList.remove("active"))
+        item.classList.add("active")
+        const contentBox = document.getElementById(id);
+        switch (section) {
+            case 'supplier':
+                contentBox.innerHTML = '<p style=\"font-weight: bold;font-size: larger;color: rgb(33, 104, 136);\">Adopt green product design based on 3 principles</p> <ul> <li> Design: <p>Consider the environmental attributes of the product, such as disassembly, recyclability, maintainability, and reusability. These factors can simplify the recycling processes for decommissioned electronic products.</p> </li> <li> Materials used: <p>Utilize eco-friendly materials that are non-hazardous, energy-efficient, easily recyclable, highly reliable, and have a long lifespan.</p> </li> <li> Contribution techniques: <p>Develop sustainable recycling processes for electronic products to prevent the release of harmful substances during e-waste dismantling. Aim to minimize the use of acidic, alkaline, and corrosive reagents and chemicals.</p> </li> </ul>';
+                break;
+            case 'seller':
+                contentBox.innerHTML = '<ul> <li>Sustainability actions for promoting sustainable electronics<ul> <li>Launch in-store campaigns and provide informative signage and brochures to raise customer awareness about responsible e-waste recycling and proper disposal practices.</li> </ul> </li> <li>Promote refurbished and second-hand product <ul> <li>Establish a dedicated section for high-quality, certified refurbished electronics offered at attractive prices to effectively reduce the demand for new products.</li> </ul> </li> <li>Advocate for green policies <ul> <li> Engage with suppliers proactively, encouraging the adoption of sustainable practices and reduction of electronic waste through comprehensive sustainability assessments and supplier evaluations. </li> </ul> </li> </ul>';
+                break;
+            case 'consumer':
+                contentBox.innerHTML = '<p style=\"font-weight: bold;font-size: larger;color: rgb(33, 104, 136);\">5R action towards e-waste management</p> <ul> <li><b>R</b>egular maintenance: Keep your appliances clean and well-maintained to ensure they last longer.</li> <li><b>R</b>efurbish: Fix broken or malfunctioning appliances instead of discarding them.</li> <li><b>R</b>euse: If your appliance is still functional but no longer needed, donate it to people in need.</li> <li><b>R</b>ecycle: Dispose of e-waste through certified recycling programs or facilities to ensure proper treatment.</li> <li><b>R</b>esponsibly: Purchase from companies that prioritize sustainability, use recycled materials and offer take-back programs.</li> </ul>';
+                break;
+
+        }
+    }
+</script>

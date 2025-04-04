@@ -24,6 +24,10 @@
         width: 20% !important;
     }
 
+    .td25 {
+        width: 25% !important;
+    }
+
     .table-text {
         align-content: baseline;
     }
@@ -83,51 +87,66 @@
     </header>
     <!-- End of header -->
     <div class="body">
+        <div style="width: 100%;margin: 10px 2% 0px 2%;">
+            <div style="line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
+                <h2><b>Recycling Procedure for Secondary Materials</b></h2>
+            </div>
+        </div>
         <ul id="list" style="margin-top: 10px;">
             <li><span class="list-title">Recycling</span>
                 <div class="list-content">
                     <div style="width: 100%;text-align: center;margin-bottom: 10px;font-size: medium;"><i>Click to see
                             these appliances in the recycling process for carbon saving</i></div>
                     <div style="max-width: 95%;margin: 0px 2% 0px 2%;display: flex;justify-content: center;">
-                        <div id="washing-machine" onclick="cardBoxChangeContent('washing-machine', 'contentBox')"
+                        <div id="washing-machine" onclick="cardBoxChangeContent(this,'washing-machine', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/washing machine.svg" style="width: 100%;" alt="Washing Machine" class="clickable">
+                            <img src="../resources/icon/washing-machine_active.svg" style="width: 100%;"
+                                alt="Washing Machine" class="clickable">
                         </div>
-                        <div id="refrigerator" onclick="cardBoxChangeContent('refrigerator', 'contentBox')"
+                        <div id="refrigerator" onclick="cardBoxChangeContent(this,'refrigerator', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/refrigerator.svg" style="width: 100%;" alt="Refrigerator" class="clickable">
+                            <img src="../resources/icon/refrigerator.svg" style="width: 100%;" alt="Refrigerator"
+                                class="clickable">
                         </div>
-                        <div id="air-conditioner" onclick="cardBoxChangeContent('air-conditioner', 'contentBox')"
+                        <div id="air-conditioner" onclick="cardBoxChangeContent(this,'air-conditioner', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/Air conditioner.svg" style="width: 100%;" alt="Air Conditioner" class="clickable">
+                            <img src="../resources/icon/air-conditioner.svg" style="width: 100%;" alt="Air Conditioner"
+                                class="clickable">
                         </div>
-                        <div id="television" onclick="cardBoxChangeContent('television', 'contentBox')"
+                        <div id="television" onclick="cardBoxChangeContent(this,'television', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/television.svg" style="width: 100%;" alt="Television" class="clickable">
+                            <img src="../resources/icon/television.svg" style="width: 100%;" alt="Television"
+                                class="clickable">
                         </div>
-                        <div id="monitor" onclick="cardBoxChangeContent('monitor', 'contentBox')"
+                        <div id="monitor" onclick="cardBoxChangeContent(this,'monitor', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/monitor.svg" style="width: 100%;" alt="Monitor" class="clickable">
+                            <img src="../resources/icon/monitor.svg" style="width: 100%;" alt="Monitor"
+                                class="clickable">
                         </div>
-                        <div id="computer" onclick="cardBoxChangeContent('computer', 'contentBox')"
+                        <div id="computer" onclick="cardBoxChangeContent(this,'computer', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/Computer.svg" style="width: 100%;" alt="Computer" class="clickable">
+                            <img src="../resources/icon/computer.svg" style="width: 100%;" alt="Computer"
+                                class="clickable">
                         </div>
-                        <div id="printer" onclick="cardBoxChangeContent('printer', 'contentBox')"
+                        <div id="printer" onclick="cardBoxChangeContent(this,'printer', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/Printer.svg" style="width: 100%;" alt="Printer" class="clickable">
+                            <img src="../resources/icon/printer.svg" style="width: 100%;" alt="Printer"
+                                class="clickable">
                         </div>
-                        <div id="scanner" onclick="cardBoxChangeContent('scanner', 'contentBox')"
+                        <div id="scanner" onclick="cardBoxChangeContent(this,'scanner', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/Scanner.svg" style="width: 100%;" alt="Scanner" class="clickable">
+                            <img src="../resources/icon/scanner.svg" style="width: 100%;" alt="Scanner"
+                                class="clickable">
                         </div>
-                        <div id="tumble-dryer" onclick="cardBoxChangeContent('tumble-dryer', 'contentBox')"
+                        <div id="tumble-dryer" onclick="cardBoxChangeContent(this,'tumble-dryer', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/Tumble dryer.svg" style="width: 100%;" alt="Tumble Dryer" class="clickable">
+                            <img src="../resources/icon/tumble-dryer_active.svg" style="width: 100%;" alt="Tumble Dryer"
+                                class="clickable">
                         </div>
-                        <div id="dehumidifier" onclick="cardBoxChangeContent('dehumidifier', 'contentBox')"
+                        <div id="dehumidifier" onclick="cardBoxChangeContent(this,'dehumidifier', 'contentBox')"
                             style="display: inline-block;width: 10%;">
-                            <img src="../resources/Dehumidifier.svg" style="width: 100%;" alt="Dehumidifier" class="clickable">
+                            <img src="../resources/icon/dehumidifier.svg" style="width: 100%;" alt="Dehumidifier"
+                                class="clickable">
                         </div>
                     </div>
                 </div>
@@ -139,70 +158,66 @@
                     Sorting
                 </span>
                 <div class="list-content" style="font-size: 1rem;">
-                    <p style="font-size: 25px;font-weight: bold;color: rgb(33, 104, 136);text-align: center;">Transform waste into valuable material</p>
+                    <p style="font-size: 25px;font-weight: bold;color: rgb(33, 104, 136);text-align: center;">Transform
+                        waste into valuable material</p>
                     <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
                         <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;" id="contentBox">
                             <div class="headers">
-                                <div class="header" style="width: 25%;"><b>Door glass</b>
-                                </div>
-                                <div class="header" style="width: 25%;"><b>Casing</b>
-                                </div>
-                                <div class="header" style="width: 25%;"><b>Drum pulley wheel</b>
-                                </div>
-                                <div class="header" style="width: 25%;"><b>Motor</b>
-                                </div>
+                                <div class="header" style="width: 25%;"><b>Door glass</b> </div>
+                                <div class="header" style="width: 25%;"><b>Casing</b> </div>
+                                <div class="header" style="width: 25%;"><b>Drum pulley wheel</b> </div>
+                                <div class="header" style="width: 25%;"><b>Motor</b> </div>
                             </div>
                             <div class="content" style="height: fit-content;padding: 0px;">
                                 <table style="width: 100%; width: 100%;table-layout: fixed;">
                                     <tr style="border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;">
-                                        <td>
+                                        <td class="td25">
                                             <div class="image-div"> <img
-                                                    src="../resources/P17_Tumble Dryer_Door glass.svg"></div>
-                                        </td>
-                                        <td>
-                                            <div class="image-div">
-                                                <img src="../resources/P17_Tumble Dryer_Door glass.svg">
+                                                    src="../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/door_glass.jpeg">
                                             </div>
                                         </td>
-                                        <td>
-                                            <div class="image-div">
-                                                <img src="../resources/P17_Tumble Dryer_motor.svg">
+                                        <td class="td25">
+                                            <div class="image-div"> <img
+                                                    src="../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/casing.jpeg">
                                             </div>
                                         </td>
-                                        <td>
-                                            <div class="image-div"><img src="../resources/P17_Tumble Dryer_motor.svg">
+                                        <td class="td25">
+                                            <div class="image-div"><img
+                                                    src="../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/drum_pulley_wheel.jpeg">
+                                            </div>
+                                        </td>
+                                        <td class="td25">
+                                            <div class="image-div"><img
+                                                    src="../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/motor.jpeg">
                                             </div>
                                         </td>
                                     </tr>
                                     <tr style="border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;">
                                         <td class="table-text">
                                             <div>
-                                                <div class="table-text-header">
-                                                    Glass Plastics</div>
+                                                <div class="table-text-header"> Glass Plastics</div>
                                                 <div>
                                                     <p>Shredded and melted down to produce new plastic.<br>
-                                                        Remanufacturing to make new glass products.
-                                                    </p>
+                                                        Remanufacturing to make new glass
+                                                        products. </p>
                                                     <p>> 80% of energy is saved when recycling plastics compared to the
-                                                        production from primary ores.</p>
+                                                        production from primary ores
+                                                    </p>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="table-text">
                                             <div>
-                                                <div class="table-text-header">
-                                                    Iron</div>
+                                                <div class="table-text-header"> Iron</div>
                                                 <div>
                                                     <p>74% of energy is saved when recycling iron compared to the
-                                                        production from primary ores.
-                                                    </p>
+                                                        production from primary ores. </p>
                                                 </div>
                                             </div>
                                         </td>
                                         <td class="table-text">
                                             <div>
-                                                <div class="table-text-header">
-                                                    Aluminum</div>
+                                                <div class="table-text-header"> Aluminum</div>
                                                 <div>
                                                     <p>95% of energy is saved when recycling aluminum compared to the
                                                         production from primary ores.
@@ -212,8 +227,7 @@
                                         </td>
                                         <td class="table-text">
                                             <div>
-                                                <div class="table-text-header">
-                                                    Copper</div>
+                                                <div class="table-text-header"> Copper</div>
                                                 <div>
                                                     <p>85% of energy is saved when recycling copper compared to the
                                                         production from primary ores.
@@ -242,7 +256,8 @@
                     <p style="font-size: 20.5px;">Refrigerants used in temperature control devices such as refrigerators
                         and air conditioners are
                         themselves potent greenhouse gases. In 2019, discarded fridges and air conditioning units
-                        released CO2 equivalents that accounted for approximately 0.3% of total global energy-related
+                        released CO<sub>2</sub> equivalents that accounted for approximately 0.3% of total global
+                        energy-related
                         emissions.</p>
                 </div>
             </span>
@@ -287,7 +302,6 @@
             .container-fluid .blue-row:hover {
                 background-color: rgb(135, 172, 207) !important;
             }
-
         </style>
         <div class="container-fluid" style="margin: 10px 0px 0px 0px;justify-items: center;">
             <div class="blue-row" style="width: fit-content;border-radius: 20px;">
@@ -314,33 +328,67 @@
     <!-- End of Footer -->
 </body>
 <script>
-    function cardBoxChangeContent(section, id) {
+    function cardBoxChangeContent(item, section, id) {
+        let parentDiv = upTo(item, "div");
+        parentDiv.querySelectorAll("img").forEach(e => { e.src = e.src.replace("_active", "") });
+
+        let icon = item.getElementsByTagName('img')[0];
+        let iconPath = "../resources/icon/"
         const contentBox = document.getElementById(id);
+
         switch (section) {
             case 'television':
             case 'monitor':
-                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>Stand</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Casing</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Heat sink</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Fluorescent lamp</b> </div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> <td> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> <td> <div class=\"image-div\"><img src=\"../resources/P17_Tumble Dryer_motor.svg\"> </div> </td> <td> <div class=\"image-div\"><img src=\"../resources/P17_Tumble Dryer_motor.svg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text\"> <div> <div class=\"table-text-header\"> Iron</div> <div> <p>74% of energy is saved when recycling iron compared to the production from primary ores </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\"> Plastics</div> <div> <p>Shredded and melted down to produce new plastic.<br>Remanufacturing new goods, as well as new electronic casings.</p> <p>>80% of energy is saved when recycling plastics compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\"> Aluminum</div> <div> <p>95% of energy is saved when recycling aluminum compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div> <p>Contains hazardous mercury, which requires careful handling. Proper recycling prevents mercury release into the environment. </p> </div> </div> </td> </tr> </table> </div>";
+                let televisionIcon = document.getElementById('television').getElementsByTagName('img')[0];
+                let monitorIcon = document.getElementById('monitor').getElementsByTagName('img')[0];
+                televisionIcon.src = iconPath + "television" + "_active.svg"
+                monitorIcon.src = iconPath + "monitor" + "_active.svg"
+                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>Stand</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Outer frame</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Inner frame</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Fluorescent lamp</b> </div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/television_and_monitor/stand.png\"></div> </td> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/television_and_monitor/outer_frame.png\"></div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/television_and_monitor/inner_frame.jpg\"> </div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/television_and_monitor/fluorescent_lamp.jpg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text\"> <div> <div class=\"table-text-header\"> Iron</div> <div> <p>74% of energy is saved when recycling iron compared to the production from primary ores </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\"> Plastics</div> <div> <p>Shredded and melted down to produce new plastic.<br>Remanufacturing new goods, as well as new electronic casings.</p> <p>>80% of energy is saved when recycling plastics compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\"> Aluminum</div> <div> <p>95% of energy is saved when recycling aluminum compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\"> Hazardous material</div> <div> <p>Contains hazardous mercury, which requires careful handling. Proper recycling prevents mercury release into the environment. </p> </div> </div> </td> </tr> </table> </div>";
                 break;
             case 'washing-machine':
             case 'tumble-dryer':
-                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>Door glass</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Casing</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Drum pulley wheel</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Motor</b> </div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> <td> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> <td> <div class=\"image-div\"><img src=\"../resources/P17_Tumble Dryer_motor.svg\"> </div> </td> <td> <div class=\"image-div\"><img src=\"../resources/P17_Tumble Dryer_motor.svg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text\"> <div> <div class=\"table-text-header\"> Glass Plastics</div> <div> <p>Shredded and melted down to produce new plastic.<br> Remanufacturing to make new glass products. </p> <p>> 80% of energy is saved when recycling plastics compared to the production from primary ores </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\"> Iron</div> <div> <p>74% of energy is saved when recycling iron compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\"> Aluminum</div> <div> <p>95% of energy is saved when recycling aluminum compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\"> Copper</div> <div> <p>85% of energy is saved when recycling copper compared to the production from primary ores. </p> </div> </div> </td> </tr> </table> </div>";
+                let washingMachineIcon = document.getElementById('washing-machine').getElementsByTagName('img')[0];
+                let tumbleDryerIcon = document.getElementById('tumble-dryer').getElementsByTagName('img')[0];
+                washingMachineIcon.src = iconPath + "washing-machine" + "_active.svg"
+                tumbleDryerIcon.src = iconPath + "tumble-dryer" + "_active.svg"
+                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>Door glass</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Casing</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Drum pulley wheel</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Motor</b> </div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"td25\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/door_glass.jpeg\"></div> </td> <td class=\"td25\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/casing.jpeg\"></div> </td> <td class=\"td25\"> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/drum_pulley_wheel.jpeg\"> </div> </td> <td class=\"td25\"> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/motor.jpeg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text\"> <div> <div class=\"table-text-header\"> Glass Plastics</div> <div> <p>Shredded and melted down to produce new plastic.<br> Remanufacturing to make new glass products. </p> <p>> 80% of energy is saved when recycling plastics compared to the production from primary ores </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\"> Iron</div> <div> <p>74% of energy is saved when recycling iron compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\"> Aluminum</div> <div> <p>95% of energy is saved when recycling aluminum compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\"> Copper</div> <div> <p>85% of energy is saved when recycling copper compared to the production from primary ores. </p> </div> </div> </td> </tr> </table> </div>";
                 break;
             case 'refrigerator':
-                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>Storage tray</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Casing</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Condenser</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Foam insulation layer<br>(Polyurethane – PUR)</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Refrigerant</b></div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> <td class=\"td20\"> <div class=\"image-div\"><img src=\"../resources/P17_Tumble Dryer_motor.svg\"> </div> </td> <td class=\"td20\"> <div class=\"image-div\"><img src=\"../resources/P17_Tumble Dryer_motor.svg\"> </div> </td> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Plastics</div> <div> <p>Shredded and melted down to produce new plastic.<br> Remanufacturing to new goods, as well as new storage tray </p> <p>> 80% of energy is saved when recycling plastics compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Iron</div> <div> <p>74% of energy is saved when recycling iron compared to the production from primary ores.</p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Aluminum</div> <div> <p>95% of energy is saved when recycling aluminum compared to the production from primary ores. </p> </div> <div class=\"table-text-header\">Copper</div> <div> <p>85% of energy is saved when recycling copper compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div> <p>The removal of cyclopentane from the PUR is highly flammable, its presence could pose a fire hazard during the recycling process if not extracted properly. WEEE · PARK formed a partnership with Green Island Cement to conduct the co-combustion of PUR with coal in the cement kiln. </p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div> <p>Typical refrigerants such as R22, R134a, and R410a are potent GHGs that can contribute to global warming and ozone depletion. WEEE · PARK collaborated with a partner in Singapore capable of purifying refrigerants for reuse. </p> </div> </div> </td> </tr> </table> </div>";
+                icon.src = iconPath + "refrigerator" + "_active.svg"
+                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>Storage tray</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Casing</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Condenser</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Foam insulation layer<br>(Polyurethane – PUR)</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Refrigerant</b></div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/refrigerator/storage_tray.jpeg\"></div> </td> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/refrigerator/casing.jpg\"></div> </td> <td class=\"td20\"> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/refrigerator/condenser.jpg\"> </div> </td> <td class=\"td20\"> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/refrigerator/foam_insulation_layer.jpeg\"> </div> </td> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/refrigerator/refrigerant.jpg\"></div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Plastics</div> <div> <p>Shredded and melted down to produce new plastic.<br> Remanufacturing to new goods, as well as new storage tray </p> <p>> 80% of energy is saved when recycling plastics compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Iron</div> <div> <p>74% of energy is saved when recycling iron compared to the production from primary ores.</p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Aluminum</div> <div> <p>95% of energy is saved when recycling aluminum compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Hazardous material</div> <div> <p>The removal of cyclopentane from the PUR is highly flammable, its presence could pose a fire hazard during the recycling process if not extracted properly. WEEE · PARK formed a partnership with Green Island Cement to conduct the co-combustion of PUR with coal in the cement kiln. </p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Hazardous material</div> <div> <p>Typical refrigerants such as R22, R134a, and R410a are potent GHGs that can contribute to global warming and ozone depletion. WEEE · PARK collaborated with a partner in Singapore capable of purifying refrigerants for reuse. </p> </div> </div> </td> </tr> </table> </div>";
                 break;
             case 'air-conditioner':
-                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>Front panel</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Casing</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Pipping</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Condenser</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Refrigerant</b></div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> <td class=\"td20\"> <div class=\"image-div\"><img src=\"../resources/P17_Tumble Dryer_motor.svg\"> </div> </td> <td class=\"td20\"> <div class=\"image-div\"><img src=\"../resources/P17_Tumble Dryer_motor.svg\"> </div> </td> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Plastics</div> <div> <p>Shredded and melted down to produce new plastic.<br> Remanufacturing to new goods.</p> <p>> 80% of energy is saved when recycling plastics compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Iron</div> <div> <p>74% of energy is saved when recycling iron compared to the production from primary ores.</p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Copper</div> <div> <p>85% of energy is saved when recycling copper compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Aluminum</div> <div> <p>95% of energy is saved when recycling aluminum compared to the production from primary ores. </p> </div> <div class=\"table-text-header\">Copper</div> <div> <p>85% of energy is saved when recycling copper compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div> <p>Typical refrigerants such as R22, R134a, and R410a are potent GHGs that can contribute to global warming and ozone depletion. WEEE · PARK has collaborated with a partner in Singapore capable of purifying refrigerants for reuse. </p> </div> </div> </td> </tr> </table> </div>";
+                icon.src = iconPath + "air-conditioner" + "_active.svg"
+                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>Front panel</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Casing</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Pipping</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Condenser coil</b></div> <div class=\"header\" style=\"width: 25%;\"><b>Refrigerant</b></div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/air-conditioner/front_panel.jpeg\"></div> </td> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/air-conditioner/casing.jpg\"></div> </td> <td class=\"td20\"> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/air-conditioner/pipping.jpeg\"> </div> </td> <td class=\"td20\"> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/air-conditioner/condenser_coil.jpg\"> </div> </td> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/air-conditioner/refrigerant.jpg\"></div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Plastics</div> <div> <p>Shredded and melted down to produce new plastic.<br> Remanufacturing to new goods.</p> <p>> 80% of energy is saved when recycling plastics compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Iron</div> <div> <p>74% of energy is saved when recycling iron compared to the production from primary ores.</p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Copper</div> <div> <p>85% of energy is saved when recycling copper compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Aluminum</div> <div> <p>95% of energy is saved when recycling aluminum compared to the production from primary ores. </p> </div> <div class=\"table-text-header\">Copper</div> <div> <p>85% of energy is saved when recycling copper compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">Hazardous material</div> <div> <p>Typical refrigerants such as R22, R134a, and R410a are potent GHGs that can contribute to global warming and ozone depletion. WEEE · PARK has collaborated with a partner in Singapore capable of purifying refrigerants for reuse. </p> </div> </div> </td> </tr> </table> </div>";
                 break;
             case 'computer':
-                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>Casing</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Power supply chassis</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Heat sink</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Power transformer</b> </div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> <td> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> <td> <div class=\"image-div\"><img src=\"../resources/P17_Tumble Dryer_motor.svg\"> </div> </td> <td> <div class=\"image-div\"><img src=\"../resources/P17_Tumble Dryer_motor.svg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Plastics</div> <div> <p>Shredded and melted down to produce new plastic.<br>Remanufacturing new goods, as well as new electronic casings.</p> <p>>80% of energy is saved when recycling plastics compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Iron</div> <div> <p>74% of energy is saved when recycling iron compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Aluminum</div> <div> <p>95% of energy is saved when recycling aluminum compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Copper</div> <div> <p>85% of energy is saved when recycling copper compared to the production from primary ores. </p> </div> </div> </td> </tr> </table> </div>";
+                icon.src = iconPath + "computer" + "_active.svg"
+                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>Keyboard</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Casing</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Heat sink</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Cable</b> </div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/computer/keyboard.jpeg\"></div> </td> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/computer/casing.jpg\"></div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/computer/heat_sink.jpeg\"> </div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/computer/cable.jpeg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Plastics</div> <div> <p>Shredded and melted down to produce new plastic.<br>Remanufacturing new goods, as well as new electronic casings.</p> <p>>80% of energy is saved when recycling plastics compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Iron</div> <div> <p>74% of energy is saved when recycling iron compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Aluminum</div> <div> <p>95% of energy is saved when recycling aluminum compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Copper</div> <div> <p>85% of energy is saved when recycling copper compared to the production from primary ores. </p> </div> </div> </td> </tr> </table> </div>";
                 break;
             case 'printer':
             case 'scanner':
-                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>Casing & tray</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Motor</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Roller</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Internal chassis</b> </div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> <td> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> <td> <div class=\"image-div\"><img src=\"../resources/P17_Tumble Dryer_motor.svg\"> </div> </td> <td> <div class=\"image-div\"><img src=\"../resources/P17_Tumble Dryer_motor.svg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Plastics</div> <div> <p>Shredded and melted down to produce new plastic. <br> Remanufacturing new goods, as well as new electronic casings.</p> <p>>80% of energy is saved when recycling plastics compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Copper</div> <div> <p>85% of energy is saved when recycling copper compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Aluminum</div> <div> <p>95% of energy is saved when recycling aluminum compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Iron</div> <div> <p>74% of energy is saved when recycling iron compared to the production from primary ores.</p> </div> </div> </td> </tr> </table> </div>";
+                let printerIcon = document.getElementById('printer').getElementsByTagName('img')[0];
+                let scannerIcon = document.getElementById('scanner').getElementsByTagName('img')[0];
+                printerIcon.src = iconPath + "printer" + "_active.svg"
+                scannerIcon.src = iconPath + "scanner" + "_active.svg"
+                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>Casing & tray</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Motor</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Roller</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Internal chassis</b> </div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/printer_and_scanner/casing.png\"></div> </td> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/printer_and_scanner/motor.jpg\"></div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/printer_and_scanner/roller.jpg\"> </div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/printer_and_scanner/internal_chassis.jpg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Plastics</div> <div> <p>Shredded and melted down to produce new plastic. <br> Remanufacturing new goods, as well as new electronic casings.</p> <p>>80% of energy is saved when recycling plastics compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Copper</div> <div> <p>85% of energy is saved when recycling copper compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Aluminum</div> <div> <p>95% of energy is saved when recycling aluminum compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Iron</div> <div> <p>74% of energy is saved when recycling iron compared to the production from primary ores.</p> </div> </div> </td> </tr> </table> </div>";
                 break;
             case 'dehumidifier':
-                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>Storage tray</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Casing</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Condenser</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Refrigerator</b> </div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> <td> <div class=\"image-div\"> <img src=\"../resources/P17_Tumble Dryer_Door glass.svg\"></div> </td> <td> <div class=\"image-div\"><img src=\"../resources/P17_Tumble Dryer_motor.svg\"> </div> </td> <td> <div class=\"image-div\"><img src=\"../resources/P17_Tumble Dryer_motor.svg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Plastics</div> <div> <p>Shredded and melted down to produce new plastic.<br>Remanufacturing new goods, as well as new electronic casings.</p> <p>>80% of energy is saved when recycling plastics compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Iron</div> <div> <p>74% of energy is saved when recycling iron compared to the production from primary ores.</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Aluminum Copper</div> <div> <p>95% of energy is saved when recycling aluminum compared to the production from primary ores. </p> <p>85% of energy is saved when recycling copper compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div> <p>Typical refrigerants such as R22, R134a, and R410a are potent GHGs that can contribute to global warming and ozone depletion. WEEE · PARK collaborated with a partner in Singapore capable of purifying refrigerants for reuse.</p> </div> </div> </td> </tr> </table> </div>";
+                icon.src = iconPath + "dehumidifier" + "_active.svg"
+                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>Storage tray</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Casing</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Condenser coil</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>Refrigerator</b> </div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/dehumidifier/storage_tray.jpg\"></div> </td> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/dehumidifier/casing.jpeg\"></div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/dehumidifier/condenser_coil.jpg\"> </div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/dehumidifier/refrigerant.jpg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Plastics</div> <div> <p>Shredded and melted down to produce new plastic.<br>Remanufacturing new goods, as well as new electronic casings.</p> <p>>80% of energy is saved when recycling plastics compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Iron</div> <div> <p>74% of energy is saved when recycling iron compared to the production from primary ores.</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Aluminum Copper</div> <div> <p>95% of energy is saved when recycling aluminum compared to the production from primary ores. </p> <p>85% of energy is saved when recycling copper compared to the production from primary ores. </p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">Hazardous material</div> <div> <p>Typical refrigerants such as R22, R134a, and R410a are potent GHGs that can contribute to global warming and ozone depletion. WEEE · PARK collaborated with a partner in Singapore capable of purifying refrigerants for reuse.</p> </div> </div> </td> </tr> </table> </div>";
                 break;
         }
+    }
+
+    function upTo(el, tagName) {
+        tagName = tagName.toLowerCase();
+
+        while (el && el.parentNode) {
+            el = el.parentNode;
+            if (el.tagName && el.tagName.toLowerCase() == tagName) {
+                return el;
+            }
+        }
+        return null;
     }
 </script>

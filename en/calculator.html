@@ -52,15 +52,14 @@
         <div style="margin-bottom: 10px;display: flex;">
             <span style="width: 100%;margin: 10px 2% 0px 2%;">
                 <div style="line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
-                    <h2><b>Pick the number of appliances you want to treat!</b></h2>
+                    <h2><b>Input the data of appliances you want to treat below!</b></h2>
                 </div>
             </span>
         </div>
         <div style="margin-bottom: 10px;display: flex;padding-left: 2%;font-size: 20.5px;">
             <span style="width: 50%;">
                 Your selected appliances are collected and transported to a recycling facility in Hong Kong.<br>
-                Click “<b>GO</b>” to discover what happens to your appliances during the treatment process.
-            </span>
+                Click “<b>GO</b>” below to see what happens when you recycled these appliances!</span>
         </div>
         <style>
             .value-control {
@@ -110,12 +109,16 @@
                         </div>
                         <div class="content" style="height: fit-content;">
                             <div style="display: flex;justify-content: space-around;">
-                                <div style="display: inline-block;"><img src="../resources/washing machine.svg" style="height: 150px;" alt="Washing Machine"></div>
-                                <div style="display: inline-block;"><img src="../resources/refrigerator.svg" style="height: 150px;" alt="Refrigerator"></div>
+                                <div style="display: inline-block;"><img src="../resources/icon/washing-machine.svg"
+                                        style="height: 150px;" alt="Washing Machine"></div>
+                                <div style="display: inline-block;"><img src="../resources/icon/refrigerator.svg"
+                                        style="height: 150px;" alt="Refrigerator"></div>
                             </div>
                             <div style="display: flex;justify-content: space-around;">
-                                <div style="display: inline-block;"><img src="../resources/Air conditioner.svg" style="height: 150px;" alt="Air Conditioner"></div>
-                                <div style="display: inline-block;"><img src="../resources/television.svg" style="height: 150px;" alt="Television"></div>
+                                <div style="display: inline-block;"><img src="../resources/icon/air-conditioner.svg"
+                                        style="height: 150px;" alt="Air Conditioner"></div>
+                                <div style="display: inline-block;"><img src="../resources/icon/television.svg"
+                                        style="height: 150px;" alt="Television"></div>
                             </div>
                         </div>
                     </span>
@@ -139,17 +142,22 @@
                     <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
                         <div class="headers">
                             <div class="header" style="width: 100%;"
-                                onclick="cardBoxChangeContent(this, 'weee-park', 'contentBox2')"><b>Regulated WEEE - Computer</b>
+                                onclick="cardBoxChangeContent(this, 'weee-park', 'contentBox2')"><b>Regulated WEEE -
+                                    Computer</b>
                             </div>
                         </div>
                         <div class="content" style="height: fit-content;">
                             <div style="display: flex;justify-content: space-around;">
-                                <div style="display: inline-block;"><img src="../resources/monitor.svg" style="height: 150px;" alt="Monitor"></div>
-                                <div style="display: inline-block;"><img src="../resources/Computer.svg" style="height: 150px;" alt="Computer"></div>
+                                <div style="display: inline-block;"><img src="../resources/icon/monitor.svg"
+                                        style="height: 150px;" alt="Monitor"></div>
+                                <div style="display: inline-block;"><img src="../resources/icon/computer.svg"
+                                        style="height: 150px;" alt="Computer"></div>
                             </div>
                             <div style="display: flex;justify-content: space-around;">
-                                <div style="display: inline-block;"><img src="../resources/Printer.svg" style="height: 150px;" alt="Printer"></div>
-                                <div style="display: inline-block;"><img src="../resources/Scanner.svg" style="height: 150px;" alt="Scanner"></div>
+                                <div style="display: inline-block;"><img src="../resources/icon/printer.svg"
+                                        style="height: 150px;" alt="Printer"></div>
+                                <div style="display: inline-block;"><img src="../resources/icon/scanner.svg"
+                                        style="height: 150px;" alt="Scanner"></div>
                             </div>
                         </div>
                     </span>
@@ -236,10 +244,10 @@
     function calculation() {
         let qtyLargeHousehold = document.getElementById("largeHouseholdInput").value > 0 ? Math.round(document.getElementById("largeHouseholdInput").value) : 0;
         let qtyComputer = document.getElementById("computerInput").value > 0 ? Math.round(document.getElementById("computerInput").value) : 0;
-        let largeHouseholdCO2SavingFactor = 0.207996883238374;
-        let largeHouseholdEmissionsFactor = 0.00325916555506491;
-        let computerCO2SavingFactor = 0.023108440414928;
-        let computerEmissionsFactor = 0.000904669941138952;
+        let largeHouseholdCO2SavingFactor = 0.20615;
+        let largeHouseholdEmissionsFactor = 0.00339;
+        let computerCO2SavingFactor = 0.01167;
+        let computerEmissionsFactor = 0.00049;
 
         let largeHouseholdcO2Saving = Math.round(qtyLargeHousehold * largeHouseholdCO2SavingFactor * 1e3) / 1e3;
         let computerCO2Saving = Math.round(qtyComputer * computerCO2SavingFactor * 1e3) / 1e3;

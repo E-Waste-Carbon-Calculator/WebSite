@@ -63,13 +63,13 @@
                         <div style="text-align: left;font-size: x-large;margin-top: 8%;color: rgb(21, 96, 130);">
                             <b><span id="cO2SavingResult" style="font-size: 60px;"></span><span
                                     style="font-size: 30px;">
-                                    tonnes of CO2e</span></b>
-                            <p>in CO2 saving from recycled materials</p>
+                                    tonnes of CO<sub2< /span></b>
+                            <p>in CO<sub>2</sub> saving from recycled materials</p>
                         </div>
                         <div style="text-align: left;font-size: x-large;margin-top: 8%;color: rgb(21, 96, 130);">
                             <b><span id="emissionResult" style="font-size: 60px;"></span><span style="font-size: 30px;">
-                                    tonnes of CO2e</span></b>
-                            <p>in CO2 emissions generated from recycling treatment</p>
+                                    tonnes of CO<sub2< /span></b>
+                            <p>in CO<sub>2</sub> emissions generated from recycling treatment</p>
                         </div>
                     </div>
                     <div style="width: 48%;margin: auto;display: inline-block;">
@@ -82,10 +82,11 @@
                                 </b>
                             </div>
                             <div class="header" style="width: 15%;"><b>Quantity</b></div>
-                            <div class="header" style="width: 27.5%;"><b>CO2 saving from recycled materials
+                            <div class="header" style="width: 27.5%;"><b>CO<sub>2</sub> saving from recycled materials
                                 </b>
                             </div>
-                            <div class="header" style="width: 27.5%;"><b>CO2 emissions generated from recycling treatment
+                            <div class="header" style="width: 27.5%;"><b>CO<sub>2</sub> emissions generated from
+                                    recycling treatment
                                 </b></div>
                         </div>
                         <div class="headers" style="height: 15%;border-bottom: 1px solid white;">
@@ -94,22 +95,28 @@
                                 household<br>electrical appliances
                             </div>
                             <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 15%;">
-                                <span id="qtyLargeHousehold"></span></div>
-                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;"><span
-                                    id="largeHouseholdcO2Saving"></span></div>
-                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;"><span
-                                    id="largeHouseholdEmissions"></span></div>
+                                <span id="qtyLargeHousehold"></span>
+                            </div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;">
+                                <span id="largeHouseholdcO2Saving"></span>
+                            </div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;">
+                                <span id="largeHouseholdEmissions"></span>
+                            </div>
                         </div>
                         <div class="headers" style="height: 15%;border-bottom: 1px solid white;">
                             <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 30%;">
                                 Computer
                             </div>
                             <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 15%;">
-                                <span id="qtyComputer"></span></div>
-                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;"><span
-                                    id="computerCO2Saving"></span></div>
-                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;"><span
-                                    id="computerEmissions"></span></div>
+                                <span id="qtyComputer"></span>
+                            </div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;">
+                                <span id="computerCO2Saving"></span>
+                            </div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;">
+                                <span id="computerEmissions"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -124,12 +131,12 @@
                     let emissionResult = (sessionStorage.getItem("emissionResult") == undefined || sessionStorage.getItem("emissionResult") == null) ? 0 : sessionStorage.getItem("emissionResult");
 
                     document.getElementById("qtyLargeHousehold").innerHTML = qtyLargeHousehold;
-                    document.getElementById("largeHouseholdcO2Saving").innerHTML = "= " + largeHouseholdcO2Saving + " tonnes of CO2e";
-                    document.getElementById("largeHouseholdEmissions").innerHTML = "= " + largeHouseholdEmissions + " tonnes of CO2e";
+                    document.getElementById("largeHouseholdcO2Saving").innerHTML = "= " + largeHouseholdcO2Saving + " tonnes of CO<sub>2</sub>";
+                    document.getElementById("largeHouseholdEmissions").innerHTML = "= " + largeHouseholdEmissions + " tonnes of CO<sub>2</sub>";
 
                     document.getElementById("qtyComputer").innerHTML = qtyComputer;
-                    document.getElementById("computerCO2Saving").innerHTML = "= " + computerCO2Saving + " tonnes of CO2e";
-                    document.getElementById("computerEmissions").innerHTML = "= " + computerEmissions + " tonnes of CO2e";
+                    document.getElementById("computerCO2Saving").innerHTML = "= " + computerCO2Saving + " tonnes of CO<sub>2</sub>";
+                    document.getElementById("computerEmissions").innerHTML = "= " + computerEmissions + " tonnes of CO<sub>2</sub>";
 
                     document.getElementById("cO2SavingResult").innerHTML = cO2SavingResult;
                     document.getElementById("emissionResult").innerHTML = emissionResult;
@@ -233,8 +240,7 @@
 
         <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
             <span style="width: 40%;margin: 0% 2% 10px 2%;">
-                <div
-                    style="line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
+                <div style="line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
                     <h2><b>Action hints for Zero E-waste</b></h2>
                 </div>
             </span>
@@ -255,29 +261,22 @@
                     </div>
                 </div>
                 <div class="content" style="height: 400px;" id="contentBox">
-                    <p style="font-weight: bold;font-size: larger;color: rgb(33, 104, 136);">&#10003;Adopt green product
+                    <p style="font-weight: bold;font-size: larger;color: rgb(33, 104, 136);">Adopt green product
                         design based on 3 principles</p>
                     <ul>
                         <li>
-                            Design: <p>Consider the environmental attributes of the product—such as disassembly,
-                                recyclability,
-                                maintainability, and reusability—which in turn simplify the recycling processes for
-                                decommissioned
-                                electronic products.</p>
+                            Design: <p>Consider the environmental attributes of the product, such as disassembly,
+                                recyclability, maintainability, and reusability. These factors can simplify the
+                                recycling processes for decommissioned electronic products.</p>
                         </li>
                         <li>
-                            Materials used: <p>Employ eco-friendly new materials that are non-hazardous, energy-saving,
-                                easily
-                                recyclable, highly reliable, and have a long lifespan.</p>
+                            Materials used: <p>Utilize eco-friendly materials that are non-hazardous, energy-efficient,
+                                easily recyclable, highly reliable, and have a long lifespan.</p>
                         </li>
                         <li>
-                            Contribution techniques: <p>Develop green recycling processes for electronic products to
-                                help avoid
-                                the
-                                release of harmful substances during the dismantling of e- waste, and to reduce the use
-                                of
-                                acidic,
-                                alkaline, and corrosive reagents and chemicals.</p>
+                            Contribution techniques: <p>Develop sustainable recycling processes for electronic products
+                                to prevent the release of harmful substances during e-waste dismantling. Aim to minimize
+                                the use of acidic, alkaline, and corrosive reagents and chemicals.</p>
                         </li>
                     </ul>
                 </div>
@@ -355,13 +354,13 @@
         const contentBox = document.getElementById(id);
         switch (section) {
             case 'supplier':
-                contentBox.innerHTML = '<p style=\"font-weight: bold;font-size: larger;color: rgb(33, 104, 136);\">&#10003;Adopt green product design based on 3 principles</p> <ul> <li> Design: <p>Consider the environmental attributes of the product—such as disassembly, recyclability, maintainability, and reusability—which in turn simplify the recycling processes for decommissioned electronic products.</p> </li> <li> Materials used: <p>Employ eco-friendly new materials that are non-hazardous, energy-saving, easily recyclable, highly reliable, and have a long lifespan.</p> </li> <li> Contribution techniques: <p>Develop green recycling processes for electronic products to help avoid the release of harmful substances during the dismantling of e- waste, and to reduce the use of acidic, alkaline, and corrosive reagents and chemicals.</p> </li> </ul>';
+                contentBox.innerHTML = '<p style=\"font-weight: bold;font-size: larger;color: rgb(33, 104, 136);\">Adopt green product design based on 3 principles</p> <ul> <li> Design: <p>Consider the environmental attributes of the product, such as disassembly, recyclability, maintainability, and reusability. These factors can simplify the recycling processes for decommissioned electronic products.</p> </li> <li> Materials used: <p>Utilize eco-friendly materials that are non-hazardous, energy-efficient, easily recyclable, highly reliable, and have a long lifespan.</p> </li> <li> Contribution techniques: <p>Develop sustainable recycling processes for electronic products to prevent the release of harmful substances during e-waste dismantling. Aim to minimize the use of acidic, alkaline, and corrosive reagents and chemicals.</p> </li> </ul>';
                 break;
             case 'seller':
-                contentBox.innerHTML = '<ol> <li>Educate customers <ul> <li>Promote in-store awareness campaigns using signage, brochures to educate customers about the importance of e-waste recycling and proper disposal</li> </ul> </li> <li>Promote refurbished and second-hand product <ul> <li>Create second-hand section to offer high-quality, certified refurbished devices at a lower price point to reduce demand for new products</li> </ul> </li> <li>Advocate for green policies <ul> <li>Encourage manufacturers to adopt sustainable practices and reduce e-waste, by conducting sustainable supplier assessment </li> </ul> </li> </ol>';
+                contentBox.innerHTML = '<ul> <li>Sustainability actions for promoting sustainable electronics<ul> <li>Launch in-store campaigns and provide informative signage and brochures to raise customer awareness about responsible e-waste recycling and proper disposal practices.</li> </ul> </li> <li>Promote refurbished and second-hand product <ul> <li>Establish a dedicated section for high-quality, certified refurbished electronics offered at attractive prices to effectively reduce the demand for new products.</li> </ul> </li> <li>Advocate for green policies <ul> <li> Engage with suppliers proactively, encouraging the adoption of sustainable practices and reduction of electronic waste through comprehensive sustainability assessments and supplier evaluations. </li> </ul> </li> </ul>';
                 break;
             case 'consumer':
-                contentBox.innerHTML = '<p><b>5R action towards e-waste management:</b></p> <ul> <li><b>R</b>egular maintenance: Keep your appliances clean and well-maintained to ensure they last longer.</li> <li><b>R</b>efurbish: Fix broken or malfunctioning appliances instead of discarding them.</li> <li><b>R</b>euse: If your appliance is still functional but no longer needed, donate it to people in need.</li> <li><b>R</b>ecycle: Dispose of e-waste through certified recycling programs or facilities to ensure proper treatment.</li> <li><b>R</b>esponsibly: Purchase from companies that prioritize sustainability, use recycled materials and offer take-back programs.</li> </ul>';
+                contentBox.innerHTML = '<p style=\"font-weight: bold;font-size: larger;color: rgb(33, 104, 136);\">5R action towards e-waste management</p> <ul> <li><b>R</b>egular maintenance: Keep your appliances clean and well-maintained to ensure they last longer.</li> <li><b>R</b>efurbish: Fix broken or malfunctioning appliances instead of discarding them.</li> <li><b>R</b>euse: If your appliance is still functional but no longer needed, donate it to people in need.</li> <li><b>R</b>ecycle: Dispose of e-waste through certified recycling programs or facilities to ensure proper treatment.</li> <li><b>R</b>esponsibly: Purchase from companies that prioritize sustainability, use recycled materials and offer take-back programs.</li> </ul>';
                 break;
 
         }
