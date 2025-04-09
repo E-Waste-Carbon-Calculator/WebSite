@@ -50,7 +50,7 @@
     <!-- End of header -->
     <div class="body">
         <div style="width: 100%;text-align: center;margin-top: 10px;"><img style="height:100%"
-                src="./resources/background/P1_Banner.svg"></div>
+                src="./resources/background/P1_Banner.png"></div>
         <div style="display: flex; justify-content: center; margin-top: 10px; margin-bottom: 10px;">
             <span class="table-container" style="justify-content: center;width: 80%;">
                 <div class="headers" style="height: fit-content;">
@@ -116,9 +116,9 @@
                         </div>
                     </li>
                     <li><span class="sublist-title">Hong Kong E-waste Management</span>
-                        <div class="list-content">To address this challenge, Hong Kong implemented the <span
-                                style="color: rgb(33, 104, 136);"><b>Producer Responsibility Scheme on Waste Electrical
-                                    and Electronic Equipment (WPRS)</b></span> in 2018 to ensure proper recycling and
+                        <div class="list-content">To address this challenge, Hong Kong implemented the Producer
+                            Responsibility Scheme on Waste Electrical and Electronic Equipment (WPRS) in 2018 to ensure
+                            proper recycling and
                             disposal of e-waste at WEEE · PARK.</div>
                     </li>
                 </ul>
@@ -347,6 +347,7 @@
         <div style="display: flex; justify-content: space-between;">
             <span style="position: relative;left: 25%;margin-top: 8px;text-align: center;">
                 <span style="margin-bottom: 2px;"><u>Created by:</u></span><br>
+                <img style="height:125px;" src="./resources/e-waste-carbon-calculation-platform-logo.png">
                 <img style="height:125px;" src="./resources/hkuLogo.png"><br>
             </span>
             <span style="position: relative;right: 25%;margin-top: 8px;text-align: center;">
@@ -367,13 +368,13 @@
                 contentBox.innerHTML = 'Welcome to the E-waste Carbon Calculator, a specialized tool designed to comprehensive assessments of greenhouse gas emissions linked to waste electrical and electronic equipment (WEEE or e-waste) in Hong Kong. This Calculator empowers producers, retailers, and consumers of Regulated Electrical and Electronic Equipment (REE) in the region to gain a deeper understanding of their local environmental impact and promote sustainable practices in e- waste management.';
                 break;
             case 'purpose':
-                contentBox.innerHTML = 'This E-waste Carbon Calculator estimates: Your carbon saving in CO2 equivalent (CO2e) from the appliances you recycle come mainly from preventing release of refrigerants (if any) to the atmosphere and producing recycled materials for reuse. This is calculated after deducting the emissions generated during collection, treatment and final disposal processes.<br><br> If you are producing a GHG Inventory, you may consider to include this carbon saving in your Scope 3 GHG emissions (CO2 equivalent) under <br><br> <ul> <li>Category 1 (Purchased goods and services),</li> <li>Category 5 (Waste generated in operations), or</li> <li>Category 12 (End-of-life treatment of sold products) as appropriate.</li> </ul>';
+                contentBox.innerHTML = 'This E-waste Carbon Calculator estimates: Your carbon saving in CO<sub>2</sub> equivalent (CO<sub>2</sub>e) from the appliances you recycle come mainly from preventing release of refrigerants (if any) to the atmosphere and producing recycled materials for reuse. This is calculated after deducting the emissions generated during collection, treatment and final disposal processes.<br><br> If you are producing a GHG Inventory, you may consider to include this carbon saving in your Scope 3 GHG emissions (CO<sub>2</sub> equivalent) under <br><br> <ul> <li>Category 1 (Purchased goods and services),</li> <li>Category 5 (Waste generated in operations), or</li> <li>Category 12 (End-of-life treatment of sold products) as appropriate.</li> </ul>';
                 break;
             case 'users':
                 contentBox.innerHTML = 'This Calculator is designed for all stakeholders under the Producer Responsibility Scheme on Waste Electrical and Electronic Equipment (WPRS): <br><br> <ul> <li>REE Suppliers</li> <li>REE Sellers</li> <li>REE Consumers</li> </ul>';
                 break;
             case 'relevance':
-                contentBox.innerHTML = 'This Calculator is built upon an emission factors database maintained by ALBA Integrated Waste Solutions (Hong Kong) Limited (ALBA IWS), which has been verified by third parties with reference to the GHG Protocol. ALBA IWS operates the WEEE.PARK, under the supervision of the Environmental Protection Department and is responsible for the collection, treatment and recycling of WEEE in Hong Kong. Therefore, the carbon saving calculation methodology of this Calculator aligns with the Greenhouse Gas Protocol.';
+                contentBox.innerHTML = 'This Calculator is built upon an emission factors database maintained by ALBA Integrated Waste Solutions (Hong Kong) Limited (ALBA IWS), which has been verified by third parties with reference to the GHG Protocol. ALBA IWS operates the WEEE · PARK, under the supervision of the Environmental Protection Department and is responsible for the collection, treatment and recycling of WEEE in Hong Kong. Therefore, the carbon saving calculation methodology of this Calculator aligns with the Greenhouse Gas Protocol.';
                 break;
             case 'producer-responsibility':
                 contentBox.innerHTML = "<div>The WPRS regulates the disposal of key appliances, including air conditioners, refrigerators, washing machines, televisions, computers, printers, scanners, and monitors. Effective from 1 July 2024, the scheme will expand to cover additional appliances, such as larger refrigerators, high-capacity washing machines, tumble dryers, and dehumidifiers, ensuring greater oversight of e-waste recycling.</div> <div style=\"display: flex; justify-content: space-between; margin: 10px 0px 10px 2%;\"> <img id=\"image-box\" src=\"./resources/background/P3_Washing Machine details (eng).svg\" style=\"width: 40%;\"> <div style=\"display: flex; justify-content: center;width: 60%;    margin: 0% 2% 10px 2%;\"> <table style=\"max-width: 100%; width: 100%;margin: 0px 10px 0px 2%;\"> <tr> <td id=\"washing-machine\" onclick=\"imageBoxChangeContent(this,'washing-machine', 'image-box')\"> <img src=\"./resources/icon/washing-machine_active.svg\" style=\"height: 150px;\" alt=\"Washing Machine\" class=\"clickable\"> </td> <td id=\"refrigerator\" onclick=\"imageBoxChangeContent(this,'refrigerator', 'image-box')\"> <img src=\"./resources/icon/refrigerator.svg\" style=\"height: 150px;\" alt=\"Refrigerator\" class=\"clickable\"> </td> <td id=\"air-conditioner\" onclick=\"imageBoxChangeContent(this,'air-conditioner', 'image-box')\"> <img src=\"./resources/icon/air-conditioner.svg\" style=\"height: 150px;\" alt=\"Air Conditioner\" class=\"clickable\"> </td> <td id=\"television\" onclick=\"imageBoxChangeContent(this,'television', 'image-box')\"> <img src=\"./resources/icon/television.svg\" style=\"height: 150px;\" alt=\"Television\" class=\"clickable\"> </td> <td id=\"dehumidifier\" onclick=\"imageBoxChangeContent(this,'dehumidifier', 'image-box')\"> <img src=\"./resources/icon/dehumidifier.svg\" style=\"height: 150px;\" alt=\"Dehumidifier\" class=\"clickable\"> </td> </tr> <tr> <td id=\"monitor\" onclick=\"imageBoxChangeContent(this,'monitor', 'image-box')\"> <img src=\"./resources/icon/monitor.svg\" style=\"height: 150px;\" alt=\"Monitor\" class=\"clickable\"> </td> <td id=\"computer\" onclick=\"imageBoxChangeContent(this,'computer', 'image-box')\"> <img src=\"./resources/icon/computer.svg\" style=\"height: 150px;\" alt=\"Computer\" class=\"clickable\"> </td> <td id=\"printer\" onclick=\"imageBoxChangeContent(this,'printer', 'image-box')\"> <img src=\"./resources/icon/printer.svg\" style=\"height: 150px;\" alt=\"Printer\" class=\"clickable\"> </td> <td id=\"scanner\" onclick=\"imageBoxChangeContent(this,'scanner', 'image-box')\"> <img src=\"./resources/icon/scanner.svg\" style=\"height: 150px;\" alt=\"Scanner\" class=\"clickable\"> </td> <td id=\"tumble-dryer\" onclick=\"imageBoxChangeContent(this,'tumble-dryer', 'image-box')\"> <img src=\"./resources/icon/tumble-dryer.svg\" style=\"height: 150px;\" alt=\"Tumble Dryer\" class=\"clickable\"> </td> </tr> </table> </div> </div>"

@@ -230,6 +230,7 @@
         <div style="display: flex; justify-content: space-between;">
             <span style="position: relative;left: 25%;margin-top: 8px;text-align: center;">
                 <span style="margin-bottom: 2px;"><u>Created by:</u></span><br>
+                <img style="height:125px;" src="../resources/e-waste-carbon-calculation-platform-logo.png">
                 <img style="height:125px;" src="../resources/hkuLogo.png"><br>
             </span>
             <span style="position: relative;right: 25%;margin-top: 8px;text-align: center;">
@@ -252,10 +253,29 @@
         let largeHouseholdcO2Saving = Math.round(qtyLargeHousehold * largeHouseholdCO2SavingFactor * 1e3) / 1e3;
         let computerCO2Saving = Math.round(qtyComputer * computerCO2SavingFactor * 1e3) / 1e3;
         let cO2SavingResult = (largeHouseholdcO2Saving + computerCO2Saving).toFixed(3);
+        if (largeHouseholdcO2Saving < 0.001 && qtyLargeHousehold > 0) {
+            largeHouseholdcO2Saving = 0.001;
+        }
+        if (computerCO2Saving < 0.001 && qtyComputer > 0) {
+            computerCO2Saving = 0.001;
+        }
+        if (cO2SavingResult < 0.001 && (qtyLargeHousehold > 0 || qtyComputer > 0)) {
+            cO2SavingResult = 0.001;
+        }
 
         let largeHouseholdEmissions = Math.round(qtyLargeHousehold * largeHouseholdEmissionsFactor * 1e3) / 1e3;
         let computerEmissions = Math.round(qtyComputer * computerEmissionsFactor * 1e3) / 1e3;
         let emissionResult = (largeHouseholdEmissions + computerEmissions).toFixed(3);
+
+        if (largeHouseholdEmissions < 0.001 && qtyLargeHousehold > 0) {
+            largeHouseholdEmissions = 0.001;
+        }
+        if (computerEmissions < 0.001 && qtyComputer > 0) {
+            computerEmissions = 0.001;
+        }
+        if (emissionResult < 0.001 && (qtyLargeHousehold > 0 || qtyComputer > 0)) {
+            emissionResult = 0.001;
+        }
 
         sessionStorage.setItem("qtyLargeHousehold", qtyLargeHousehold);
         sessionStorage.setItem("qtyComputer", qtyComputer);
