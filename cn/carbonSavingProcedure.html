@@ -1,0 +1,385 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<style>
+    td {
+        border: 2px solid rgb(239, 246, 251);
+        width: 25%;
+        padding: 15px;
+    }
+
+    .td20 {
+        width: 20% !important;
+    }
+
+    .td25 {
+        width: 25% !important;
+    }
+
+    .table-text {
+        align-content: baseline;
+    }
+
+    .table-text-header {
+        text-align: center;
+        font-size: larger;
+        font-weight: bold;
+        color: rgb(21, 96, 130);
+        margin-bottom: 10px;
+    }
+
+    .image-div {
+        height: 100%;
+        width: 100%;
+    }
+
+    .image-div>img {
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <header>
+        <span><img src="../resources/四電一腦智碳平台 logo (updated).png" style="height: 100%;" /></span>
+        <span class="header-title">
+            四電一腦 智碳平台<br>
+            E-waste Smart Carbon Platform</span>
+        <span class="header-stepper-container">
+            <div class="stepper-wrapper">
+                <div class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./background.html"><u>背景</u></a></div>
+                </div>
+                <div class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./calculator.html"><u>計算器</u></a></div>
+                </div>
+                <div class="stepper-item active">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./carbonSavingProcedure.html"><u>碳減排流程</u></a>
+                    </div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./impact.html"><u>影響</u></a></div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./zeroE-wasteAction.html"><u>#零電子廢物行動</u></a></div>
+                </div>
+            </div>
+        </span>
+        <span class="header-language">
+            <a href="../en/carbonSavingProcedure.html">EN</a> / <a href="./carbonSavingProcedure.html"
+                class="active">中</a>
+        </span>
+    </header>
+    <!-- End of header -->
+    <div class="body">
+        <div style="width: 100%;margin: 10px 2% 0px 2%;">
+            <div style="line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
+                <h2><b>二次物料回收處理流程</b></h2>
+            </div>
+        </div>
+        <ul id="list" style="margin-top: 10px;">
+            <li><span class="list-title">回收處理</span>
+                <div class="list-content">
+                    <div style="width: 100%;text-align: center;margin-bottom: 10px;font-size: medium;">
+                        <i>點擊查看這些電器在回收過程中如何實現碳減排</i>
+                    </div>
+                    <div style="max-width: 95%;margin: 0px 2% 0px 2%;display: flex;justify-content: center;">
+                        <div id="washing-machine" onclick="cardBoxChangeContent(this,'washing-machine', 'contentBox')"
+                            style="display: inline-block;width: 10%;">
+                            <img src="../resources/icon/washing-machine_active.svg" style="width: 100%;"
+                                alt="Washing Machine" class="clickable">
+                        </div>
+                        <div id="refrigerator" onclick="cardBoxChangeContent(this,'refrigerator', 'contentBox')"
+                            style="display: inline-block;width: 10%;">
+                            <img src="../resources/icon/refrigerator.svg" style="width: 100%;" alt="Refrigerator"
+                                class="clickable">
+                        </div>
+                        <div id="air-conditioner" onclick="cardBoxChangeContent(this,'air-conditioner', 'contentBox')"
+                            style="display: inline-block;width: 10%;">
+                            <img src="../resources/icon/air-conditioner.svg" style="width: 100%;" alt="Air Conditioner"
+                                class="clickable">
+                        </div>
+                        <div id="television" onclick="cardBoxChangeContent(this,'television', 'contentBox')"
+                            style="display: inline-block;width: 10%;">
+                            <img src="../resources/icon/television.svg" style="width: 100%;" alt="Television"
+                                class="clickable">
+                        </div>
+                        <div id="monitor" onclick="cardBoxChangeContent(this,'monitor', 'contentBox')"
+                            style="display: inline-block;width: 10%;">
+                            <img src="../resources/icon/monitor.svg" style="width: 100%;" alt="Monitor"
+                                class="clickable">
+                        </div>
+                        <div id="computer" onclick="cardBoxChangeContent(this,'computer', 'contentBox')"
+                            style="display: inline-block;width: 10%;">
+                            <img src="../resources/icon/computer.svg" style="width: 100%;" alt="Computer"
+                                class="clickable">
+                        </div>
+                        <div id="printer" onclick="cardBoxChangeContent(this,'printer', 'contentBox')"
+                            style="display: inline-block;width: 10%;">
+                            <img src="../resources/icon/printer.svg" style="width: 100%;" alt="Printer"
+                                class="clickable">
+                        </div>
+                        <div id="scanner" onclick="cardBoxChangeContent(this,'scanner', 'contentBox')"
+                            style="display: inline-block;width: 10%;">
+                            <img src="../resources/icon/scanner.svg" style="width: 100%;" alt="Scanner"
+                                class="clickable">
+                        </div>
+                        <div id="tumble-dryer" onclick="cardBoxChangeContent(this,'tumble-dryer', 'contentBox')"
+                            style="display: inline-block;width: 10%;">
+                            <img src="../resources/icon/tumble-dryer_active.svg" style="width: 100%;" alt="Tumble Dryer"
+                                class="clickable">
+                        </div>
+                        <div id="dehumidifier" onclick="cardBoxChangeContent(this,'dehumidifier', 'contentBox')"
+                            style="display: inline-block;width: 10%;">
+                            <img src="../resources/icon/dehumidifier.svg" style="width: 100%;" alt="Dehumidifier"
+                                class="clickable">
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul id="list" style="margin-top: 10px;">
+            <li>
+                <span style="font-size: 25px;font-weight: bold;color: rgb(33, 104, 136);">拆解、除毒與分類</span>
+                <div class="list-content" style="font-size: 1rem;">
+                    <p style="font-size: 25px;font-weight: bold;color: rgb(33, 104, 136);text-align: center;">
+                        轉廢為材，將廢棄物轉化為有價值的物料</p>
+                    <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+                        <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;" id="contentBox">
+                            <div class="headers">
+                                <div class="header" style="width: 25%;"><b>門板玻璃</b> </div>
+                                <div class="header" style="width: 25%;"><b>外殼</b> </div>
+                                <div class="header" style="width: 25%;"><b>滾筒滑輪</b> </div>
+                                <div class="header" style="width: 25%;"><b>馬達</b> </div>
+                            </div>
+                            <div class="content" style="height: fit-content;padding: 0px;">
+                                <table style="width: 100%; width: 100%;table-layout: fixed;">
+                                    <tr style="border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;">
+                                        <td class="td25">
+                                            <div class="image-div"> <img
+                                                    src="../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/door_glass.jpeg">
+                                            </div>
+                                        </td>
+                                        <td class="td25">
+                                            <div class="image-div"> <img
+                                                    src="../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/casing.jpeg">
+                                            </div>
+                                        </td>
+                                        <td class="td25">
+                                            <div class="image-div"><img
+                                                    src="../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/drum_pulley_wheel.jpeg">
+                                            </div>
+                                        </td>
+                                        <td class="td25">
+                                            <div class="image-div"><img
+                                                    src="../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/motor.jpeg">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr style="border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;">
+                                        <td class="table-text">
+                                            <div>
+                                                <div class="table-text-header">玻璃塑膠</div>
+                                                <div>
+                                                    <p>經粉碎與熔融處理後可製成新塑膠物料，再加工製造為新的新玻璃製品。</p>
+                                                    <p>與生產原生塑膠相比，回收塑膠可節省超過80%的能源消耗。</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="table-text">
+                                            <div>
+                                                <div class="table-text-header">鐵</div>
+                                                <div>
+                                                    <p>與生產原生鐵相比，回收鐵可節省74%的能源消耗。</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="table-text">
+                                            <div>
+                                                <div class="table-text-header">鋁</div>
+                                                <div>
+                                                    <p>與生產原生鋁相比，回收鋁可節省95%的能源消耗。</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="table-text">
+                                            <div>
+                                                <div class="table-text-header">銅</div>
+                                                <div>
+                                                    <p>與生產原生銅相比，回收銅可節省85%的能源消耗。</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div style="display: flex; justify-content: center; margin-bottom: 10px;margin-top: 2%;">
+            <span style="width: 5%;margin: 0px 2% 0px 2%;">
+                <div>
+                    <img src="../resources/didUKnow.jpg">
+                </div>
+            </span>
+            <span style="width: 80%;">
+                <div style="border: solid; border-radius: 10px;padding: 15px;">
+                    <div style="font-size: 26px;color: rgb(33, 104, 136);"><b>您知道嗎？</b></div>
+                    <p style="font-size: 20.5px;">雪櫃、空調機等溫控設備使用的製冷劑是強效溫室氣體。2019年，廢棄雪櫃和空調機設備排放的二氧化碳當量，約佔全球能源相關總排放量的0.3%。
+                    </p>
+                </div>
+            </span>
+        </div>
+        <style>
+            .container-fluid .blue-row {
+                background-color: rgb(33, 104, 136);
+                width: 100%;
+                margin: auto;
+            }
+
+            .container-fluid .blue-row h3 {
+                color: white;
+                font-size: 39px;
+                text-align: center;
+                vertical-align: center;
+                padding: 40px;
+                font-weight: bold;
+            }
+
+            @keyframes example {
+                0% {
+                    transform: translateX(20%);
+                }
+
+                50% {
+                    transform: translateX(40%);
+                }
+
+                100% {
+                    transform: translateX(20%);
+                }
+            }
+
+            .container-fluid .blue-row h3 span {
+                display: inline-block;
+                animation-name: example;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+
+            .container-fluid .blue-row:hover {
+                background-color: rgb(135, 172, 207) !important;
+            }
+        </style>
+        <div class="container-fluid" style="margin: 10px 0px 0px 0px;justify-items: center;">
+            <div class="blue-row" style="width: fit-content;border-radius: 20px;">
+                <a href="./impact.html" style="all: unset;cursor: pointer;">
+                    <h3 style="font-size: 25px;">電子廢棄物影響知多少<span>&#10230;</span></h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End of body class -->
+    <!-- Footer -->
+    <footer>
+        <div style="display: flex; justify-content: space-between;">
+            <span style="position: relative;left: 25%;margin-top: 8px;text-align: center;">
+                <span style="margin-bottom: 2px;"><u>Created by:</u></span><br>
+                <img style="height:125px;" src="../resources/四電一腦智碳平台 logo (updated).png">
+                <img style="height:125px;" src="../resources/hkuLogo.png"><br>
+            </span>
+            <span style="position: relative;right: 25%;margin-top: 8px;text-align: center;">
+                <span style="margin-bottom: 2px;"><u>Supported by:</u></span><br>
+                <img style="height:85px;" src="../resources/P1_ALBA_logo.svg">
+            </span>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+</body>
+<script>
+    function cardBoxChangeContent(item, section, id) {
+        let parentDiv = upTo(item, "div");
+        parentDiv.querySelectorAll("img").forEach(e => { e.src = e.src.replace("_active", "") });
+
+        let icon = item.getElementsByTagName('img')[0];
+        let iconPath = "../resources/icon/"
+        const contentBox = document.getElementById(id);
+
+        switch (section) {
+            case 'television':
+            case 'monitor':
+                let televisionIcon = document.getElementById('television').getElementsByTagName('img')[0];
+                let monitorIcon = document.getElementById('monitor').getElementsByTagName('img')[0];
+                televisionIcon.src = iconPath + "television" + "_active.svg"
+                monitorIcon.src = iconPath + "monitor" + "_active.svg"
+                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>底座</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>外框</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>內框</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>螢光燈管</b> </div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/television_and_monitor/stand.jpg\"></div> </td> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/television_and_monitor/outer_frame.png\"></div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/television_and_monitor/inner_frame.jpg\"> </div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/television_and_monitor/fluorescent_lamp.jpg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text\"> <div> <div class=\"table-text-header\">鐵</div> <div> <p>與生產原生鐵相比，回收鐵可節省74%的能源消耗。</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">塑膠</div> <div> <p>經粉碎與熔融處理後可製成新塑膠原料，並能重新製造為新產品及電子設備外殼。</p> <p>與生產原生塑膠相比，回收塑膠可節省80%的能源消耗。</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">鋁</div> <div> <p>與生產原生鋁相比，回收鋁可節省95%的能源消耗。</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">有害物料</div> <div> <p>含危險性汞物質，需謹慎處理。透過妥善回收可防止汞釋放至環境中。</p> </div> </div> </td> </tr> </table> </div>";
+                break;
+            case 'washing-machine':
+            case 'tumble-dryer':
+                let washingMachineIcon = document.getElementById('washing-machine').getElementsByTagName('img')[0];
+                let tumbleDryerIcon = document.getElementById('tumble-dryer').getElementsByTagName('img')[0];
+                washingMachineIcon.src = iconPath + "washing-machine" + "_active.svg"
+                tumbleDryerIcon.src = iconPath + "tumble-dryer" + "_active.svg"
+                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>門板玻璃</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>外殼</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>滾筒滑輪</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>馬達</b> </div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"td25\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/door_glass.jpeg\"> </div> </td> <td class=\"td25\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/casing.jpeg\"> </div> </td> <td class=\"td25\"> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/drum_pulley_wheel.jpeg\"> </div> </td> <td class=\"td25\"> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/washing-machine_and_tumble-dryer/motor.jpeg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text\"> <div> <div class=\"table-text-header\">玻璃塑膠</div> <div> <p>經粉碎與熔融處理後可製成新塑膠物料，再加工製造為新的新玻璃製品。</p> <p>與生產原生塑膠相比，回收塑膠可節省超過80%的能源消耗。</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">鐵</div> <div> <p>與生產原生鐵相比，回收鐵可節省74%的能源消耗。</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">鋁</div> <div> <p>與生產原生鋁相比，回收鋁可節省95%的能源消耗。</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">銅</div> <div> <p>與生產原生銅相比，回收銅可節省85%的能源消耗。</p> </div> </div> </td> </tr> </table> </div>";
+                break;
+            case 'refrigerator':
+                icon.src = iconPath + "refrigerator" + "_active.svg"
+                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>儲存托盤</b></div> <div class=\"header\" style=\"width: 25%;\"><b>外殼</b></div> <div class=\"header\" style=\"width: 25%;\"><b>冷凝器</b></div> <div class=\"header\" style=\"width: 25%;\"><b>泡棉隔熱層（聚氨酯 - PUR）</b></div> <div class=\"header\" style=\"width: 25%;\"><b>製冷劑</b></div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/refrigerator/storage_tray.jpeg\"> </div> </td> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/refrigerator/casing.jpg\"></div> </td> <td class=\"td20\"> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/refrigerator/condenser.jpg\"> </div> </td> <td class=\"td20\"> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/refrigerator/foam_insulation_layer.jpeg\"> </div> </td> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/refrigerator/refrigerant.jpg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">塑膠</div> <div> <p>經粉碎與熔融處理後可製成新塑膠原料，並能重新製造為新產品及儲存托盤。</p> <p>與生產原生塑膠相比，回收塑膠可節省超過80%的能源消耗。</p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">鐵</div> <div> <p>與生產原生鐵相比，回收鐵可節省74%的能源消耗。</p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">鋁</div> <div> <p>與生產原生鋁相比，回收鋁可節省95%的能源消耗。</p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">有害物料</div> <div> <p>PUR中的環戊烷具有高度易燃性，若未妥善處理，在回收過程中可能引發火災風險。WEEE·PARK與青洲英坭合作，將PUR與煤在水泥窯中進行共燃處理。</p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">有害物料</div> <div> <p>常見製冷劑如R22、R134a和R410a均為強效溫室氣體，可導致全球暖化與臭氧層破壞。WEEE·PARK與新加坡合作夥伴共同開發製冷劑純化技術，提供製冷劑淨化再用的解決方案。</p> </div> </div> </td> </tr> </table> </div>";
+                break;
+            case 'air-conditioner':
+                icon.src = iconPath + "air-conditioner" + "_active.svg"
+                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>前面板</b></div> <div class=\"header\" style=\"width: 25%;\"><b>外殼</b></div> <div class=\"header\" style=\"width: 25%;\"><b>管線組件</b></div> <div class=\"header\" style=\"width: 25%;\"><b>冷凝器盤管</b></div> <div class=\"header\" style=\"width: 25%;\"><b>製冷劑</b></div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/air-conditioner/front_panel.jpeg\"></div> </td> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/air-conditioner/casing.jpg\"> </div> </td> <td class=\"td20\"> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/air-conditioner/pipping.jpeg\"> </div> </td> <td class=\"td20\"> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/air-conditioner/condenser_coil.jpg\"> </div> </td> <td class=\"td20\"> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/air-conditioner/refrigerant.jpg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">塑膠</div> <div> <p>經粉碎與熔融處理後可製成新塑膠原料，並能重新製造為新產品。</p> <p>與生產原生塑膠相比，回收塑膠可節省超過80%的能源消耗。</p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">鐵</div> <div> <p>與生產原生鐵相比，回收鐵可節省74%的能源消耗。</p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">銅</div> <div> <p>與生產原生銅相比，回收銅可節省85%的能源消耗。</p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">鋁</div> <div> <p>與生產原生鋁相比，回收鋁可節省95%的能源消耗。 </p> </div> <div class=\"table-text-header\">銅</div> <div> <p>與生產原生銅相比，回收銅可節省85%的能源消耗。 </p> </div> </div> </td> <td class=\"table-text td20\"> <div> <div class=\"table-text-header\">有害物料</div> <div> <p>常見製冷劑如R22、R134a和R410a均為強效溫室氣體，可導致全球暖化與臭氧層破壞。WEEE·PARK與新加坡合作夥伴建立技術合作，提供製冷劑淨化再用的解決方案。</p> </div> </div> </td> </tr> </table> </div>";
+                break;
+            case 'computer':
+                icon.src = iconPath + "computer" + "_active.svg"
+                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>鍵盤</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>外殼</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>散熱片</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>電線</b> </div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/computer/keyboard.jpeg\"></div> </td> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/computer/casing.jpg\"></div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/computer/heat_sink.jpeg\"> </div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/computer/cable.jpeg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text\"> <div> <div class=\"table-text-header\">塑膠</div> <div> <p>經粉碎與熔融處理後可製成新塑膠原料，並能重新製造為新產品，包括新的電子產品外殼。</p> <p>與生產原生塑膠相比，回收塑膠可節省80%的能源消耗。</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">鐵</div> <div> <p>與生產原生鐵相比，回收鐵可節省74%的能源消耗。</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">鋁</div> <div> <p>與生產原生鋁相比，回收鋁可節省95%的能源消耗。</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">銅</div> <div> <p>與生產原生銅相比，回收銅可節省85%的能源消耗。</p> </div> </div> </td> </tr> </table> </div>";
+                break;
+            case 'printer':
+            case 'scanner':
+                let printerIcon = document.getElementById('printer').getElementsByTagName('img')[0];
+                let scannerIcon = document.getElementById('scanner').getElementsByTagName('img')[0];
+                printerIcon.src = iconPath + "printer" + "_active.svg"
+                scannerIcon.src = iconPath + "scanner" + "_active.svg"
+                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>外殼與托盤</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>馬達</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>滾輪</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>內部支架</b> </div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/printer_and_scanner/casing.png\"> </div> </td> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/printer_and_scanner/motor.jpg\"> </div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/printer_and_scanner/roller.jpg\"> </div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/printer_and_scanner/internal_chassis.jpg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text\"> <div> <div class=\"table-text-header\">塑膠</div> <div> <p>經粉碎與熔融處理後可製成新塑膠原料，並能重新製造為新產品，包括新的電子產品外殼。</p> <p>與生產原生塑膠相比，回收塑膠可節省80%的能源消耗。</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">銅</div> <div> <p>與生產原生銅相比，回收銅可節省85%的能源消耗。</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">鋁</div> <div> <p>與生產原生鋁相比，回收鋁可節省95%的能源消耗。</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">鐵</div> <div> <p>與生產原生鐵相比，回收鐵可節省74%的能源消耗。</p> </div> </div> </td> </tr> </table> </div>";
+                break;
+            case 'dehumidifier':
+                icon.src = iconPath + "dehumidifier" + "_active.svg"
+                contentBox.innerHTML = "<div class=\"headers\"> <div class=\"header\" style=\"width: 25%;\"><b>儲存托盤</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>外殼</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>冷凝器盤管</b> </div> <div class=\"header\" style=\"width: 25%;\"><b>製冷劑</b> </div> </div> <div class=\"content\" style=\"height: fit-content;padding: 0px;\"> <table style=\"width: 100%; width: 100%;table-layout: fixed;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/dehumidifier/storage_tray.jpg\"> </div> </td> <td> <div class=\"image-div\"> <img src=\"../resources/carbon_saving_procedure/dehumidifier/casing.jpeg\"></div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/dehumidifier/condenser_coil.jpg\"> </div> </td> <td> <div class=\"image-div\"><img src=\"../resources/carbon_saving_procedure/dehumidifier/refrigerant.jpg\"> </div> </td> </tr> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td class=\"table-text\"> <div> <div class=\"table-text-header\">塑膠</div> <div> <p>經粉碎與熔融處理後可製成新塑膠原料，並能重新製造為新產品，包括新的電子設備外殼。</p> <p>與生產原生塑膠相比，回收塑膠可節省超過80%的能源消耗。</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">鐵</div> <div> <p>與生產原生鐵相比，回收鐵可節省74%的能源消耗。</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">鋁</div> <div> <p>與生產原生鋁相比，回收鋁可節省95%的能源消耗。</p> </div> <div class=\"table-text-header\">銅</div> <div> <p>與生產原生銅相比，回收銅可節省85%的能源消耗。</p> </div> </div> </td> <td class=\"table-text\"> <div> <div class=\"table-text-header\">有害物料</div> <div> <p>常見冷媒如R22、R134a和R410a均為強效溫室氣體，可能導致全球暖化及臭氧層破壞。WEEE · PARK與新加坡合作夥伴共同推動冷媒純化再利用技術。</p> </div> </div> </td> </tr> </table> </div>";
+                break;
+        }
+    }
+
+    function upTo(el, tagName) {
+        tagName = tagName.toLowerCase();
+
+        while (el && el.parentNode) {
+            el = el.parentNode;
+            if (el.tagName && el.tagName.toLowerCase() == tagName) {
+                return el;
+            }
+        }
+        return null;
+    }
+</script>

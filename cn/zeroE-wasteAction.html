@@ -1,0 +1,364 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <span><img src="../resources/四電一腦智碳平台 logo (updated).png" style="height: 100%;" /></span>
+        <span class="header-title">
+            四電一腦 智碳平台<br>
+            E-waste Smart Carbon Platform</span>
+        <span class="header-stepper-container">
+            <div class="stepper-wrapper">
+                <div class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./background.html"><u>背景</u></a></div>
+                </div>
+                <div class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./calculator.html"><u>計算器</u></a></div>
+                </div>
+                <div class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./carbonSavingProcedure.html"><u>碳減排流程</u></a>
+                    </div>
+                </div>
+                <div class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./impact.html"><u>影響</u></a></div>
+                </div>
+                <div class="stepper-item active">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./zeroE-wasteAction.html"><u>#零電子廢物行動</u></a></div>
+                </div>
+            </div>
+        </span>
+        <span class="header-language">
+            <a href="../en/zeroE-wasteAction.html">EN</a> / <a href="./zeroE-wasteAction.html" class="active">中</a>
+        </span>
+    </header>
+    <!-- End of header -->
+    <div class="body">
+        <div style="margin: auto;height: calc((90% - 100px) - 30px);align-content: center;">
+            <div>
+                <div style="text-align: center;margin: 0% 2% 2% 2%;">
+                    <span style="width: 100%;">
+                        <div style="line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
+                            <h2><b>如果您的電子廢棄物進行回收處理，您將產生……</b></h2>
+                        </div>
+                    </span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;text-align: center;">
+                    <div style="width: 40%;margin:auto;display: inline-block;padding-left: 5%;">
+                        <div style="text-align: left;font-size: x-large;margin-top: 8%;color: rgb(21, 96, 130);">
+                            <b><span id="cO2SavingResult" style="font-size: 60px;"></span><span
+                                    style="font-size: 30px;">
+                                    噸二氧化碳</span></b>
+                            <p>來自回收材料的二氧化碳減排</p>
+                        </div>
+                        <div style="text-align: left;font-size: x-large;margin-top: 8%;color: rgb(21, 96, 130);">
+                            <b><span id="emissionResult" style="font-size: 60px;"></span><span style="font-size: 30px;">
+                                    噸二氧化碳當量</span></b>
+                            <p>來自回收處理過程產生的二氧化碳排放</p>
+                        </div>
+                    </div>
+                    <div style="width: 48%;margin: auto;display: inline-block;">
+                        <div
+                            style="text-align: center; background-color: rgb(134, 206, 234);height: 3em;margin-bottom: 1%;align-content: center;color: rgb(21, 96, 130);font-size: larger;">
+                            <b>電子廢物回收處理報告</b>
+                        </div>
+                        <div class="headers" style="height: auto;border-bottom: 1px solid white;">
+                            <div class="header" style="width: 30%;"><b>電子廢物類別
+                                </b>
+                            </div>
+                            <div class="header" style="width: 14%;"><b>數量</b></div>
+                            <div class="header" style="width: 27.5%;"><b>來自回收材料<br>所帶來的減碳效益
+                                </b>
+                            </div>
+                            <div class="header" style="width: 28.5%;"><b>來自回收處理過程<br>所產生的二氧化碳排放量
+                                </b></div>
+                        </div>
+                        <div class="headers" style="height: 15%;border-bottom: 1px solid white;">
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 30%;">
+                                大型家用電器<br>(四電: 雪櫃、<br>洗衣機、冷氣機)
+                            </div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 14%;">
+                                <span id="qtyLargeHousehold"></span>
+                            </div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;">
+                                <span id="largeHouseholdcO2Saving"></span>
+                            </div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 28.5%;">
+                                <span id="largeHouseholdEmissions"></span>
+                            </div>
+                        </div>
+                        <div class="headers" style="height: 15%;border-bottom: 1px solid white;">
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 30%;">
+                                電腦
+                            </div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 14%;">
+                                <span id="qtyComputer"></span>
+                            </div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;">
+                                <span id="computerCO2Saving"></span>
+                            </div>
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 28.5%;">
+                                <span id="computerEmissions"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    let qtyLargeHousehold = (sessionStorage.getItem("qtyLargeHousehold") == undefined || sessionStorage.getItem("qtyLargeHousehold") == null) ? 0 : sessionStorage.getItem("qtyLargeHousehold");
+                    let qtyComputer = (sessionStorage.getItem("qtyComputer") == undefined || sessionStorage.getItem("qtyComputer") == null) ? 0 : sessionStorage.getItem("qtyComputer");
+                    let largeHouseholdcO2Saving = (sessionStorage.getItem("largeHouseholdcO2Saving") == undefined || sessionStorage.getItem("largeHouseholdcO2Saving") == null) ? 0 : sessionStorage.getItem("largeHouseholdcO2Saving");
+                    let computerCO2Saving = (sessionStorage.getItem("computerCO2Saving") == undefined || sessionStorage.getItem("computerCO2Saving") == null) ? 0 : sessionStorage.getItem("computerCO2Saving");
+                    let largeHouseholdEmissions = (sessionStorage.getItem("largeHouseholdEmissions") == undefined || sessionStorage.getItem("largeHouseholdEmissions") == null) ? 0 : sessionStorage.getItem("largeHouseholdEmissions");
+                    let computerEmissions = (sessionStorage.getItem("computerEmissions") == undefined || sessionStorage.getItem("computerEmissions") == null) ? 0 : sessionStorage.getItem("computerEmissions");
+                    let cO2SavingResult = (sessionStorage.getItem("cO2SavingResult") == undefined || sessionStorage.getItem("cO2SavingResult") == null) ? 0 : sessionStorage.getItem("cO2SavingResult");
+                    let emissionResult = (sessionStorage.getItem("emissionResult") == undefined || sessionStorage.getItem("emissionResult") == null) ? 0 : sessionStorage.getItem("emissionResult");
+
+                    document.getElementById("qtyLargeHousehold").innerHTML = qtyLargeHousehold;
+                    document.getElementById("largeHouseholdcO2Saving").innerHTML = "= " + largeHouseholdcO2Saving + " 噸二氧化碳";
+                    document.getElementById("largeHouseholdEmissions").innerHTML = "= " + largeHouseholdEmissions + " 噸二氧化碳當量";
+
+                    document.getElementById("qtyComputer").innerHTML = qtyComputer;
+                    document.getElementById("computerCO2Saving").innerHTML = "= " + computerCO2Saving + " 噸二氧化碳";
+                    document.getElementById("computerEmissions").innerHTML = "= " + computerEmissions + " 噸二氧化碳當量";
+
+                    document.getElementById("cO2SavingResult").innerHTML = cO2SavingResult;
+                    document.getElementById("emissionResult").innerHTML = emissionResult;
+                </script>
+            </div>
+        </div>
+
+        <style>
+            .container {
+                position: relative;
+                width: 24px;
+                height: 17%;
+            }
+
+            .chevron {
+                position: absolute;
+                width: 28px;
+                height: 2px;
+                opacity: 0;
+                transform: scale3d(0.5, 0.5, 0.5);
+                animation: move 3s ease-out infinite;
+                z-index: 1;
+            }
+
+            .chevron:first-child {
+                animation: move 3s ease-out 1s infinite;
+            }
+
+            .chevron:nth-child(2) {
+                animation: move 3s ease-out 2s infinite;
+            }
+
+            .chevron:before,
+            .chevron:after {
+                content: ' ';
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 51%;
+                background: black;
+            }
+
+            .chevron:before {
+                left: 0;
+                transform: skew(0deg, 30deg);
+            }
+
+            .chevron:after {
+                right: 0;
+                width: 50%;
+                transform: skew(0deg, -30deg);
+            }
+
+            @keyframes move {
+                25% {
+                    opacity: 1;
+
+                }
+
+                33% {
+                    opacity: 1;
+                    transform: translateY(30px);
+                }
+
+                67% {
+                    opacity: 1;
+                    transform: translateY(40px);
+                }
+
+                100% {
+                    opacity: 0;
+                    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+                }
+            }
+
+            .text {
+                display: inline-block;
+                margin-top: 75px;
+                margin-left: -10px;
+                font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+                font-size: 12px;
+                color: black;
+                text-transform: uppercase;
+                white-space: nowrap;
+                opacity: .25;
+                animation: pulse 2s linear alternate infinite;
+            }
+
+            @keyframes pulse {
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
+        <div class="container">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <span class="text">向下捲動</span>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span style="width: 40%;margin: 0% 2% 10px 2%;">
+                <div style="line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
+                    <h2><b>「零電子廢物」小貼士</b></h2>
+                </div>
+            </span>
+        </div>
+
+        <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+            <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
+                <div class="headers">
+                    <div class="header clickable active" style="width: 33.3%;"
+                        onclick="cardBoxChangeContent(this, 'supplier','contentBox')">
+                        <b>供應商</b>
+                    </div>
+                    <div class="header clickable" style="width: 33.3%;"
+                        onclick="cardBoxChangeContent(this, 'seller', 'contentBox')"><b>銷售商</b>
+                    </div>
+                    <div class="header clickable" style="width: 33.3%;"
+                        onclick="cardBoxChangeContent(this, 'consumer', 'contentBox')"><b>消費者</b>
+                    </div>
+                </div>
+                <div class="content" style="height: 400px;" id="contentBox">
+                    <p style="font-weight: bold;font-size: larger;color: rgb(33, 104, 136);">採用綠色產品設計三大原則：</p>
+                    <ul>
+                        <li>
+                            設計考量：<p>考慮產品的環保特性，包括可拆解性、可回收性、可維護性及可重用性。這些設計要素能簡化退役電子產品的回收工序。</p>
+                        </li>
+                        <li>
+                            採用物料：<p>選用符合環保原則的無害物料，兼具節能效益、易回收性、高可靠性及使用壽命長等特點。</p>
+                        </li>
+                        <li>
+                            環保處理技術：<p>研發電子產品的可持續回收工序，防止拆解電子廢物時釋放有害物質。相關技術旨在盡量減少使用酸性、鹼性及具腐蝕性的試劑與化學品。</p>
+                        </li>
+                    </ul>
+                </div>
+            </span>
+        </div>
+        <style>
+            .container-fluid .blue-row {
+                background-color: rgb(33, 104, 136);
+                width: 100%;
+                margin: auto;
+            }
+
+            .container-fluid .blue-row h3 {
+                color: white;
+                font-size: 39px;
+                text-align: center;
+                vertical-align: center;
+                padding: 40px;
+                font-weight: bold;
+            }
+
+            @keyframes example {
+                0% {
+                    transform: translateX(20%);
+                }
+
+                50% {
+                    transform: translateX(40%);
+                }
+
+                100% {
+                    transform: translateX(20%);
+                }
+            }
+
+            .container-fluid .blue-row h3 span {
+                display: inline-block;
+                animation-name: example;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+
+            .container-fluid .blue-row:hover {
+                background-color: rgb(135, 172, 207) !important;
+            }
+        </style>
+        <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+            <div class="blue-row" style="width: fit-content;border-radius: 20px;">
+                <a href="./survey.html" style="all: unset;cursor: pointer;">
+                    <h3 style="font-size: 25px;">下一頁<span>&#10230;</span></h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End of body class -->
+    <!-- Footer -->
+    <footer>
+        <div style="display: flex; justify-content: space-between;">
+            <span style="position: relative;left: 25%;margin-top: 8px;text-align: center;">
+                <span style="margin-bottom: 2px;"><u>Created by:</u></span><br>
+                <img style="height:125px;" src="../resources/四電一腦智碳平台 logo (updated).png">
+                <img style="height:125px;" src="../resources/hkuLogo.png"><br>
+            </span>
+            <span style="position: relative;right: 25%;margin-top: 8px;text-align: center;">
+                <span style="margin-bottom: 2px;"><u>Supported by:</u></span><br>
+                <img style="height:85px;" src="../resources/P1_ALBA_logo.svg">
+            </span>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+</body>
+<script>
+    function cardBoxChangeContent(item, section, id) {
+        item.parentElement.querySelectorAll(".active").forEach(e => e.classList.remove("active"))
+        item.classList.add("active")
+        const contentBox = document.getElementById(id);
+        switch (section) {
+            case 'supplier':
+                contentBox.innerHTML = '<p style=\"font-weight: bold;font-size: larger;color: rgb(33, 104, 136);\">採用綠色產品設計三大原則：</p> <ul> <li> 設計考量：<p>考慮產品的環保特性，包括可拆解性、可回收性、可維護性及可重用性。這些設計要素能簡化退役電子產品的回收工序。</p> </li> <li> 採用物料：<p>選用符合環保原則的無害物料，兼具節能效益、易回收性、高可靠性及使用壽命長等特點。</p> </li> <li> 環保處理技術：<p>研發電子產品的可持續回收工序，防止拆解電子廢物時釋放有害物質。相關技術旨在盡量減少使用酸性、鹼性及具腐蝕性的試劑與化學品。</p> </li> </ul>';
+                break;
+            case 'seller':
+                contentBox.innerHTML = '<p style=\"font-weight: bold;font-size: larger;color: rgb(33, 104, 136);\">推動可持續電子產品的環保行動</p> <ul> <li>教育顧客<ul> <li>推行店内宣傳計劃，透過展示資訊標示及派發宣傳單張，提升顧客對妥善處理電子廢物的認知，推廣負責任的回收做法。</li> </ul> </li> <li>推廣翻新及二手產品<ul> <li>設立專區銷售經認證的高品質翻新電子產品，並提供吸引價格，以有效降低對新產品的需求。</li> </ul> </li> <li>倡導綠色政策<ul> <li>積極與供應商協作，透過全面的可持續發展評估及供應商評核，推動業界採用環保措施及減少電子廢物。</li> </ul> </li> </ul>';
+                break;
+            case 'consumer':
+                contentBox.innerHTML = '<p style=\"font-weight: bold;font-size: larger;color: rgb(33, 104, 136);\">實踐電子廢物管理的「5R」行動</p> <ul> <li>定期保養（<b>R</b>egular maintenance）：修理損壞或故障的電器，而非直接丟棄。</li> <li>翻新維修（<b>R</b>efurbish）：修理損壞或故障的電器，而非直接丟棄。</li> <li>重用捐贈（<b>R</b>euse）：若電器仍能運作但不再需要，可捐贈給有需要的人。</li> <li>認證回收（<b>R</b>ecycle）：透過認可的回收計劃或設施處理電子廢物，確保得到妥善處理。</li> <li>責任消費（<b>R</b>esponsibly）：光顧重視可持續發展、使用再生物材料並提供回收計劃的公司。</li> </ul>';
+                break;
+
+        }
+    }
+</script>

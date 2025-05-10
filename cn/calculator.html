@@ -1,0 +1,295 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <span><img src="../resources/四電一腦智碳平台 logo (updated).png" style="height: 100%;" /></span>
+        <span class="header-title">
+            四電一腦 智碳平台<br>
+            E-waste Smart Carbon Platform</span>
+        <span class="header-stepper-container">
+            <div class="stepper-wrapper">
+                <div class="stepper-item completed">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./background.html"><u>背景</u></a></div>
+                </div>
+                <div class="stepper-item active">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./calculator.html"><u>計算器</u></a></div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./carbonSavingProcedure.html"><u>碳減排流程</u></a>
+                    </div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./impact.html"><u>影響</u></a></div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./zeroE-wasteAction.html"><u>#零電子廢物行動</u></a></div>
+                </div>
+            </div>
+        </span>
+        <span class="header-language">
+            <a href="../en/calculator.html">EN</a> / <a href="./calculator.html" class="active">中</a>
+        </span>
+    </header>
+    <!-- End of header -->
+    <div class="body">
+        <div style="margin-bottom: 10px;display: flex;">
+            <span style="width: 100%;margin: 10px 2% 0px 2%;">
+                <div style="line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
+                    <h2><b>請輸入您想處理的廢電器電子產品資料！</b></h2>
+                </div>
+            </span>
+        </div>
+        <div style="margin-bottom: 10px;display: flex;padding-left: 2%;font-size: 20.5px;">
+            <span style="width: 50%;">
+                您選擇的廢電器電子產品將會被收集並運送至香港的回收設施。<br>
+                點擊下方的「<b>開始</b>」按鈕，看看回收這些電器會帶來什麼影響！</span>
+        </div>
+        <style>
+            .value-control {
+                width: 38px;
+                height: 38px;
+                margin: 15px 8px;
+                background: transparent;
+                color: #3b3b3b;
+                cursor: pointer;
+            }
+
+            .value-control:hover {
+                background: #eee;
+            }
+
+            .value-control:active {
+                background: #ddd;
+            }
+
+            .value-input {
+                margin: 0;
+                height: 38px;
+                width: 80px;
+                padding: 2px 8px;
+                text-align: center;
+            }
+
+            .value-input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+
+            .value-input:hover {
+                border-color: #777;
+            }
+        </style>
+        <div
+            style="height: fit-content;display: flex; justify-content: space-around; margin: 10px 2% 15px 2%; margin-bottom: 10px;">
+            <div style="width: 40%;text-align: center;display: inline-block;">
+                <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+                    <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
+                        <div class="headers">
+                            <div class="header" style="width: 100%;"
+                                onclick="cardBoxChangeContent(this, 'weee-park', 'contentBox2')"><b>受管制廢電器電子產品 -
+                                    大型家用電器</b>
+                            </div>
+                        </div>
+                        <div class="content" style="height: fit-content;">
+                            <div style="display: flex;justify-content: space-around;">
+                                <div style="display: inline-block;"><img src="../resources/icon/washing-machine.svg"
+                                        style="height: 150px;" alt="Washing Machine"></div>
+                                <div style="display: inline-block;"><img src="../resources/icon/refrigerator.svg"
+                                        style="height: 150px;" alt="Refrigerator"></div>
+                            </div>
+                            <div style="display: flex;justify-content: space-around;">
+                                <div style="display: inline-block;"><img src="../resources/icon/air-conditioner.svg"
+                                        style="height: 150px;" alt="Air Conditioner"></div>
+                                <div style="display: inline-block;"><img src="../resources/icon/television.svg"
+                                        style="height: 150px;" alt="Television"></div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div>
+                    <div style="color:rgb(21, 96, 130);font-size: x-large;"><b>數量:</b></div>
+                    <div>
+                        <button class="value-control" onclick="largeHouseholdInput.stepDown()" title="Decrease value"
+                            aria-label="Decrease value">-</button>
+
+                        <input class="value-input" type="number" value="0" name="largeHouseholdInput"
+                            id="largeHouseholdInput" min="0" step="1" style="text-align: center;">
+
+                        <button class="value-control" onclick="largeHouseholdInput.stepUp()" title="Increase value"
+                            aria-label="Increase value">+</button>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 40%;text-align: center;display:inline-block">
+                <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+                    <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
+                        <div class="headers">
+                            <div class="header" style="width: 100%;"
+                                onclick="cardBoxChangeContent(this, 'weee-park', 'contentBox2')"><b>受管制廢電器電子產品 -
+                                    電腦設備</b>
+                            </div>
+                        </div>
+                        <div class="content" style="height: fit-content;">
+                            <div style="display: flex;justify-content: space-around;">
+                                <div style="display: inline-block;"><img src="../resources/icon/monitor.svg"
+                                        style="height: 150px;" alt="Monitor"></div>
+                                <div style="display: inline-block;"><img src="../resources/icon/computer.svg"
+                                        style="height: 150px;" alt="Computer"></div>
+                            </div>
+                            <div style="display: flex;justify-content: space-around;">
+                                <div style="display: inline-block;"><img src="../resources/icon/printer.svg"
+                                        style="height: 150px;" alt="Printer"></div>
+                                <div style="display: inline-block;"><img src="../resources/icon/scanner.svg"
+                                        style="height: 150px;" alt="Scanner"></div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div>
+                    <div style="color:rgb(21, 96, 130);font-size: x-large;"><b>數量:</b></div>
+                    <div>
+                        <button class="value-control" onclick="computerInput.stepDown()">-</button>
+
+                        <input class="value-input" type="number" value="0" name="computerInput" id="computerInput"
+                            min="0" step="1" style="text-align: center;">
+
+                        <button class="value-control" onclick="computerInput.stepUp()">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .container-fluid .blue-row {
+                background-color: rgb(33, 104, 136);
+                width: 100%;
+                margin: auto;
+            }
+
+            .container-fluid .blue-row h3 {
+                color: white;
+                font-size: 39px;
+                text-align: center;
+                vertical-align: center;
+                padding: 40px;
+                font-weight: bold;
+            }
+
+            @keyframes example {
+                0% {
+                    transform: translateX(20%);
+                }
+
+                50% {
+                    transform: translateX(40%);
+                }
+
+                100% {
+                    transform: translateX(20%);
+                }
+            }
+
+            .container-fluid .blue-row h3 span {
+                display: inline-block;
+                animation-name: example;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+
+            .container-fluid .blue-row:hover {
+                background-color: rgb(135, 172, 207) !important;
+            }
+        </style>
+        <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+            <div class="blue-row" style="width: fit-content;border-radius: 20px;">
+                <a href="./carbonSavingProcedure.html" style="all: unset;cursor: pointer;" onclick="calculation()">
+                    <h3 style="font-size: 25px;">開始<span>&#10230;</span></h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End of body class -->
+    <!-- Footer -->
+    <footer>
+        <div style="display: flex; justify-content: space-between;">
+            <span style="position: relative;left: 25%;margin-top: 8px;text-align: center;">
+                <span style="margin-bottom: 2px;"><u>Created by:</u></span><br>
+                <img style="height:125px;" src="../resources/四電一腦智碳平台 logo (updated).png">
+                <img style="height:125px;" src="../resources/hkuLogo.png"><br>
+            </span>
+            <span style="position: relative;right: 25%;margin-top: 8px;text-align: center;">
+                <span style="margin-bottom: 2px;"><u>Supported by:</u></span><br>
+                <img style="height:85px;" src="../resources/P1_ALBA_logo.svg">
+            </span>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+</body>
+<script>
+    function calculation() {
+        let qtyLargeHousehold = document.getElementById("largeHouseholdInput").value > 0 ? Math.round(document.getElementById("largeHouseholdInput").value) : 0;
+        let qtyComputer = document.getElementById("computerInput").value > 0 ? Math.round(document.getElementById("computerInput").value) : 0;
+        let largeHouseholdCO2SavingFactor = 0.20615;
+        let largeHouseholdEmissionsFactor = 0.00339;
+        let computerCO2SavingFactor = 0.01167;
+        let computerEmissionsFactor = 0.00049;
+
+        let largeHouseholdcO2Saving = Math.round(qtyLargeHousehold * largeHouseholdCO2SavingFactor * 1e3) / 1e3;
+        let computerCO2Saving = Math.round(qtyComputer * computerCO2SavingFactor * 1e3) / 1e3;
+        let cO2SavingResult = (largeHouseholdcO2Saving + computerCO2Saving).toFixed(3);
+        if (largeHouseholdcO2Saving < 0.001 && qtyLargeHousehold > 0) {
+            largeHouseholdcO2Saving = 0.001;
+        }
+        if (computerCO2Saving < 0.001 && qtyComputer > 0) {
+            computerCO2Saving = 0.001;
+        }
+        if (cO2SavingResult < 0.001 && (qtyLargeHousehold > 0 || qtyComputer > 0)) {
+            cO2SavingResult = 0.001;
+        }
+
+        let largeHouseholdEmissions = Math.round(qtyLargeHousehold * largeHouseholdEmissionsFactor * 1e3) / 1e3;
+        let computerEmissions = Math.round(qtyComputer * computerEmissionsFactor * 1e3) / 1e3;
+        let emissionResult = (largeHouseholdEmissions + computerEmissions).toFixed(3);
+
+        if (largeHouseholdEmissions < 0.001 && qtyLargeHousehold > 0) {
+            largeHouseholdEmissions = 0.001;
+        }
+        if (computerEmissions < 0.001 && qtyComputer > 0) {
+            computerEmissions = 0.001;
+        }
+        if (emissionResult < 0.001 && (qtyLargeHousehold > 0 || qtyComputer > 0)) {
+            emissionResult = 0.001;
+        }
+
+        sessionStorage.setItem("qtyLargeHousehold", qtyLargeHousehold);
+        sessionStorage.setItem("qtyComputer", qtyComputer);
+
+        sessionStorage.setItem("largeHouseholdcO2Saving", largeHouseholdcO2Saving);
+        sessionStorage.setItem("computerCO2Saving", computerCO2Saving);
+        sessionStorage.setItem("cO2SavingResult", cO2SavingResult);
+
+        sessionStorage.setItem("largeHouseholdEmissions", largeHouseholdEmissions);
+        sessionStorage.setItem("computerEmissions", computerEmissions);
+        sessionStorage.setItem("emissionResult", emissionResult);
+        window.location.href = "./carbonSavingProcedure.html";
+
+    }
+</script>

@@ -1,0 +1,440 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <span><img src="../resources/四電一腦智碳平台 logo (updated).png" style="height: 100%;" /></span>
+        <span class="header-title">
+            四電一腦 智碳平台<br>
+            E-waste Smart Carbon Platform</span>
+        <span class="header-stepper-container">
+            <div class="stepper-wrapper">
+                <div class="stepper-item active">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./background.html"><u>背景</u></a></div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./calculator.html"><u>計算器</u></a></div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./carbonSavingProcedure.html"><u>碳減排流程</u></a>
+                    </div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./impact.html"><u>影響</u></a></div>
+                </div>
+                <div class="stepper-item">
+                    <div class="step-counter"></div>
+                    <div class="step-name"><a href="./zeroE-wasteAction.html"><u>#零電子廢物行動</u></a></div>
+                </div>
+            </div>
+        </span>
+        <span class="header-language">
+            <a href="../index.html">EN</a> / <a href="./background.html" class="active">中</a>
+        </span>
+    </header>
+    <!-- End of header -->
+    <div class="body">
+        <div style="width: 100%;text-align: center;margin-top: 10px;"><img style="height:100%"
+                src="../resources/background/P1_Banner.png"></div>
+        <div style="display: flex; justify-content: center; margin-top: 10px; margin-bottom: 10px;">
+            <span class="table-container" style="justify-content: center;width: 80%;">
+                <div class="headers" style="height: fit-content;">
+                    <div class="header clickable active" onclick="cardBoxChangeContent(this, 'about','contentBox')">
+                        <b>關於我們</b>
+                    </div>
+                    <div class="header clickable" onclick="cardBoxChangeContent(this, 'purpose', 'contentBox')">
+                        <b>目的與功能</b>
+                    </div>
+                    <div class="header clickable" onclick="cardBoxChangeContent(this, 'users', 'contentBox')">
+                        <b>目標用戶</b>
+                    </div>
+                    <div class="header clickable" onclick="cardBoxChangeContent(this, 'relevance', 'contentBox')">
+                        <b>本地適用性</b>
+                    </div>
+                </div>
+                <div class="content" style="height: 315px;" id="contentBox">
+                    歡迎使用「電子廢物碳足跡計算器」，此工具旨在針對香港廢電器電子產品（簡稱WEEE或電子廢物）相關的溫室氣體排放進行全面評估。此計算器讓本地受管制電器的廢電器電子產品（REE）的生產者、銷售商及消費者更深入了解其對環境的影響，並推動電子廢物管理的可持續實踐。
+                </div>
+            </span>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span style="width: 40%;margin: 0% 2% 10px 2%;">
+                <div style="line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
+                    <h2><b>認識香港的電子廢物</b></h2>
+                </div>
+            </span>
+        </div>
+        <div style="width: 100%;margin: 0% 2% 10px 2%;">
+            <h3 style="color: rgb(21, 96, 130);font-size: 25px;">
+                <p>香港每年產生超過70,000公噸電子廢物，然而僅有32%電子廢物於「WEEE·PARK」設施得到妥善回收處理。</p>
+            </h3>
+        </div>
+
+        <ul id="list">
+            <li><span class="list-title">什麼是電子廢物？</span>
+                <div class="list-content">電子廢物（e-waste）是指被棄置及不再使用的電器及電子設備。根據歐洲聯盟《廢電器電子設備指令》（WEEE
+                    Directive），「WEEE」與「e-waste」兩個術語通常被視為同義詞。</div>
+            </li>
+        </ul>
+
+        <ul id="list">
+            <li><span class="list-title">電子廢物何去何從？</span>
+                <ul style="margin-left: 3%;">
+                    <li><span class="sublist-title">出口處理</span>
+                        <div style="display: flex;align-items: stretch;">
+                            <div class="list-content">
+                                香港過去會將電子廢物出口至發展中國家進行回收或再利用；自1992年起，《巴塞爾公約》等國際規管日趨嚴格，有害廢物的全球貿易受到限制，促使香港必須在本地處理電子廢物問題。
+                            </div>
+                        </div>
+                    </li>
+                    <li><span class="sublist-title">香港的電子廢物管理</span>
+                        <div class="list-content">為應對此挑戰，香港於2018年實施《廢電器電子產品生產者責任計劃》（WPRS），確保電子廢物能在「WEEE·PARK」獲得妥善回收與處置。
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+            <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
+                <div class="headers">
+                    <div class="header clickable active" style="width: 50%;"
+                        onclick="cardBoxChangeContent(this, 'producer-responsibility','contentBox2')">
+                        <b>廢電器電子產品生產者責任計劃（WPRS）</b>
+                    </div>
+                    <div class="header clickable" style="width: 50%;"
+                        onclick="cardBoxChangeContent(this, 'weee-park', 'contentBox2')"><b>WEEE·PARK 廢電器電子產品處理及回收設施</b>
+                    </div>
+                </div>
+                <div class="content" style="height: 461px;" id="contentBox2">
+                    <div>
+                        該計劃規管多類主要電器的處置，包括空調機、雪櫃、洗衣機、電視機、電腦、列印機、掃描器及顯示器等。自2024年7月1日起，計劃進一步擴展至涵蓋更多電器類別，例如大型雪櫃、大容量洗衣機、乾衣機及抽濕機等，以加強對電子廢物回收的監管。
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin: 10px 0px 10px 2%;">
+                        <img id="image-box" src="../resources/background/P3_Washing Machine details (eng).svg"
+                            style="width: 40%;">
+                        <div style="display: flex; justify-content: center;width: 60%;    margin: 0% 2% 10px 2%;">
+                            <table style="max-width: 100%; width: 100%;margin: 0px 10px 0px 2%;">
+                                <tr>
+                                    <td id="washing-machine"
+                                        onclick="imageBoxChangeContent(this,'washing-machine', 'image-box')">
+                                        <img src="../resources/icon/washing-machine_active.svg" style="height: 150px;"
+                                            alt="Washing Machine" class="clickable">
+                                    </td>
+                                    <td id="refrigerator"
+                                        onclick="imageBoxChangeContent(this,'refrigerator', 'image-box')">
+                                        <img src="../resources/icon/refrigerator.svg" style="height: 150px;"
+                                            alt="Refrigerator" class="clickable">
+                                    </td>
+                                    <td id="air-conditioner"
+                                        onclick="imageBoxChangeContent(this,'air-conditioner', 'image-box')">
+                                        <img src="../resources/icon/air-conditioner.svg" style="height: 150px;"
+                                            alt="Air Conditioner" class="clickable">
+                                    </td>
+                                    <td id="television" onclick="imageBoxChangeContent(this,'television', 'image-box')">
+                                        <img src="../resources/icon/television.svg" style="height: 150px;"
+                                            alt="Television" class="clickable">
+                                    </td>
+                                    <td id="dehumidifier"
+                                        onclick="imageBoxChangeContent(this,'dehumidifier', 'image-box')">
+                                        <img src="../resources/icon/dehumidifier.svg" style="height: 150px;"
+                                            alt="Dehumidifier" class="clickable">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="monitor" onclick="imageBoxChangeContent(this,'monitor', 'image-box')">
+                                        <img src="../resources/icon/monitor.svg" style="height: 150px;" alt="Monitor"
+                                            class="clickable">
+                                    </td>
+                                    <td id="computer" onclick="imageBoxChangeContent(this,'computer', 'image-box')">
+                                        <img src="../resources/icon/computer.svg" style="height: 150px;" alt="Computer"
+                                            class="clickable">
+                                    </td>
+                                    <td id="printer" onclick="imageBoxChangeContent(this,'printer', 'image-box')">
+                                        <img src="../resources/icon/printer.svg" style="height: 150px;" alt="Printer"
+                                            class="clickable">
+                                    </td>
+                                    <td id="scanner" onclick="imageBoxChangeContent(this,'scanner', 'image-box')">
+                                        <img src="../resources/icon/scanner.svg" style="height: 150px;" alt="Scanner"
+                                            class="clickable">
+                                    </td>
+                                    <td id="tumble-dryer"
+                                        onclick="imageBoxChangeContent(this,'tumble-dryer', 'image-box')">
+                                        <img src="../resources/icon/tumble-dryer.svg" style="height: 150px;"
+                                            alt="Tumble Dryer" class="clickable">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </span>
+        </div>
+
+        <ul id="list">
+            <li><span class="list-title">電子廢物加劇氣候變化</span>
+                <div class="list-content">
+                    廢電器電子產品（WEEE）的生命週期由開採天然資源開始，直至最終處置結束。整個過程中會無可避免地產生溫室氣體（GHG）排放。處理方式會直接影響溫室氣體排放量，若處置不當，更會釋出大量溫室氣體。
+                </div>
+            </li>
+        </ul>
+
+        <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+            <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
+                <div class="headers">
+                    <div class="header clickable active" style="width: 50%;"
+                        onclick="cardBoxChangeContent(this, 'higher-GHG','contentBox3')">
+                        <b>較高碳排放的電子廢物處理方法</b>
+                    </div>
+                    <div class="header clickable" style="width: 50%;"
+                        onclick="cardBoxChangeContent(this, 'lower-GHG', 'contentBox3')"><b>較低碳排放的電子廢物處理方法</b>
+                    </div>
+                </div>
+                <div class="content" style="height: 195px;" id="contentBox3">
+                    <p>
+                        不當處理電子廢物會導致溫室氣體排放，例如焚燒電器提取銅等有價值材料時，會釋出二氧化碳（CO<sub>2</sub>）。
+                    </p>
+                    <p>此外，雪櫃、空調機和抽濕機等電器含有氟氯碳化物（CFCs）和氫氟碳化物（HFCs）等製冷劑。這些都是極高強度的溫室氣體。若這些電器被不當拆解或棄置，而未有妥善回收製冷劑，這些氣體就會洩漏到大氣中，加速全球暖化。
+                    </p>
+                </div>
+            </span>
+        </div>
+
+        <ul id="list">
+            <li><span class="list-title">了解電子廢物碳排放的益處</span>
+                <div class="list-content">B透過掌握廢電器電子設備（WEEE）的溫室氣體（GHGs）的具體情況，其生命週期中的各個持份者均可在多方面獲益：
+                </div>
+            </li>
+        </ul>
+
+        <div style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+            <span class="table-container" style="width: 100%;padding: 0 2% 0 2%;">
+                <div class="headers">
+                    <div class="header clickable active" style="width: 33.3%;"
+                        onclick="cardBoxChangeContent(this, 'ree-supplier','contentBox4')">
+                        <b>受管制電器的廢電器電子產品 - 供應商</b>
+                    </div>
+                    <div class="header clickable" style="width: 33.3%;"
+                        onclick="cardBoxChangeContent(this, 'ree-seller','contentBox4')">
+                        <b>受管制電器的廢電器電子產品 - 銷售商</b>
+                    </div>
+                    <div class="header clickable" style="width: 33.3%;"
+                        onclick="cardBoxChangeContent(this, 'ree-consumer','contentBox4')">
+                        <b>受管制電器的廢電器電子產品 - 消費者</b>
+                    </div>
+                </div>
+                <div class="content" id="contentBox4">
+                    <div style="margin: 0 0 5px 0;">透過本計算器，您可獲得以下效益：</div>
+                    <table style="width: 100%;">
+                        <tr style="border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;">
+                            <td
+                                style="border-right: 2px solid rgb(239, 246, 251);border-bottom: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;">
+                                <b>可持續發展披露</b>
+                            </td>
+                            <td style="padding: 15px 0px 10px 15px;width: 80%;">&#10003; 評估生產及供應電子產品所產生的溫室氣體（GHGs）排放量
+                            </td>
+                        </tr>
+                        <tr style="font-size: larger;">
+                            <td
+                                style="border-right: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;">
+                                <b>廢棄物管理</b>
+                            </td>
+                            <td style="padding: 15px 0px 10px 15px;width: 80%;">&#10003; 深入了解回收如何減少生產過程中所用物料的相關排放</td>
+                        </tr>
+                    </table>
+                </div>
+            </span>
+        </div>
+
+        <style>
+            .container-fluid .blue-row {
+                background-color: rgb(33, 104, 136);
+                width: 100%;
+                margin: auto;
+            }
+
+            .container-fluid .blue-row h3 {
+                color: white;
+                font-size: 39px;
+                text-align: center;
+                vertical-align: center;
+                padding: 40px;
+                font-weight: bold;
+            }
+
+            @keyframes example {
+                0% {
+                    transform: translateX(20%);
+                }
+
+                50% {
+                    transform: translateX(40%);
+                }
+
+                100% {
+                    transform: translateX(20%);
+                }
+            }
+
+            .container-fluid .blue-row h3 span {
+                display: inline-block;
+                animation-name: example;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+
+            .container-fluid .blue-row:hover {
+                background-color: rgb(135, 172, 207) !important;
+            }
+        </style>
+        <div class="container-fluid" style="margin-top: 10px; margin-bottom: 10px;justify-items: center;">
+            <div class="blue-row" style="width: fit-content;border-radius: 20px;">
+                <a href="./calculator.html" style="all: unset;cursor: pointer;">
+                    <h3 style="font-size: 25px;">探索您的電子廢物碳足跡資料<span>&#10230;</span></h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End of body class -->
+    <!-- Footer -->
+    <footer>
+        <div style="display: flex; justify-content: space-between;">
+            <span style="position: relative;left: 25%;margin-top: 8px;text-align: center;">
+                <span style="margin-bottom: 2px;"><u>Created by:</u></span><br>
+                <img style="height:125px;" src="../resources/四電一腦智碳平台 logo (updated).png">
+                <img style="height:125px;" src="../resources/hkuLogo.png"><br>
+            </span>
+            <span style="position: relative;right: 25%;margin-top: 8px;text-align: center;">
+                <span style="margin-bottom: 2px;"><u>Supported by:</u></span><br>
+                <img style="height:85px;" src="../resources/P1_ALBA_logo.svg">
+            </span>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+</body>
+<script>
+    function cardBoxChangeContent(item, section, id) {
+        item.parentElement.querySelectorAll(".active").forEach(e => e.classList.remove("active"))
+        item.classList.add("active")
+        const contentBox = document.getElementById(id);
+        switch (section) {
+            case 'about':
+                contentBox.innerHTML = '歡迎使用「電子廢物碳足跡計算器」，此工具旨在針對香港廢電器電子產品（簡稱WEEE或電子廢物）相關的溫室氣體排放進行全面評估。此計算器讓本地受管制電器的廢電器電子產品（REE）的生產者、銷售商及消費者更深入了解其對環境的影響，並推動電子廢物管理的可持續實踐。';
+                break;
+            case 'purpose':
+                contentBox.innerHTML = '本「電子廢物碳足跡計算器」可估算： <br> 您透過回收電器所減少的二氧化碳當量(CO<sub>2</sub>e)排放，主要來自避免製冷劑（如適用）釋放至大氣層，以及生產可供循環再造的物料。計算結果已扣除在收集、處理及最終處置過程中所產生的排放量。 <br><br> 若您正在編製溫室氣體清單，可考慮將此碳減排量納入您的「範圍3」溫室氣體排放（二氧化碳當量）中的以下類別 <br><br> <ul> <li>類別1（購買的商品及服務）</li> <li>類別5（營運中產生的廢物）</li> <li>類別12（已售出產品的報廢處理）（視情況適用）</li> </ul>';
+                break;
+            case 'users':
+                contentBox.innerHTML = '本計算器專為「廢電器電子產品生產者責任計劃」（WPRS）下的所有持份者設計： <br><br> <ul> <li>REE 供應商</li> <li>REE 銷售商</li> <li>REE 消費者</li> </ul>';
+                break;
+            case 'relevance':
+                contentBox.innerHTML = '本計算器基於「歐綠保綜合環保（香港）有限公司」（ALBA IWS）維護的排放因子數據庫，並參照《溫室氣體核算體系》經第三方驗證。ALBA IWS在環境保護署監督下營運「WEEE·PARK」，負責香港廢電器電子產品的收集、處理及回收。因此，本計算器的減碳計算方法符合《溫室氣體核算體系》標準。';
+                break;
+            case 'producer-responsibility':
+                contentBox.innerHTML = "<div>該計劃規管多類主要電器的處置，包括空調機、雪櫃、洗衣機、電視機、電腦、列印機、掃描器及顯示器等。自2024年7月1日起，計劃進一步擴展至涵蓋更多電器類別，例如大型雪櫃、大容量洗衣機、乾衣機及抽濕機等，以加強對電子廢物回收的監管。</div> <div style=\"display: flex; justify-content: space-between; margin: 10px 0px 10px 2%;\"> <img id=\"image-box\" src=\"../resources/background/P3_Washing Machine details (eng).svg\" style=\"width: 40%;\"> <div style=\"display: flex; justify-content: center;width: 60%; margin: 0% 2% 10px 2%;\"> <table style=\"max-width: 100%; width: 100%;margin: 0px 10px 0px 2%;\"> <tr> <td id=\"washing-machine\" onclick=\"imageBoxChangeContent(this,'washing-machine', 'image-box' )\"> <img src=\"../resources/icon/washing-machine_active.svg\" style=\"height: 150px;\" alt=\"Washing Machine\" class=\"clickable\"> </td> <td id=\"refrigerator\" onclick=\"imageBoxChangeContent(this,'refrigerator', 'image-box' )\"> <img src=\"../resources/icon/refrigerator.svg\" style=\"height: 150px;\" alt=\"Refrigerator\" class=\"clickable\"> </td> <td id=\"air-conditioner\" onclick=\"imageBoxChangeContent(this,'air-conditioner', 'image-box' )\"> <img src=\"../resources/icon/air-conditioner.svg\" style=\"height: 150px;\" alt=\"Air Conditioner\" class=\"clickable\"> </td> <td id=\"television\" onclick=\"imageBoxChangeContent(this,'television', 'image-box' )\"> <img src=\"../resources/icon/television.svg\" style=\"height: 150px;\" alt=\"Television\" class=\"clickable\"> </td> <td id=\"dehumidifier\" onclick=\"imageBoxChangeContent(this,'dehumidifier', 'image-box' )\"> <img src=\"../resources/icon/dehumidifier.svg\" style=\"height: 150px;\" alt=\"Dehumidifier\" class=\"clickable\"> </td> </tr> <tr> <td id=\"monitor\" onclick=\"imageBoxChangeContent(this,'monitor', 'image-box' )\"> <img src=\"../resources/icon/monitor.svg\" style=\"height: 150px;\" alt=\"Monitor\" class=\"clickable\"> </td> <td id=\"computer\" onclick=\"imageBoxChangeContent(this,'computer', 'image-box' )\"> <img src=\"../resources/icon/computer.svg\" style=\"height: 150px;\" alt=\"Computer\" class=\"clickable\"> </td> <td id=\"printer\" onclick=\"imageBoxChangeContent(this,'printer', 'image-box' )\"> <img src=\"../resources/icon/printer.svg\" style=\"height: 150px;\" alt=\"Printer\" class=\"clickable\"> </td> <td id=\"scanner\" onclick=\"imageBoxChangeContent(this,'scanner', 'image-box' )\"> <img src=\"../resources/icon/scanner.svg\" style=\"height: 150px;\" alt=\"Scanner\" class=\"clickable\"> </td> <td id=\"tumble-dryer\" onclick=\"imageBoxChangeContent(this,'tumble-dryer', 'image-box' )\"> <img src=\"../resources/icon/tumble-dryer.svg\" style=\"height: 150px;\" alt=\"Tumble Dryer\" class=\"clickable\"> </td> </tr> </table> </div> </div>";
+                break;
+            case 'weee-park':
+                contentBox.innerHTML = "<div>WEEE·PARK坐落於屯門環保園，作為全球同類設施中的領先者，採用先進技術將受規管的廢電器電子產品，通過一系列除毒、拆解及循環再造等工序，轉化為有價值的二次物料。</div> <div style=\"justify-items: center; display: flex; justify-content: center; height: 48%; margin: 5%;\"><img src=\"../resources/WEEE_PARK_2048x1249.png\"></div>";
+                break;
+            case 'higher-GHG':
+                contentBox.innerHTML = "<p> 不當處理電子廢物會導致溫室氣體排放，例如焚燒電器提取銅等有價值材料時，會釋出二氧化碳（CO<sub>2</sub>）。 </p> <p>此外，雪櫃、空調機和抽濕機等電器含有氟氯碳化物（CFCs）和氫氟碳化物（HFCs）等製冷劑。這些都是極高強度的溫室氣體。若這些電器被不當拆解或棄置，而未有妥善回收製冷劑，這些氣體就會洩漏到大氣中，加速全球暖化。</p>"
+                break;
+            case 'lower-GHG':
+                contentBox.innerHTML = "妥善回收電子廢物有助減少溫室氣體排放。透過回收程序，我們可以提取並重用有價值的物料，從而減少開採和處理新原材料的需要。這種資源保育方式能夠降低能源消耗，以及因生產新材料而產生的相關溫室氣體排放。若能全面回收電子廢物，便可大幅減少甚至完全避免因開採和提煉原材料所產生的溫室氣體。"
+                break;
+            case 'ree-supplier':
+                contentBox.innerHTML = "<div style=\"margin: 0 0 5px 0;\">透過本計算器，您可獲得以下效益：</div> <table style=\"width: 100%;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td style=\"border-right: 2px solid rgb(239, 246, 251);border-bottom: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;\"> <b>可持續發展披露</b></td> <td style=\"padding: 15px 0px 10px 15px;width: 80%;\">&#10003; 評估生產及供應電子產品所產生的溫室氣體（GHGs）排放量</td> </tr> <tr style=\"font-size: larger;\"> <td style=\"border-right: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;\"> <b>廢棄物管理</b></td> <td style=\"padding: 15px 0px 10px 15px;width: 80%;\">&#10003; 深入了解回收如何減少生產過程中所用物料的相關排放</td> </tr> </table>";
+                break;
+            case 'ree-seller':
+                contentBox.innerHTML = "<div style=\"margin: 0 0 5px 0;\">透過本計算器，您可獲得以下效益：</div> <table style=\"width: 100%;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td style=\"border-right: 2px solid rgb(239, 246, 251);border-bottom: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;\"> <b>可持續發展披露</b></td> <td style=\"padding: 15px 0px 10px 15px;width: 80%;\">&#10003; 評估銷售電子產品產生的碳足跡，特別是營運過程中產生的廢電器電子產品</td> </tr> <tr style=\"font-size: larger;\"> <td style=\"border-right: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;\"><b>廢棄物管理</b></td> <td style=\"padding: 15px 0px 10px 15px;width: 80%;\">&#10003; 利用計算器支援可持續商業實踐，並加強碳排放的披露</td> </tr> </table>";
+                break;
+            case 'ree-consumer':
+                contentBox.innerHTML = "<div style=\"margin: 0 0 5px 0;\">透過本計算器，您可獲得以下效益：</div> <table style=\"width: 100%;\"> <tr style=\"border-bottom: 2px solid rgb(239, 246, 251);font-size: larger;\"> <td style=\"border-right: 2px solid rgb(239, 246, 251);border-bottom: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;\"> <b>可持續發展披露</b></td> <td style=\"padding: 15px 0px 10px 15px;width: 80%;\">&#10003; 了解回收廢電器電子產品所帶來的潛在碳排放量及節省效益</td> </tr> <tr style=\"font-size: larger;\"> <td style=\"border-right: 2px solid rgb(239, 246, 251);width: 20%;padding: 15px 15px 10px 0px;\"> <b>廢棄物管理</b></td> <td style=\"padding: 15px 0px 10px 15px;width: 80%;\">&#10003; 更清楚認識回收選擇如何影響環境</td> </tr> </table>";
+                break;
+        }
+    }
+
+    function imageBoxChangeContent(item, section, id) {
+        let icon = item.getElementsByTagName('img')[0];
+        let parent_div = upTo(item, "div");
+        let iconPath = "../resources/icon/"
+
+        let target_item = document.getElementById(id)
+        let resourcePath = "../resources/background/"
+
+        parent_div.querySelectorAll("img").forEach(e => { e.src = e.src.replace("_active", "") });
+
+        switch (section) {
+            case 'washing-machine':
+                icon.src = iconPath + "washing-machine" + "_active.svg"
+                target_item.src = resourcePath + "P3_Washing Machine details (eng).svg";
+                break;
+            case 'refrigerator':
+                icon.src = iconPath + "refrigerator" + "_active.svg"
+                target_item.src = resourcePath + "P3_Refrigerator details (eng).svg";
+                break;
+            case 'air-conditioner':
+                icon.src = iconPath + "air-conditioner" + "_active.svg"
+                target_item.src = resourcePath + "P3_Air conditioner details (eng).svg";
+                break;
+            case 'television':
+                icon.src = iconPath + "television" + "_active.svg"
+                target_item.src = resourcePath + "P3_Television details (eng).svg";
+                break;
+            case 'dehumidifier':
+                icon.src = iconPath + "dehumidifier" + "_active.svg"
+                target_item.src = resourcePath + "P3_Dehumidifier details (eng).svg";
+                break;
+            case 'monitor':
+                icon.src = iconPath + "monitor" + "_active.svg"
+                target_item.src = resourcePath + "P3_Monitor details (eng).svg";
+                break;
+            case 'computer':
+                icon.src = iconPath + "computer" + "_active.svg"
+                target_item.src = resourcePath + "P3_Computer details (eng).svg";
+                break;
+            case 'printer':
+                icon.src = iconPath + "printer" + "_active.svg"
+                target_item.src = resourcePath + "P3_Printer details (eng).svg";
+                break;
+            case 'scanner':
+                icon.src = iconPath + "scanner" + "_active.svg"
+                target_item.src = resourcePath + "P3_Scanner details (eng).png";
+                break;
+            case 'tumble-dryer':
+                icon.src = iconPath + "tumble-dryer" + "_active.svg"
+                target_item.src = resourcePath + "P3_Tumble Dryer details (eng).svg";
+                break;
+        }
+    }
+
+    function upTo(el, tagName) {
+        tagName = tagName.toLowerCase();
+
+        while (el && el.parentNode) {
+            el = el.parentNode;
+            if (el.tagName && el.tagName.toLowerCase() == tagName) {
+                return el;
+            }
+        }
+        return null;
+    }
+</script>
