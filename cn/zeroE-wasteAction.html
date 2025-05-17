@@ -29,7 +29,7 @@
                 </div>
                 <div class="stepper-item completed">
                     <div class="step-counter"></div>
-                    <div class="step-name"><a href="./calculator.html"><u>計算器</u></a></div>
+                    <div class="step-name"><a href="./calculator.html"><u>碳計算器</u></a></div>
                 </div>
                 <div class="stepper-item completed">
                     <div class="step-counter"></div>
@@ -57,7 +57,7 @@
                 <div style="text-align: center;margin: 0% 2% 2% 2%;">
                     <span style="width: 100%;">
                         <div style="line-height: 4em;font-size: 26px;color: rgb(33, 104, 136)">
-                            <h2><b>如果您的電子廢棄物進行回收處理，您將產生……</b></h2>
+                            <h2><b>如果您的電子廢物進行回收處理，您將產生……</b></h2>
                         </div>
                     </span>
                 </div>
@@ -66,8 +66,8 @@
                         <div style="text-align: left;font-size: x-large;margin-top: 8%;color: rgb(21, 96, 130);">
                             <b><span id="cO2SavingResult" style="font-size: 60px;"></span><span
                                     style="font-size: 30px;">
-                                    噸二氧化碳</span></b>
-                            <p>來自回收材料的二氧化碳減排</p>
+                                    噸二氧化碳當量</span></b>
+                            <p>來自回收物料的所節省的二氧化碳排放</p>
                         </div>
                         <div style="text-align: left;font-size: x-large;margin-top: 8%;color: rgb(21, 96, 130);">
                             <b><span id="emissionResult" style="font-size: 60px;"></span><span style="font-size: 30px;">
@@ -78,27 +78,27 @@
                     <div style="width: 48%;margin: auto;display: inline-block;">
                         <div
                             style="text-align: center; background-color: rgb(134, 206, 234);height: 3em;margin-bottom: 1%;align-content: center;color: rgb(21, 96, 130);font-size: larger;">
-                            <b>電子廢物回收處理報告</b>
+                            <b>回收電子廢物溫室氣體排放</b>
                         </div>
                         <div class="headers" style="height: auto;border-bottom: 1px solid white;">
-                            <div class="header" style="width: 30%;"><b>電子廢物類別
+                            <div class="header" style="width: 28%;"><b>電子廢物類別
                                 </b>
                             </div>
                             <div class="header" style="width: 14%;"><b>數量</b></div>
-                            <div class="header" style="width: 27.5%;"><b>來自回收材料<br>所帶來的減碳效益
+                            <div class="header" style="width: 29.5%;"><b>來自回收物料<br>所節省的二氧化碳排放量
                                 </b>
                             </div>
                             <div class="header" style="width: 28.5%;"><b>來自回收處理過程<br>所產生的二氧化碳排放量
                                 </b></div>
                         </div>
                         <div class="headers" style="height: 15%;border-bottom: 1px solid white;">
-                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 30%;">
-                                大型家用電器<br>(四電: 雪櫃、<br>洗衣機、冷氣機)
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 28%;">
+                                大型家用電器
                             </div>
                             <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 14%;">
                                 <span id="qtyLargeHousehold"></span>
                             </div>
-                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;">
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 29.5%;">
                                 <span id="largeHouseholdcO2Saving"></span>
                             </div>
                             <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 28.5%;">
@@ -106,13 +106,13 @@
                             </div>
                         </div>
                         <div class="headers" style="height: 15%;border-bottom: 1px solid white;">
-                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 30%;">
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 28%;">
                                 電腦
                             </div>
                             <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 14%;">
                                 <span id="qtyComputer"></span>
                             </div>
-                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 27.5%;">
+                            <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 29.5%;">
                                 <span id="computerCO2Saving"></span>
                             </div>
                             <div class="header" style="background-color: rgb(220, 234, 247);color: black;width: 28.5%;">
@@ -132,11 +132,11 @@
                     let emissionResult = (sessionStorage.getItem("emissionResult") == undefined || sessionStorage.getItem("emissionResult") == null) ? 0 : sessionStorage.getItem("emissionResult");
 
                     document.getElementById("qtyLargeHousehold").innerHTML = qtyLargeHousehold;
-                    document.getElementById("largeHouseholdcO2Saving").innerHTML = "= " + largeHouseholdcO2Saving + " 噸二氧化碳";
+                    document.getElementById("largeHouseholdcO2Saving").innerHTML = "= " + largeHouseholdcO2Saving + " 噸二氧化碳當量";
                     document.getElementById("largeHouseholdEmissions").innerHTML = "= " + largeHouseholdEmissions + " 噸二氧化碳當量";
 
                     document.getElementById("qtyComputer").innerHTML = qtyComputer;
-                    document.getElementById("computerCO2Saving").innerHTML = "= " + computerCO2Saving + " 噸二氧化碳";
+                    document.getElementById("computerCO2Saving").innerHTML = "= " + computerCO2Saving + " 噸二氧化碳當量";
                     document.getElementById("computerEmissions").innerHTML = "= " + computerEmissions + " 噸二氧化碳當量";
 
                     document.getElementById("cO2SavingResult").innerHTML = cO2SavingResult;
